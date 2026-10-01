@@ -1,0 +1,57 @@
+{
+  "checkpoint": 7,
+  "consulted_on": "2026-10-01",
+  "sources": [
+    {
+      "id": "I7-S1",
+      "publisher": "NIST",
+      "title": "Chi-Square Goodness-of-Fit Test",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm"
+    },
+    {
+      "id": "I7-S2",
+      "publisher": "NIST",
+      "title": "Runs Test for Detecting Non-randomness",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm"
+    },
+    {
+      "id": "I7-S3",
+      "publisher": "NIST",
+      "title": "Autocorrelation",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35c.htm"
+    },
+    {
+      "id": "I7-S4",
+      "publisher": "NIST",
+      "title": "Autocorrelation Plot",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/autocopl.htm"
+    },
+    {
+      "id": "I7-S5",
+      "publisher": "Scandinavian Journal of Statistics",
+      "title": "A Simple Sequentially Rejective Multiple Test Procedure",
+      "authors": [
+        "Sture Holm"
+      ],
+      "year": 1979,
+      "doi": "10.2307/4615733"
+    },
+    {
+      "id": "I7-S6",
+      "publisher": "JRSS Series B / Wiley-Oxford",
+      "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+      "authors": [
+        "Yoav Benjamini",
+        "Yosef Hochberg"
+      ],
+      "year": 1995,
+      "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1995.tb02031.x"
+    }
+  ],
+  "design_decisions": {
+    "primary_family": "pre-specified tests with FWER control",
+    "exploratory_family": "FDR possible for mass pair/triple screening",
+    "chi_square_caution": "calibrate under exact 14-of-25 mechanism rather than assume independent multinomial counts"
+  }
+}
