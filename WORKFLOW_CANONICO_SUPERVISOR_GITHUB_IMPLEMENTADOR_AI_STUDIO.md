@@ -1,610 +1,517 @@
-# Workflow canónico — Supervisor + GitHub + Agente implementador + AI_STUDIO_OPERATOR
+# Workflow canónico de Estadis — Supervisor + GitHub + Agente implementador
 
-> **Estado:** workflow canónico activo del proyecto desde la integración de Issue #47 mediante PR #49 en `main@866d7aaa793cb9d1a2675965f911c6ddb37275e9`.
+> **Repositorio:** cmiloarevalo-hash/Estadis
 >
-> **Baseline:** `WORKFLOW_SIMPLIFICADO_CHAT_WEB_GPT_GEMINI_3_8.md` en `main@ff1a7d46c3f9992adbcc41b933cc13c3501fc617` (blob `d6fd666d5be7659784f6f20021ba4a3515d45f14`).
+> **Estado:** propuesta canónica de Issue #1; pendiente de revisión semántica del Supervisor para el SHA del PR.
 >
-> **Base de consolidación validada:** historial aceptado por el Supervisor en Issue #47, comentario `issuecomment-5851766362`.
+> **Fuente de adaptación:** WORKFLOW_CANONICO_SUPERVISOR_GITHUB_IMPLEMENTADOR_AI_STUDIO.md en la base 8cf7d059692e6a7ab6eeec85bad5979e9a6ecde0, blob c347210353ce8dc8150343b886f59e5cd66645ed.
 >
-> **Regla de consolidación:** preservar la función y significado del baseline; incorporar únicamente mejoras ya canónicas o reglas operativas verificadas y persistidas. No importar recomendaciones no adoptadas.
+> **Bootstrap residente:** AGENTE_IMPLEMENTADOR.md, blob 1edb714a7cef4e110e84ce09a30ba375f84bc78e.
+>
+> **Work Item de adaptación:** Issue #1 y decisión RESUME del Supervisor en issuecomment-5935621278.
+>
+> **Regla de adaptación:** se conserva el significado operativo y la separación de autoridad del protocolo de referencia. Identificadores, rutas, comandos, integraciones, Issues, PR, SHA, documentación de producto e infraestructura pertenecientes al proyecto de procedencia no se importan como hechos de Estadis.
 
-## Estado de procedencia
+## 0. Estado inicial de capacidades en Estadis
 
-Ya están integradas en el baseline y se preservan sin reimplementarlas:
+En la base de Issue #1 el repositorio contiene únicamente el prompt residente del implementador y la fuente canónica importada para esta adaptación. Por tanto:
 
-- Issue #4 / PR #5 — autoridad de merge del Supervisor;
-- Issue #26 / PR #27 — GitHub Actions como CI persistente y CI como evidencia;
-- Issue #32 / PR #33 — `AI_STUDIO_OPERATOR` subordinado y no-write;
-- Issue #36 / PR #38 — contrato residente, bootstrap/recovery, `CANONICAL_GIT_CHECKOUT`, `MANAGED_PREVIEW_ROOT`, materialización one-way, cwd/process safety, SHA Gate, PUBLISH y reporting.
+- documentación de producto/ingeniería adicional: **NOT CONFIGURED**;
+- comandos de build/test del producto: **NOT CONFIGURED**;
+- CI persistente: **NOT CONFIGURED**;
+- contrato AI_STUDIO_OPERATOR: **NOT CONFIGURED**;
+- integración operativa de Google AI Studio: **NOT CONFIGURED**;
+- reglas específicas de deployment/publish: **NOT CONFIGURED**;
+- allowlists de GitHub App para operadores externos: **NOT CONFIGURED**.
 
-Reglas operativas verificadas que estaban pendientes de integración canónica antes de la consolidación de Issue #47:
+NOT CONFIGURED no elimina la regla correspondiente. Significa que no existe todavía infraestructura verificable que permita afirmar que está activa. Su incorporación futura requiere un Work Item autorizado.
 
-- Issue #35 — `RESEARCH_GATE + STRATEGIC_RATIONALE`;
-- Issue #39 — `TECHNICAL PERMISSION != WORKFLOW AUTHORITY` y `AI_STUDIO_ALLOWED_REPOSITORY_WRITES = NONE`.
+---
 
-Issue #35 y Issue #39 permanecen OPEN. Antes de PR #49 sus reglas eran operativamente vigentes pero todavía no estaban integradas canónicamente; quedaron incorporadas a este workflow mediante la integración de Issue #47. Su estado OPEN no equivale a ausencia de esa integración y su cierre conserva su propio lifecycle.
+# 1. Objetivo
 
-El registro `recomendaciones/MEJORAS_WORKFLOW.md` es provenance de recomendaciones. Según la revisión histórica validada en #47, sólo la recomendación de CI fue adoptada mediante #26; las restantes recomendaciones no se importan por el solo hecho de estar documentadas.
+Este workflow organiza el trabajo reproducible en cmiloarevalo-hash/Estadis entre:
 
-## 1. Objetivo
+- **Humano (Camilo):** intención del proyecto, prioridades, permisos y decisiones excepcionales.
+- **Supervisor técnico (Chat Web GPT):** define y delimita Work Items, revisa evidencia, emite decisiones formales y ejecuta el merge cuando corresponda.
+- **Agente implementador:** implementa únicamente el Work Item autorizado, publica branch/commit/PR y evidencia, y devuelve control al Supervisor.
+- **GitHub:** memoria persistente, fuente de evidencia y coordinación.
 
-Este workflow organiza el trabajo colaborativo entre:
+El objetivo es que una sesión nueva pueda reconstruir el estado del trabajo desde GitHub sin depender del transcript de una conversación anterior.
 
-- **Chat Web GPT**: planificación, arquitectura, definición de tareas y revisión.
-- **Agente implementador**: implementación y escritura técnica mediante Codespaces/terminal u otro canal de implementación expresamente autorizado.
-- **AI_STUDIO_OPERATOR**: Google AI Studio web para operación externa read/test/publish, sin escritura de código ni repositorio.
-- **GitHub**: memoria persistente, tareas, código, evidencia y coordinación.
-- **Humano**: intención del producto, prioridades, permisos y decisiones excepcionales.
+Flujo principal:
 
-No utiliza GoFlow ni una mini aplicación auxiliar.
-
-La idea principal es:
-
-```text
-Chat Web GPT
-    ↓ define trabajo
+~~~text
+Humano
+  ↓ intención/prioridades
+Supervisor
+  ↓ define Work Item
 GitHub Issue
-    ↓
+  ↓
 Agente implementador
-    ↓ implementa + verifica
-GitHub Branch / Commit / PR
-    ↓
-Chat Web GPT
-    ↓ revisión
-ACCEPT / REWORK / ESCALATE
-```
-
-GitHub reemplaza el chat como memoria compartida.
+  ↓ implementa + verifica
+Branch + Commit + PR
+  ↓
+Supervisor
+  ↓ revisión del SHA exacto
+SEMANTIC_ACCEPTED | REWORK | HOLD | ESCALATE
+~~~
 
 ---
 
 # 2. Principio fundamental
 
-> **Las conversaciones son temporales. GitHub y los documentos del proyecto son persistentes.**
+> **Las conversaciones son temporales. GitHub y los documentos persistidos del proyecto son la memoria compartida.**
 
-Ni Chat Web GPT ni Agente implementador deben depender de recordar conversaciones anteriores.
+El estado de una tarea debe poder reconstruirse desde:
 
-Una sesión nueva debe poder reconstruir el trabajo con:
-
-```text
+~~~text
 Repositorio
 + Issue
 + branch / PR
-+ documentación técnica
-```
++ commits
++ documentación relevante
++ evidencia de verificación / CI
++ comentarios de review
+~~~
 
-No necesita recibir todo el transcript anterior.
-
----
-
-# 3. Responsabilidades
-
-## 3.1 Chat Web GPT
-
-Es el **Supervisor técnico**.
-
-Responsabilidades:
-
-- entender la intención del humano;
-- estudiar el proyecto completo cuando sea necesario;
-- razonar sobre arquitectura;
-- identificar impacto;
-- dividir trabajo en tareas pequeñas;
-- crear o definir el Work Item;
-- indicar documentación relevante;
-- revisar PR, diff y evidencia;
-- detectar cambios fuera de alcance;
-- detectar sobreingeniería;
-- solicitar REWORK;
-- aceptar semánticamente el cambio.
-
-No implementa normalmente el código de la tarea que posteriormente revisará.
-
-Su foco es:
-
-```text
-pensar
-planificar
-delimitar
-revisar
-decidir
-```
+Lo afirmado por un modelo es un reporte. El repositorio es la evidencia.
 
 ---
 
-# 4. Agente implementador
+# 3. Autoridad y separación de roles
 
-Es el **desarrollador** del workflow canónico. Implementa mediante Codespaces/terminal u otro canal de implementación expresamente autorizado; conserva las responsabilidades de branch, commit y PR definidas en esta sección.
+## 3.1 Humano
 
-No es `AI_STUDIO_OPERATOR` y Google AI Studio web no ejerce el rol implementador bajo este protocolo.
+Conserva autoridad sobre:
+
+- intención del proyecto;
+- prioridades;
+- decisiones de producto;
+- cambios materiales de scope;
+- credenciales y permisos;
+- costes y trade-offs materiales;
+- excepciones de workflow.
+
+## 3.2 Supervisor técnico
 
 Responsabilidades:
 
-- leer el Issue;
-- recuperar únicamente el contexto necesario;
-- revisar la documentación relevante;
-- comprobar el estado del repositorio;
-- crear o utilizar la branch indicada;
-- implementar únicamente el alcance autorizado;
-- ejecutar las pruebas correspondientes;
-- revisar su propio diff;
-- commit;
-- push;
+- convertir intención en Work Items verificables;
+- definir Objective, Acceptance Criteria, Authorized Scope, Relevant Sources, Verification y Base;
+- estudiar arquitectura y contexto sólo cuando sea necesario;
+- revisar Issue, diff, PR, SHA, tests/evidencia y CI cuando exista;
+- detectar scope creep, cambios accidentales y sobreingeniería;
+- emitir una decisión formal;
+- ejecutar el merge únicamente después de verificar elegibilidad.
+
+El Supervisor no debe basar una aceptación sólo en el reporte del implementador.
+
+## 3.3 Agente implementador
+
+Responsabilidades:
+
+- leer el Issue y la última decisión aplicable;
+- recuperar sólo el contexto necesario;
+- verificar base, branch y estado del repositorio;
+- implementar únicamente dentro de Semantic Scope y Path Scope;
+- ejecutar la verificación requerida;
+- revisar el diff completo;
+- crear commit;
+- publicar branch;
 - abrir o actualizar PR;
-- informar resultados.
-
-Su foco es:
-
-```text
-leer contexto acotado
-implementar
-probar
-revisar diff
-publicar evidencia
-```
+- informar el SHA exacto y evidencia.
 
 No debe:
 
 - redefinir arquitectura por iniciativa propia;
-- ampliar el alcance silenciosamente;
+- ampliar scope silenciosamente;
 - corregir problemas no relacionados;
-- declarar su propio trabajo aprobado;
-- hacer merge sólo porque los tests pasaron.
+- introducir infraestructura futura no solicitada;
+- autoaprobarse;
+- emitir SEMANTIC_ACCEPTED, REWORK, HOLD o ESCALATE;
+- ejecutar merge.
 
 ---
 
-# 5. GitHub
+# 4. GitHub como memoria persistente
 
-GitHub es el centro del sistema.
+GitHub persiste:
 
-Guarda:
-
-```text
+~~~text
 Issue
-→ intención concreta y alcance
+→ intención, criterios, scope, fuentes, verificación y base
 
 Branch
 → trabajo aislado
 
 Commit
-→ estado exacto del código
+→ estado exacto de la propuesta
 
 Pull Request
-→ propuesta de integración
+→ vehículo de integración
 
 Diff
-→ evidencia del cambio
+→ evidencia concreta del cambio
 
-CI
-→ evidencia automatizada, cuando exista
+Tests / CI
+→ evidencia mecánica cuando exista
 
-Comentarios de review
-→ REWORK / aceptación / decisiones
+Comentarios
+→ decisiones, REWORK, bloqueos y handoffs
 
 Git history
-→ historial
-```
+→ trazabilidad
+~~~
 
-Regla:
-
-> **Lo dicho por un modelo es un reporte. El repositorio es la evidencia.**
+Una instrucción material que afecte ejecución debe quedar persistida en GitHub cuando deba sobrevivir al cambio de sesión.
 
 ---
 
-# 6. Documentación del proyecto
+# 5. Unidad de trabajo: GitHub Issue
 
-El workflow canónico utiliza la documentación normal del producto:
+Cada tarea material debe existir como Work Item con, como mínimo:
 
-```text
-README.md
-
-docs/engineering/
-├── SOFTWARE_REQUIREMENTS_SPECIFICATION.md
-├── SOFTWARE_ARCHITECTURE.md
-├── TECHNICAL_SPECIFICATION.md
-├── VERIFICATION_SPECIFICATION.md
-└── adr/
-```
-
-El workflow no se copia dentro de esos documentos.
-
-La documentación describe la aplicación.
-
-El workflow describe cómo trabajan las personas y modelos sobre ella.
-
----
-
-# 7. Unidad de trabajo: GitHub Issue
-
-Cada tarea suficientemente importante debe existir como un Issue.
-
-Formato simplificado:
-
-```markdown
+~~~markdown
 ## Objective
-
-Qué debe conseguir esta tarea.
+Qué debe conseguir la tarea.
 
 ## Acceptance Criteria
-
-Qué condiciones deben cumplirse.
+Qué condiciones verificables deben cumplirse.
 
 ## Authorized Scope
-
-Qué archivos o módulos puede modificar.
+Qué rutas o módulos puede modificar.
 
 ## Relevant Sources
-
-Qué documentación debe leer.
+Qué documentos o evidencia debe leer.
 
 ## Verification
-
-Qué pruebas o comprobaciones debe realizar.
+Qué pruebas o comprobaciones debe ejecutar.
 
 ## Base
+Branch o SHA desde el que debe comenzar.
+~~~
 
-Branch o commit desde el que comienza el trabajo.
-```
+Default recomendado:
 
-No necesitamos la gramática rígida utilizada por GoFlow.
-
-Pero sí necesitamos que estas seis partes sean claras.
-
----
-
-# 8. Dos tipos de scope
-
-Aunque no exista GoFlow, seguimos utilizando dos límites.
-
-## Semantic Scope
-
-Proviene de:
-
-```text
-Objective
-+
-Acceptance Criteria
-```
-
-Define:
-
-> qué comportamiento está autorizado a cambiar.
-
-## Path Scope
-
-Proviene de:
-
-```text
-Authorized Scope
-```
-
-Define:
-
-> qué archivos o módulos puede modificar.
-
-Para que un cambio sea válido debe cumplir ambos.
-
-Ejemplo:
-
-```text
-Authorized Scope:
-src/auth/**
-```
-
-no significa:
-
-```text
-puede cambiar cualquier regla de autenticación.
-```
-
-El comportamiento también debe estar autorizado por Objective y Acceptance Criteria.
-
----
-
-# 9. Flujo completo
-
-## Fase A — intención
-
-El humano explica qué quiere conseguir.
-
-```text
-Humano
-↓
-Chat Web GPT
-```
-
-Chat Web GPT analiza:
-
-- objetivo;
-- arquitectura;
-- módulos afectados;
-- riesgos;
-- alcance;
-- verificación necesaria.
-
----
-
-## Fase B — creación del Work Item
-
-Chat Web GPT prepara el Issue.
-
-Debe ser suficientemente pequeño para que el Agente implementador pueda ejecutarlo sin reconstruir todo el proyecto.
-
-Idealmente:
-
-```text
+~~~text
 1 Issue
 → 1 objetivo
 → 1 branch
 → 1 PR
-```
+~~~
 
-Es un default, no una obligación absoluta.
-
----
-
-# 10. Inicio del Agente implementador
-
-El mensaje inicial puede ser extremadamente corto:
-
-```text
-Repositorio: <owner/repo>
-Work Item: #123
-
-Ejecuta la tarea según el Issue y la documentación canónica.
-No amplíes el alcance.
-Publica el PR y la evidencia cuando esté listo para revisión.
-```
-
-El prompt no transporta la especificación completa.
+Puede existir una excepción, pero debe ser explícita y no puede inferirse por conveniencia del implementador.
 
 ---
 
-# 11. Bootstrap del Agente implementador
+# 6. Semantic Scope y Path Scope
 
-Antes de modificar código debe responder internamente estas preguntas:
+## 6.1 Semantic Scope
+
+Proviene de:
+
+~~~text
+Objective + Acceptance Criteria
+~~~
+
+Define qué comportamiento está autorizado a cambiar.
+
+## 6.2 Path Scope
+
+Proviene de:
+
+~~~text
+Authorized Scope
+~~~
+
+Define qué rutas están autorizadas.
+
+Un cambio es válido sólo si satisface ambos scopes.
+
+Que una ruta esté autorizada no concede permiso para cambiar cualquier comportamiento contenido en ella.
+
+---
+
+# 7. Bootstrap obligatorio del Agente implementador
+
+Antes de modificar debe poder responder:
 
 1. ¿Cuál es el objetivo del Issue?
 2. ¿Cuáles son los Acceptance Criteria?
 3. ¿Qué comportamiento está autorizado a cambiar?
 4. ¿Qué rutas están autorizadas?
-5. ¿Qué documentos debo leer?
-6. ¿Qué módulo es responsable de este comportamiento?
-7. ¿Qué interfaces podría afectar?
-8. ¿Qué pruebas debo ejecutar?
-9. ¿Cuál es la branch/base correcta?
-10. ¿Existen cambios previos que no pertenecen a esta tarea?
+5. ¿Qué fuentes debo leer?
+6. ¿Qué módulo/documento es responsable?
+7. ¿Qué interfaces o contratos podría afectar?
+8. ¿Qué verificación debo ejecutar?
+9. ¿Cuál es la base exacta y cuál será la branch de trabajo?
+10. ¿Existen cambios previos ajenos a esta tarea?
 
-Si no puede responder una pregunta material, debe detenerse y pedir aclaración.
-
----
-
-# 12. Política de lectura
-
-Agente implementador no debe leer todo el repositorio automáticamente.
-
-Orden recomendado:
-
-```text
-Issue
-↓
-README si necesita orientación
-↓
-secciones relevantes de SRS
-↓
-Architecture del módulo
-↓
-Technical Specification pertinente
-↓
-Verification Plan pertinente
-↓
-código y tests afectados
-```
-
-Sólo amplía contexto cuando encuentra una dependencia real.
+Si falta una respuesta material, el agente no improvisa. Persiste el hallazgo y devuelve control al Supervisor.
 
 ---
 
-# 13. Implementación
+# 8. Política de lectura
+
+El Agente implementador no debe leer automáticamente todo el repositorio.
+
+Orden general:
+
+~~~text
+Issue y última decisión aplicable
+↓
+workflow canónico
+↓
+fuentes expresamente relevantes
+↓
+README si existe y es necesario
+↓
+documentación técnica pertinente si existe
+↓
+código/tests afectados
+↓
+contexto adicional sólo ante una dependencia real
+~~~
+
+Las rutas de documentación concretas se obtienen del estado real de Estadis y del Work Item. No se presuponen directorios heredados de otro proyecto.
+
+---
+
+# 9. Base, branch y aislamiento
+
+La Base del Work Item es vinculante.
+
+Reglas:
+
+- crear la branch desde la base indicada por el Supervisor;
+- si la base se expresa como SHA, usar ese SHA exacto;
+- no asumir que el HEAD actual de main sustituye silenciosamente un SHA fijado;
+- no mezclar cambios de otra tarea;
+- si existen cambios previos ajenos, detenerse o aislarlos de forma verificable antes de continuar;
+- el nombre de branch debe permitir asociarla al Work Item.
+
+Un cambio de base material requiere decisión persistida del Supervisor.
+
+---
+
+# 10. Implementación
 
 Durante la implementación:
 
 - modificar únicamente lo necesario;
-- mantener comportamiento no relacionado;
-- no realizar refactors oportunistas;
-- no introducir frameworks o dependencias sin necesidad;
-- no crear infraestructura futura;
+- preservar comportamiento no relacionado;
+- evitar refactors oportunistas;
+- no introducir frameworks, dependencias o servicios sin autorización;
 - respetar contratos existentes;
-- mantener el cambio fácil de revisar.
+- mantener el diff pequeño y revisable;
+- no convertir un hallazgo secundario en cambio de alcance.
 
-Para prototipos:
-
-> **La solución más simple que cumple correctamente el requisito normalmente es preferible.**
-
----
-
-# 14. Problemas descubiertos durante el trabajo
-
-Si el Agente implementador encuentra otro problema:
-
-```text
-Problema relacionado directamente
-→ puede corregirse si está dentro del scope.
-
-Problema no relacionado
-→ se reporta.
-
-Problema que requiere ampliar scope
-→ se detiene y solicita decisión.
-```
-
-No debe existir:
-
-```text
-“Ya que estoy aquí también arreglé…”
-```
+Para trabajo documental, las mismas reglas aplican: no se inventan capacidades, rutas, comandos ni estados operativos inexistentes.
 
 ---
 
-# 15. Verificación local
+# 11. Hallazgos durante el trabajo
+
+Clasificación:
+
+~~~text
+Relacionado + dentro de scope
+→ puede corregirse.
+
+Relacionado + requiere ampliar scope
+→ detenerse y solicitar decisión.
+
+No relacionado
+→ reportar sin modificar.
+~~~
+
+No existe autorización implícita del tipo “ya que estoy aquí también arreglé...”.
+
+---
+
+# 12. Verificación
 
 Antes de publicar:
 
-```text
+~~~text
 implementar
 ↓
-ejecutar tests relevantes
+ejecutar la verificación requerida
 ↓
-corregir
+corregir si corresponde
 ↓
-volver a ejecutar
+volver a verificar
 ↓
 revisar diff completo
-```
+~~~
 
-Debe comprobar:
+Debe comprobarse:
 
-- tests;
-- archivos cambiados;
+- archivos modificados;
 - archivos nuevos;
 - cambios accidentales;
+- alcance semántico;
+- alcance por rutas;
 - contratos afectados;
-- documentación que realmente deba cambiar.
+- documentación necesaria;
+- referencias heredadas inválidas;
+- comandos/infraestructura declarados versus estado real;
+- evidencia asociada al SHA que se entrega.
+
+Si no existe suite de tests aplicable al Work Item, la verificación puede ser documental/estructural, pero debe quedar descrita de forma reproducible.
 
 ---
 
-# 16. Publicación
+# 13. Publicación
 
-Cuando el cambio esté listo:
+Secuencia:
 
-```text
+~~~text
 commit
 ↓
-push
+push/publicación de branch
 ↓
-PR
-```
+Pull Request
+~~~
 
 El PR debe permitir identificar:
 
-```text
-Issue
-branch
-commit SHA
-qué cambió
-qué pruebas se ejecutaron
-limitaciones conocidas
-```
+- Work Item;
+- branch;
+- base;
+- HEAD SHA;
+- cambios realizados;
+- verificación ejecutada;
+- estado de CI;
+- limitaciones o hallazgos inesperados;
+- fuentes/evidencia relevante.
 
 ---
 
-# 17. Handoff del Agente implementador
+# 14. Handoff del Agente implementador
 
-El mensaje final debe ser breve.
+Formato mínimo:
 
-Ejemplo:
-
-```text
-WORK ITEM: #123
-PR: #145
-COMMIT: abc1234
-VERIFICATION: PASS
-CI: PASS / NOT CONFIGURED / PENDING
+~~~text
+WORK ITEM: #<issue>
+PR: #<pr>
+COMMIT: <sha>
+VERIFICATION: PASS | FAIL
+CI: PASS | FAIL | PENDING | NOT CONFIGURED
 STATE: READY_FOR_REVIEW
-UNEXPECTED FINDING: none
-```
+UNEXPECTED FINDING: <none | descripción>
+~~~
 
-No necesita escribir una explicación extensa de todo el desarrollo.
-
-Chat Web GPT puede reconstruir el detalle desde GitHub.
+El Agente implementador no declara SEMANTIC_ACCEPTED.
 
 ---
 
-# 18. Revisión de Chat Web GPT
+# 15. Revisión del Supervisor
 
-Chat Web GPT no debe aceptar simplemente porque el Agente implementador diga que terminó.
-
-Debe revisar independientemente:
+El Supervisor revisa de forma independiente:
 
 - Issue;
 - Objective;
 - Acceptance Criteria;
-- diff;
+- Semantic Scope;
+- Path Scope;
+- base;
+- branch;
+- HEAD SHA;
+- diff completo;
 - archivos cambiados;
-- arquitectura;
-- interfaces;
-- dependencias;
-- tests;
+- contratos/interfaces afectados;
+- verificación;
+- CI cuando exista;
 - documentación;
 - PR;
-- SHA;
-- CI cuando exista.
+- comentarios/hallazgos.
 
-Y responder una de estas decisiones:
+La revisión produce exactamente uno de estos estados formales:
 
-```text
+~~~text
 SEMANTIC_ACCEPTED
 REWORK
 HOLD
 ESCALATE
-```
+~~~
 
 ---
 
-# 19. Significado de las decisiones
+# 16. Significado de los estados formales
 
 ## SEMANTIC_ACCEPTED
 
-El cambio satisface la intención del Work Item para el SHA revisado.
+El SHA revisado satisface la intención del Work Item.
 
-No significa automáticamente merge.
+La aceptación vale sólo para ese SHA.
+
+No equivale automáticamente a merge ni autoriza al implementador a fusionar.
 
 ## REWORK
 
 Existe una corrección necesaria dentro del mismo objetivo.
 
-Normalmente continúa:
+Default:
 
-```text
+~~~text
 mismo Issue
 misma branch
 mismo PR
-```
+nuevo commit
+nueva verificación
+nueva revisión
+~~~
 
 ## HOLD
 
-Existe un impedimento objetivo que no puede resolverse actualmente.
-
-Ejemplo:
-
-```text
-dependencia externa caída
-credencial técnica no disponible
-conflicto que impide continuar
-```
-
-## ESCALATE
-
-Se requiere una decisión humana.
+Existe un impedimento objetivo que impide continuar sin que corresponda todavía una decisión humana de producto/scope.
 
 Ejemplos:
 
-```text
-cambio de alcance
-decisión de producto
-permiso
-credencial
-trade-off material
-excepción importante
-```
+- dependencia externa temporalmente no disponible;
+- evidencia técnica material inaccesible;
+- conflicto operativo que impide verificar.
+
+## ESCALATE
+
+Se requiere decisión humana.
+
+Ejemplos:
+
+- cambio material de scope;
+- decisión de producto;
+- credencial o permiso;
+- coste;
+- excepción de seguridad o workflow;
+- trade-off material.
 
 ---
 
-# 20. REWORK
+# 17. Decisión vigente y revisión por SHA
 
-Chat Web GPT debe escribir en el PR:
+Una decisión sólo vale para el SHA al que se asocia explícitamente.
 
-```text
+Ejemplo:
+
+~~~text
+SHA A → REWORK
+SHA B → SEMANTIC_ACCEPTED
+SHA C → nuevo commit
+~~~
+
+La aceptación de B no alcanza a C.
+
+Cuando existan múltiples comentarios, la decisión vigente es la última decisión del Supervisor que esté asociada explícitamente al HEAD actual.
+
+---
+
+# 18. REWORK
+
+El comentario de REWORK debe dejar trazabilidad suficiente:
+
+~~~text
 Problema observado:
 ...
 
@@ -616,155 +523,84 @@ Evidencia:
 
 Scope:
 permanece / cambia
-```
+~~~
 
-Agente implementador:
-
-```text
-lee comentario
-↓
-corrige
-↓
-verifica
-↓
-nuevo commit
-↓
-push
-↓
-nuevo handoff
-```
-
-Un nuevo commit invalida cualquier aceptación anterior correspondiente a otro SHA.
+Si el scope cambia, el Supervisor debe actualizar o aclarar el Work Item antes de que el implementador aplique el cambio.
 
 ---
 
-# 21. Decisión vigente
+# 19. CI
 
-Cuando existan varios comentarios antiguos:
+## Estado actual de Estadis
 
-> **La decisión vigente es la última decisión de Chat Web GPT asociada explícitamente al HEAD actual.**
+~~~text
+CI: NOT CONFIGURED
+~~~
 
-Ejemplo:
+En la base de Issue #1 no existe un workflow de CI persistente ni comandos canónicos de build/test que este documento pueda declarar como hechos.
 
-```text
-SHA A → REWORK
-SHA B → REWORK
-SHA C → SEMANTIC_ACCEPTED
-SHA D → nuevo commit
-```
+## Regla canónica
 
-La aceptación de C no autoriza D.
+Cuando exista CI:
 
-D debe revisarse nuevamente.
+- debe producir evidencia reproducible;
+- la evidencia debe asociarse al SHA exacto revisado;
+- PASS significa evidencia mecánica favorable, no aprobación semántica;
+- FAIL o PENDING impiden afirmar que el CI requerido está satisfecho;
+- cualquier configuración inicial o ampliación de CI requiere un Work Item autorizado;
+- no se inventan comandos de build/test antes de que el repositorio los defina.
 
----
+Estados permitidos:
 
-# 22. CI
-
-El proyecto adopta **GitHub Actions como CI mínimo persistente** mediante Issue #26. El workflow canónico está en:
-
-```text
-.github/workflows/ci.yml
-```
-
-Su objetivo es producir evidencia mecánica reproducible asociada al SHA verificado. Ejecuta los comandos canónicos del repositorio:
-
-```text
-npm ci
-npm run build
-npm test
-git diff --check <base>...<HEAD>
-```
-
-El workflow se ejecuta automáticamente para Pull Requests cuyo target es `main`. Para PR, la verificación debe corresponder al **HEAD exacto del PR** y usar como base la revisión de `main` indicada por el evento.
-
-También define `workflow_dispatch` para verificación manual por `ref`/SHA y base de comparación, con `main` como base por defecto. GitHub sólo permite recibir `workflow_dispatch` cuando el archivo de workflow existe en la rama por defecto; por ello esta capacidad manual queda disponible después de integrar el workflow en `main`. Una ejecución manual contra otro PR no modifica el HEAD de ese PR.
-
-El CI mínimo usa únicamente un runner GitHub-hosted Linux estándar, sin secrets del proyecto, caché, artefactos, deploy ni larger runners. Cualquier ampliación requiere un Work Item separado.
-
-Estados de CI:
-
-```text
+~~~text
 PASS
 FAIL
 PENDING
 NOT CONFIGURED
-```
-
-`PASS` es evidencia automática para el SHA indicado.
-
-No significa aprobación ni equivale a `SEMANTIC_ACCEPTED`.
-
-Si el proyecto requiere CI y está:
-
-```text
-FAIL
-PENDING
-```
-
-el cambio todavía no está listo para integración.
+~~~
 
 ---
 
-# 23. Integración
+# 20. Integración y merge
 
 Secuencia conceptual:
 
-```text
+~~~text
 READY_FOR_REVIEW
 ↓
-SEMANTIC_ACCEPTED
+SEMANTIC_ACCEPTED para HEAD exacto
 ↓
-verificar estado actual de target branch
+verificación de condiciones de integración
 ↓
 MERGE_ELIGIBLE
 ↓
-MERGED
-↓
-CLOSED
-```
+merge por el Supervisor
+~~~
 
-Antes del merge se confirma que:
+Antes del merge, el Supervisor verifica:
 
-- HEAD sigue siendo el revisado;
-- no apareció un conflicto relevante;
-- CI requerido sigue válido;
-- no existe un blocker nuevo.
+- HEAD sigue siendo exactamente el SHA aceptado;
+- base/target siguen vigentes;
+- no existen conflictos relevantes;
+- CI requerido, cuando exista, está válido para ese SHA;
+- no apareció un blocker nuevo.
 
----
-
-# 24. Merge
-
-En este proyecto, **Chat Web GPT, como Supervisor técnico, ejecuta el merge del PR mediante la integración disponible**. La decisión humana vigente asigna esa autoridad a Chat Web GPT; no queda como una lista de actores posibles.
-
-Antes de ejecutar el merge, Chat Web GPT verifica que:
-
-- el HEAD del PR sigue siendo exactamente el SHA con `SEMANTIC_ACCEPTED`;
-- la rama destino está vigente y el PR no tiene conflictos;
-- no hay impedimentos ni blockers nuevos;
-- el CI requerido, cuando exista, está válido para ese SHA.
-
-`SEMANTIC_ACCEPTED` confirma que el cambio satisface el Work Item para el SHA revisado, pero no declara por sí solo que el PR está `MERGE_ELIGIBLE` ni autoriza al Agente implementador a ejecutarlo. `MERGE_ELIGIBLE` registra que se comprobaron las condiciones de integración. La decisión humana registrada en este workflow autoriza a Chat Web GPT a ejecutar el merge únicamente después de esas comprobaciones.
-
-El Agente implementador no se autoaprueba ni ejecuta el merge.
+El Agente implementador no ejecuta merge.
 
 ---
 
-# 25. Cambio de sesión del Agente implementador
+# 21. Cambio de sesión del Agente implementador
 
-Si desaparece la sesión del Agente implementador:
+Una sesión nueva reconstruye desde GitHub:
 
-La nueva sesión recibe solamente:
-
-```text
+~~~text
 Repositorio
+↓
 Issue
-```
-
-y reconstruye:
-
-```text
-Issue
+↓
+última decisión aplicable
+↓
+base
 ↓
 branch
 ↓
@@ -772,466 +608,94 @@ HEAD
 ↓
 PR
 ↓
-últimos comentarios
-↓
 documentación relevante
 ↓
-código
-↓
-tests
-```
+código/tests/evidencia afectados
+~~~
 
-No necesita transcript anterior.
+Después repite las diez preguntas de bootstrap.
 
-Debe responder nuevamente las diez preguntas de bootstrap antes de continuar.
+No depende del transcript previo.
 
 ---
 
-# 26. Cambio de sesión de Chat Web GPT
+# 22. Cambio de sesión del Supervisor
 
-Una sesión nueva de Chat Web GPT debe reconstruir:
+Una sesión nueva del Supervisor debe poder reconstruir:
 
-1. ¿Qué producto se está desarrollando?
-2. ¿Cuál es la arquitectura relevante?
-3. ¿Qué Work Item está activo?
-4. ¿Cuál es el objetivo?
-5. ¿Qué scope fue autorizado?
-6. ¿Cuál es el HEAD actual?
-7. ¿Qué cambió realmente?
-8. ¿Qué evidencia corresponde a ese SHA?
-9. ¿Cuál es la última decisión válida para ese SHA?
-10. ¿Qué decisión debe tomar ahora el Supervisor?
-
-Tampoco necesita transcript anterior.
+1. producto/proyecto relevante;
+2. Work Item activo;
+3. objetivo y criterios;
+4. scopes autorizados;
+5. base;
+6. HEAD actual;
+7. cambios reales;
+8. evidencia correspondiente al SHA;
+9. última decisión válida para ese SHA;
+10. decisión que corresponde tomar ahora.
 
 ---
 
-# 27. Rol del humano
+# 23. Investigación externa: RESEARCH_GATE
 
-El humano interviene principalmente para:
+Se activa antes de proponer o implementar una decisión técnica o estratégica material cuya validez dependa de información externa susceptible de cambio.
 
-```text
-intención
-prioridades
-decisiones de producto
-cambio material de scope
-credenciales
-permisos
-trade-offs importantes
-```
+Ejemplos:
 
-No debería tener que copiar:
-
-- diffs;
-- código;
-- contexto técnico;
-- resultados extensos;
-
-entre Chat Web GPT y el Agente implementador.
-
-Un mensaje humano ideal puede ser simplemente:
-
-```text
-Agente implementador: trabaja Issue #123.
-```
-
-o:
-
-```text
-Chat Web GPT: revisa PR #145.
-```
-
----
-
-# 28. Reglas esenciales
-
-El workflow canónico puede resumirse en diez reglas:
-
-1. GitHub es la memoria compartida.
-2. El Issue define la tarea.
-3. La documentación define el producto y su ingeniería.
-4. El Agente implementador implementa; Chat Web GPT revisa.
-5. El Agente implementador no se autoaprueba.
-6. Scope significa comportamiento autorizado + rutas autorizadas.
-7. Una decisión de review sólo vale para el SHA revisado.
-8. Tests/CI son evidencia, no aprobación.
-9. REWORK del mismo objetivo permanece en el mismo Issue/PR.
-10. Una sesión nueva reconstruye desde GitHub; no desde el transcript anterior.
-
----
-
-
-# 29. AI_STUDIO_OPERATOR — protocolo subordinado de operación externa
-
-Esta sección añade un rol operativo externo sin sustituir las reglas generales ya definidas para Issue, scopes, implementador, revisión por SHA, decisiones del Supervisor, CI, integración, merge y Humano.
-
-> **AI_STUDIO_OPERATOR no es el Agente implementador y Google AI Studio web no puede ejercer el rol implementador bajo este protocolo.**
-
-El Agente implementador conserva la escritura canónica por branch/commit/PR. `AI_STUDIO_OPERATOR` es invocado por el Supervisor para producir evidencia operacional o ejecutar una publicación autorizada.
-
-```text
-                         ┌→ Agente implementador → branch/commit/PR → GitHub
-Humano → Supervisor → GitHub
-                         └→ AI_STUDIO_OPERATOR → evidencia/publicación → Supervisor/GitHub
-```
-
-GitHub continúa siendo la fuente persistente de verdad. AI Studio no crea una ruta paralela `AI Studio → code → GitHub`.
-
-El contrato de ejecución residente es [`AI_STUDIO_OPERATOR.md`](AI_STUDIO_OPERATOR.md). AI Studio debe leerlo desde el mismo SHA que está verificando antes de ejecutar una tarea dependiente del código. Ese archivo es subordinado a este workflow: no puede ampliar permisos, scope, autoridad ni estados formales. Ante contradicción, prevalece este workflow.
-
-**NEW CHAT BOOTSTRAP:** un chat nuevo de AI Studio reconstruye contexto desde GitHub + Work Item + documentación canónica, no desde el transcript previo. Antes de trabajo consecuencial debe completar el bootstrap residente: establecer rol/autoridad, objetivo, TASK, MODE, EXPECTED SHA, evidencia esperada y límites; verificar checkout/HEAD/worktree y managed Preview root/runtime cuando aplique; y declarar la única operación, STOP conditions y evidencia a retornar. Sólo después puede actuar.
-
-## 29.1 Permission Matrix
-
-| Capacidad | AI_STUDIO_OPERATOR |
-|---|---|
-| READ / OBSERVE | YES |
-| PULL / SYNC FROM GITHUB | YES, sólo para consumir/importar una versión |
-| PREVIEW | YES |
-| TEST | YES |
-| DIAGNOSE | YES |
-| PUBLISH external operational state | YES, sólo bajo protocolo PUBLISH |
-| SPIKE_READ_ONLY | YES |
-| repository/product-code write | NO |
-| WRITE CANONICAL | NO |
-| Fix / APPLY FIX | NO |
-| COMMIT / PUSH | NO |
-| CREATE / MODIFY BRANCH OR PR | NO |
-| MERGE | NO |
-| CHANGE DEPENDENCIES | NO |
-| CHANGE SCHEMA / PROMPTS / WORKFLOW | NO |
-| CHANGE REPOSITORY SECRETS | NO |
-| ADOPT INTEGRATION | NO sin decisión humana + Issue |
-
-`PULL / SYNC` nunca autoriza sincronización de cambios de vuelta al repositorio. Para repositorios públicos, la vía preferida es clone/fetch HTTPS anónimo, sin token, preservando `.git` y verificando `origin`, HEAD exacto y worktree limpio. Esto no exige integración GitHub nativa ni sync bidireccional.
-
-## 29.2 Inicio: AI_STUDIO_REQUEST
-
-Toda intervención usada como evidencia del workflow comienza por solicitud explícita del Supervisor y un Work Item existente.
-
-Antes de una tarea dependiente del código, AI Studio debe obtener/refrescar la copia Git read-only, verificar `origin`, `EXPECTED SHA`, worktree limpio, leer `AI_STUDIO_OPERATOR.md` desde ese mismo SHA e identificar explícitamente `CANONICAL_GIT_CHECKOUT` y, cuando aplique, `MANAGED_PREVIEW_ROOT`. Sólo entonces puede ejecutar el `TASK`.
-
-El checkout Git usado para verificar SHA y la raíz administrada que alimenta el Preview pueden ser distintos. Verificar un clone exacto **no prueba** que el Preview visible use ese árbol.
-
-```text
-AI_STUDIO_REQUEST
-
-WORK ITEM: #<issue>
-MODE: OBSERVE | PREVIEW | TEST | DIAGNOSE | PUBLISH | SPIKE_READ_ONLY
-EXPECTED SHA: <sha> | N/A (platform-only)
-TARGET: <preview / route / deployment / platform capability>
-CANONICAL_GIT_CHECKOUT: <absolute path when code-dependent>
-MANAGED_PREVIEW_ROOT: <absolute path when Preview/Publish-dependent>
-TASK: <una sola operación concreta>
-PRECONDITIONS: <observable conditions>
-STOP CONDITIONS: <conditions that force BLOCKED/return>
-
-FORBIDDEN:
-- edit code/files
-- Fix
-- commit / branch / PR / push / merge
-- dependency / schema / prompt / workflow changes
-- repository secret changes
-
-RETURN:
-- OBSERVED SHA
-- RESULT: PASS | FAIL | BLOCKED
-- CLASSIFICATION
-- EVIDENCE
-- ERROR exacto si existe
-```
-
-`EXPECTED SHA: N/A (platform-only)` sólo se usa para `SPIKE_READ_ONLY` puramente de plataforma que no dependa de una versión del código.
-
-## 29.3 Modos y disciplina de prompts
-
-- `OBSERVE`: inspeccionar estado visible sin modificarlo.
-- `PREVIEW`: ejecutar preview del SHA autorizado.
-- `TEST`: ejecutar una comprobación concreta.
-- `DIAGNOSE`: reproducir y aislar un fallo sin aplicar corrección.
-- `PUBLISH`: publicar exclusivamente el SHA autorizado por el Supervisor.
-- `SPIKE_READ_ONLY`: estudiar una capacidad/integración sin adoptarla.
-
-Una operación real que cambie estado por prompt. Puede incluir verificación antes/después, pero no combinar diagnose + repair + publish. No usar tareas abiertas como “arregla todo” o “actualiza la interfaz”. `Fix` permanece prohibido.
-
-Plantillas mínimas:
-
-```text
-MODE: TEST
-EXPECTED SHA: <sha>
-TASK: ejecutar <prueba concreta>; reportar resultado/evidencia; no modificar archivos.
-```
-
-```text
-MODE: DIAGNOSE
-EXPECTED SHA: <sha>
-TASK: reproducir <fallo concreto>; capturar error exacto; clasificar; no aplicar Fix.
-```
-
-```text
-MODE: PUBLISH
-EXPECTED SHA: <approved-sha>
-TASK: importar/sincronizar ese SHA; confirmar SHA; smoke preview; publish; smoke público; no modificar código.
-```
-
-## 29.4 SHA Gate
-
-Es obligatorio antes de:
-
-- `PREVIEW`;
-- `TEST`;
-- `DIAGNOSE` sobre código;
-- `PUBLISH`.
-
-```text
-EXPECTED SHA == OBSERVED SHA
-```
-
-Si no coincide:
-
-```text
-STOP
-RESULT: BLOCKED
-CLASSIFICATION: AI_STUDIO_ENVIRONMENT
-REASON: SHA_MISMATCH
-```
-
-No se continúa la operación ni se declara defecto de código.
-Para `PREVIEW` y `PUBLISH`, el SHA Gate no termina en el checkout: también debe identificarse el `MANAGED_PREVIEW_ROOT` y demostrarse, por una vía soportada, que el árbol aprobado fue materializado unidireccionalmente allí. No se inventan/sustituyen archivos ni se sincroniza de vuelta a GitHub. Un HTTP 200 por sí solo no prueba que el Preview visible corresponda al SHA autorizado.
-
-## 29.5 Ventanas de intervención
-
-- **Antes/durante implementación:** `OBSERVE`, `SPIKE_READ_ONLY` o diagnóstico de plataforma/capacidad. AI Studio no implementa.
-- **Branch/PR:** `PREVIEW`, `TEST` o `DIAGNOSE` sólo por solicitud del Supervisor y con el HEAD exacto como `EXPECTED SHA`.
-- **Revisión:** puede aportar evidencia; `PASS` no equivale a `SEMANTIC_ACCEPTED` y `FAIL` no equivale por sí solo a `REWORK`.
-- **Post-merge/publicación:** `PUBLISH` sólo para el SHA autorizado explícitamente por el Supervisor.
-
-Las decisiones formales continúan bajo las reglas de revisión existentes; AI Studio sólo reporta `PASS / FAIL / BLOCKED`.
-
-## 29.6 Clasificación y diagnóstico
-
-Toda falla se clasifica provisionalmente como:
-
-```text
-CODE
-AI_STUDIO_ENVIRONMENT
-DEPLOYMENT
-EXTERNAL_SERVICE
-UNKNOWN
-```
-
-- `CODE`: evidencia de defecto en el mismo SHA.
-- `AI_STUDIO_ENVIRONMENT`: sync, instalación, preview, runtime o estado interno de AI Studio.
-- `DEPLOYMENT`: fallo durante preparación/publicación/serving con origen aún por determinar.
-- `EXTERNAL_SERVICE`: servicio/proveedor externo indisponible, limitado o rechazando la operación.
-- `UNKNOWN`: evidencia insuficiente.
-
-```text
-confirm SHA → reproduce → capture exact error → classify → report → no automatic fix
-```
-
-La clasificación es evidencia provisional. El Supervisor aplica las decisiones `REWORK / HOLD / ESCALATE` según las reglas generales ya existentes. Un problema de entorno/plataforma no se convierte automáticamente en `REWORK` de código.
-
-Reglas operativas verificadas, detalladas en `AI_STUDIO_OPERATOR.md`:
-
-- **cwd:** toda operación dependiente del proyecto usa path absoluto, `cd <absolute-path> && ...` o equivalente; si el launcher ejecuta desde otra raíz, `BLOCKED / AI_STUDIO_ENVIRONMENT`.
-- **process safety:** identificar PID/comando/cwd exactos, preferir cierre graceful, no usar listas amplias de PID ni loops de takeover de puerto; respawn administrado implica `STOP / BLOCKED`.
-- **recovery:** ante `Canceled`, `An internal error occurred`, respuesta stale/repetida o fallo de tool/workspace: salir/volver atrás → reingresar al proyecto → `NEW CHAT` → comprobar únicamente `git rev-parse HEAD`, `git status --short` y `GET /api/health`; continuar sólo con SHA correcto, worktree limpio y health válido.
-- si la recuperación falla, puede probarse sesión fresca/privada o Remix/workspace fresco como recuperación de entorno; sin evidencia de defecto de aplicación no se clasifica automáticamente como `CODE`.
-- `BLOCKED` significa detenerse, no improvisar y devolver control al Supervisor.
-
-## 29.7 Protocolo PUBLISH
-
-```text
-approved GitHub SHA
-→ AI_STUDIO_REQUEST MODE=PUBLISH
-→ pull/sync/import desde GitHub
-→ SHA Gate
-→ identificar CANONICAL_GIT_CHECKOUT y MANAGED_PREVIEW_ROOT
-→ demostrar materialización one-way del árbol aprobado en el managed root
-→ preview smoke test
-→ publish
-→ public smoke test
-→ AI_STUDIO_REPORT
-→ evidencia persistida en GitHub
-→ control vuelve al Supervisor
-```
-
-Distinción obligatoria:
-
-```text
-repository/product-code write: NO
-authorized external PUBLISH: YES
-```
-
-`PUBLISH` nunca autoriza `Fix`, edición de código, dependencias, repository secrets, commit, push, PR o merge.
-
-Si publicar exige escritura del proyecto:
-
-```text
-STOP → ESCALATE → decisión humana → nuevo Work Item
-```
-
-## 29.8 SPIKE_READ_ONLY para integraciones Google
-
-```text
-SPIKE_READ_ONLY
-→ inspeccionar capacidad/documentación/configuración visible
-→ AI_STUDIO_REPORT
-→ Supervisor review
-→ Human decision
-→ Issue
-→ implementación canónica por el Agente implementador
-```
-
-Puede reportar OAuth/scopes esperados, configuración visible, secretos previsiblemente necesarios **sin leer/copiar valores**, archivos potencialmente afectados y limitaciones de plataforma.
-
-Ver o pulsar una capacidad de integración no autoriza su adopción. Si el spike requiere escribir/generar cambios del proyecto, se detiene y escala.
-
-## 29.9 Regla absoluta de no escritura
-
-```text
-AI Studio may read, run, test, diagnose and publish.
-AI Studio may not write product code or repository state.
-```
-
-Prohibido: editar archivos; aplicar `Fix`; commit; branch; PR; push; merge; cambiar dependencias, schema, prompts, workflow o repository secrets.
-
-La preparación efímera interna para ejecutar Preview sólo es admisible si no modifica ni sincroniza archivos de vuelta a GitHub. Puede instalar dependencias ya declaradas desde el lockfile/manifiestos del SHA aprobado, iniciar/reiniciar servicios permitidos y materializar unidireccionalmente el árbol aprobado al workspace administrado por una vía soportada. Eso no concede autoridad para cambiar dependencias ni archivos canónicos.
-
-`WRITE_SANDBOX: NO AUTORIZADO`.
-
-Cualquier necesidad futura de escritura exige:
-
-```text
-STOP → ESCALATE → decisión humana explícita → nuevo Work Item
-```
-
-## 29.10 Fin: AI_STUDIO_REPORT y evidencia
-
-Toda intervención termina con:
-
-```text
-AI_STUDIO_REPORT
-
-WORK ITEM: #<issue>
-MODE: <mode>
-EXPECTED SHA: <sha> | N/A (platform-only)
-OBSERVED SHA: <sha> | N/A (platform-only)
-RESULT: PASS | FAIL | BLOCKED
-CLASSIFICATION: CODE | AI_STUDIO_ENVIRONMENT | DEPLOYMENT | EXTERNAL_SERVICE | UNKNOWN
-EVIDENCE: <mínima y verificable>
-ERROR: <exacto o none>
-CODE/REPOSITORY MODIFIED: NO
-```
-
-Después del reporte:
-
-```text
-control → Supervisor
-```
-
-La evidencia sólo adquiere persistencia para el workflow cuando se registra en el Issue o PR correspondiente, asociada al Work Item, modo, SHA aplicable, resultado, clasificación y evidencia concreta. Cuando sea relevante debe incluir cwd real, checkout Git, managed Preview root, evidencia de materialización, comando/acción exacta, proceso/respawn y estado HTTP observable.
-
-AI Studio puede incluir una sección opcional `IMPLEMENTER_SUGGESTION` con una propuesta o pista diagnóstica sustentada en evidencia. Esa sugerencia no es una decisión formal ni autoriza código. El Supervisor decide si requiere un Work Item y coordina al Agente implementador, que sigue siendo la única autoridad de cambios persistentes de repositorio.
-
----
-
-
----
-
-# 30. RESEARCH_GATE + STRATEGIC_RATIONALE
-
-**Provenance:** Issue #35. Antes de la integración de PR #49, Issue #35 permanecía OPEN y esta regla existía como decisión humana operativamente vigente, todavía no integrada canónicamente. La regla quedó consolidada en el workflow canónico mediante Issue #47 / PR #49. Issue #35 permanece OPEN.
-
-## 30.1 Cuándo se activa RESEARCH_GATE
-
-Antes de proponer o implementar una decisión técnica o estratégica material cuya validez dependa de información externa susceptible de cambio, el agente debe activar `RESEARCH_GATE`.
-
-Incluye, como mínimo, decisiones dependientes de:
-
-- versiones de SDK, API o runtime;
-- librerías, frameworks o herramientas;
+- versión o comportamiento actual de SDK/API/runtime;
+- librerías/frameworks/herramientas;
+- integración con proveedor;
+- autenticación/seguridad dependiente de terceros;
+- formatos/protocolos externos;
+- límites, cuotas, precios o planes;
 - estrategia de despliegue;
-- integración con proveedores o plataformas;
-- autenticación o seguridad dependiente de servicios externos;
-- formatos o protocolos externos;
-- límites, cuotas, planes o condiciones vigentes;
-- alternativas de arquitectura o ingeniería cuya conveniencia dependa del estado actual del ecosistema.
+- alternativas cuya conveniencia dependa del ecosistema actual.
 
-No se activa automáticamente para decisiones locales, mecánicas o completamente determinadas por la documentación y el código vigentes, por ejemplo nombres, formato, refactors triviales autorizados o implementación directa sin dependencia de información externa mutable.
+No se activa para una operación local/mecánica completamente determinada por el Issue y el repositorio.
 
-## 30.2 Investigación y evidencia
+Cuando se activa, el agente debe:
 
-Cuando el gate se activa, el agente debe:
-
-1. identificar explícitamente el punto de decisión;
-2. explicar qué dato externo actual necesita confirmar;
-3. investigar fuentes vigentes, priorizando fuentes primarias/oficiales;
+1. identificar el punto de decisión;
+2. indicar qué dato externo actual necesita confirmar;
+3. priorizar fuentes primarias/oficiales;
 4. separar hechos del proyecto, hechos externos verificados, inferencias e incertidumbres;
-5. registrar la propuesta y evidencia en el Issue del Work Item;
-6. devolver control al Supervisor antes de aplicar una estrategia no determinada ya por el Work Item.
+5. persistir evidencia y propuesta en el Work Item;
+6. devolver control al Supervisor antes de aplicar una estrategia no determinada por el Work Item.
 
-Fuentes prioritarias:
+La investigación produce evidencia y propuesta. No equivale a autorización.
 
-- documentación oficial del proveedor;
-- especificaciones;
-- release notes;
-- repositorios oficiales;
-- documentación técnica oficial.
+---
 
-Blogs, foros y comunidad pueden aportar contexto o descubrimiento, pero no deben ser la única base cuando existe una fuente primaria relevante.
+# 24. STRATEGIC_RATIONALE
 
-La investigación produce evidencia y propuesta. **No equivale a decisión aprobada.**
+Para decisiones materiales sujetas a RESEARCH_GATE se persiste una justificación mínima:
 
-## 30.3 Verificación del Supervisor
-
-El Supervisor contrasta de forma independiente las afirmaciones estratégicas relevantes antes de autorizar su aplicación y las evalúa contra:
-
-- Objective;
-- Acceptance Criteria;
-- Authorized Scope;
-- arquitectura;
-- especificaciones;
-- workflow;
-- estado actual del repositorio y SHA.
-
-Si la conclusión exige cambiar intención de producto, ampliar scope, adoptar una integración no autorizada, introducir credenciales o costes, cambiar el workflow fuera del Work Item o tomar una decisión reservada al Humano, el Supervisor usa `ESCALATE` en vez de aplicarla unilateralmente.
-
-## 30.4 STRATEGIC_RATIONALE
-
-La justificación se persiste en el Issue del Work Item para decisiones estratégicas/materiales, no para actividad mecánica como “copié”, “leí” o “ejecuté”.
-
-Plantilla mínima:
-
-```text
+~~~text
 STRATEGIC_RATIONALE
 
 WORK ITEM: #<issue>
 
 DECISION POINT:
-<decisión técnica/estratégica material>
+...
 
 WHY CURRENT RESEARCH IS REQUIRED:
-<qué información externa susceptible de cambio debe verificarse>
+...
 
 PROJECT CONSTRAINTS:
-<workflow, arquitectura, specs, scope, SHA>
+...
 
 CURRENT EXTERNAL EVIDENCE:
-- <fuente primaria, fecha/versión, hecho relevante>
-- <fuente adicional si corresponde>
+- fuente primaria, fecha/versión, hecho relevante
 
 OPTIONS CONSIDERED:
 A. ...
 B. ...
-C. ...
 
 PROPOSED APPROACH:
 ...
 
 RATIONALE:
-<por qué encaja con este proyecto>
+...
 
 RISKS / UNCERTAINTIES:
 ...
@@ -1241,255 +705,238 @@ PENDING | VERIFIED
 
 RATIONALE STATUS:
 DRAFT | VERIFIED | SUPERSEDED
-```
+~~~
 
-`Rationale Status` no crea estados formales nuevos. Los estados formales del Supervisor permanecen exactamente:
-
-```text
-SEMANTIC_ACCEPTED
-REWORK
-HOLD
-ESCALATE
-```
-
-Si una decisión estratégica cambia, se conserva el razonamiento histórico y la decisión anterior se marca `SUPERSEDED` cuando corresponda; no se borra la evidencia previa.
-
-## 30.5 Aplicación por rol y límites de autoridad
-
-**Agente implementador**
-
-- no inventa versiones, APIs o prácticas actuales;
-- investiga antes de escoger una estrategia técnica material no determinada;
-- registra propuesta y evidencia;
-- no amplía scope;
-- implementa sólo después de la autorización del Supervisor cuando la estrategia no esté ya determinada.
-
-**AI_STUDIO_OPERATOR**
-
-Cuando una recomendación dependa del estado actual de Google o de otra información externa mutable, separa observación directa, documentación actual, inferencia y desconocido; devuelve evidencia al Supervisor y no convierte su recomendación en decisión canónica.
-
-**Supervisor**
-
-- decide si el Research Gate está satisfecho;
-- contrasta evidencia de forma independiente;
-- decide únicamente dentro de la autoridad ya existente;
-- usa `ESCALATE` cuando corresponda.
-
-Este protocolo no concede nueva autoridad de escritura, merge, scope o decisión al Agente implementador ni a AI Studio.
-
+Estos campos no crean nuevos estados formales de workflow.
 
 ---
 
-# 31. TECHNICAL PERMISSION != WORKFLOW AUTHORITY
+# 25. TECHNICAL PERMISSION != WORKFLOW AUTHORITY
 
-**Provenance:** Issue #39. Antes de la integración de PR #49, Issue #39 permanecía OPEN y esta regla existía como decisión humana operativamente vigente, todavía no integrada canónicamente. PR #40 fue cerrado sin merge y no constituye integración canónica. La regla quedó consolidada en el workflow canónico mediante Issue #47 / PR #49, sin reutilizar PR #40 como evidencia válida de implementación. Issue #39 permanece OPEN.
+Regla canónica:
 
-Regla:
-
-```text
+~~~text
 TECHNICAL PERMISSION != WORKFLOW AUTHORITY
-AI_STUDIO_ALLOWED_REPOSITORY_WRITES = NONE
-ALLOWED WRITE PATHS = NONE
-```
+~~~
 
-Aunque una OAuth App, GitHub App, integración o herramienta disponga técnicamente de scopes de escritura, esos permisos técnicos **no conceden autoridad operacional** cuando el workflow no la autoriza.
+Que una cuenta, token, OAuth App, GitHub App, integración o herramienta tenga capacidad técnica para ejecutar una acción no significa que este workflow la autorice.
 
-AI Studio puede consumir/importar/pull desde GitHub y operar únicamente conforme al protocolo `AI_STUDIO_OPERATOR`. No puede usar capacidad técnica disponible para:
+La autoridad proviene de:
 
-- Push Changes;
-- Stage and commit;
-- commit directo;
-- crear o modificar branch;
-- crear o modificar PR;
-- editar workflows;
-- escribir directamente en `main`;
-- modificar archivos del repositorio;
-- sincronizar cambios desde AI Studio hacia GitHub;
-- realizar cualquier otro write de estado del repositorio.
+~~~text
+rol
++ Work Item
++ Semantic Scope
++ Path Scope
++ decisión vigente
+~~~
 
-La instalación de la GitHub App debe permanecer restringida a `cmiloarevalo-hash/G_INF_01` salvo decisión humana explícita para otro repositorio.
+Consecuencias:
 
-Una allowlist descrita únicamente en prompt o documentación **no constituye enforcement técnico suficiente** cuando la integración conserva permisos más amplios. No se debe afirmar que la prohibición está técnicamente garantizada sólo porque el prompt o la documentación la declaren.
+- tener permiso de push no autoriza push fuera del rol/scope;
+- tener permiso de merge no autoriza al implementador a hacer merge;
+- tener capacidad de editar workflows no autoriza hacerlo sin Work Item;
+- una allowlist escrita sólo en documentación no debe describirse como enforcement técnico si no existe control verificable;
+- ninguna herramienta externa obtiene autoridad implícita por disponer de scopes amplios.
 
-## 31.1 Excepción futura de escritura
+---
 
-No existe excepción activa.
+# 26. Operadores externos y AI Studio
 
-El namespace sugerido en Issue #39:
+## Estado actual de Estadis
 
-```text
-docs/ai-studio-evidence/**
-```
+~~~text
+AI_STUDIO_OPERATOR: NOT CONFIGURED
+AI_STUDIO_ALLOWED_REPOSITORY_WRITES: NONE
+ALLOWED WRITE PATHS FOR AI STUDIO: NONE
+~~~
 
-permanece:
+No existe en la base de Issue #1 un contrato residente AI_STUDIO_OPERATOR ni configuración persistida que permita tratar Google AI Studio como operador activo de Estadis.
 
-```text
-NOT AUTHORIZED
-NOT ACTIVE
-```
+Por tanto, este workflow no presupone:
 
-Cualquier excepción futura requiere, como mínimo:
+- checkout administrado de AI Studio;
+- preview root;
+- publicación;
+- integración GitHub nativa;
+- GitHub App;
+- rutas de evidencia;
+- deployment;
+- comandos de runtime;
+- permisos de repositorio para AI Studio.
 
-1. decisión humana explícita;
-2. Work Item separado;
-3. alcance y allowlist explícitos;
-4. prohibición de escritura directa a `main`;
-5. control GitHub-side verificable antes de afirmar enforcement;
-6. revisión de autoridad, seguridad y rollback;
-7. actualización canónica del workflow antes de usarla como regla general.
+## Regla preservada si se configura en el futuro
 
-Tener scopes técnicos amplios nunca activa implícitamente una excepción. GitHub continúa siendo la fuente persistente de verdad y el Supervisor conserva la decisión dentro de la autoridad vigente.
+Cualquier incorporación futura de AI Studio u otro operador externo requiere Work Item separado y debe permanecer subordinada a este workflow.
+
+Como mínimo:
+
+- no sustituye al Agente implementador;
+- no crea una ruta paralela de escritura al repositorio;
+- no puede ampliar scope ni estados formales;
+- no puede autoaprobar cambios;
+- cualquier evidencia dependiente del código debe quedar asociada al SHA exacto;
+- PASS/FAIL del operador es evidencia, no SEMANTIC_ACCEPTED/REWORK;
+- repository/product-code write permanece prohibido salvo decisión humana explícita y actualización canónica previa;
+- si se habilita una publicación externa, su protocolo, target, SHA gate, evidencia, seguridad y rollback deben definirse en el Work Item correspondiente.
+
+Hasta entonces, cualquier operación AI Studio que pretenda actuar como parte del workflow debe considerarse no autorizada por falta de configuración canónica.
+
+---
+
+# 27. Seguridad de credenciales y permisos
+
+Las credenciales no se persisten en Issues, PR, commits ni documentación.
+
+Cuando una tarea requiera credenciales/permisos:
+
+- el Work Item debe describir la necesidad sin exponer secretos;
+- el agente no inventa ni reutiliza permisos por conveniencia;
+- un permiso técnico existente no sustituye la autorización de workflow;
+- si el requisito material no puede cumplirse sin una decisión humana, corresponde ESCALATE.
+
+---
+
+# 28. Evidencia y trazabilidad
+
+La evidencia debe ser:
+
+- mínima;
+- verificable;
+- asociada al Work Item;
+- asociada al SHA cuando dependa del contenido del repositorio;
+- suficientemente concreta para que otra sesión pueda reconstruir el resultado.
+
+Ejemplos:
+
+- diff del PR;
+- commit SHA;
+- salida de una verificación reproducible;
+- estado CI para el SHA;
+- referencia a documentación oficial cuando se activa RESEARCH_GATE;
+- comentario del Supervisor asociado al HEAD.
+
+No debe usarse como sustituto de evidencia:
+
+- “funciona” sin comprobación;
+- memoria del chat;
+- una captura sin contexto cuando existe una fuente persistente mejor;
+- un PASS referido a un SHA distinto.
+
+---
+
+# 29. Reglas esenciales
+
+1. GitHub es la memoria compartida.
+2. El Issue define la tarea.
+3. Semantic Scope y Path Scope deben cumplirse simultáneamente.
+4. El Agente implementador implementa; el Supervisor revisa.
+5. El Agente implementador no se autoaprueba ni hace merge.
+6. Branch/commit/PR preservan el estado exacto del trabajo.
+7. Una decisión de review sólo vale para el SHA revisado.
+8. Tests y CI son evidencia, no aprobación.
+9. REWORK dentro del mismo objetivo permanece por defecto en el mismo Issue/branch/PR.
+10. Una sesión nueva reconstruye desde GitHub, no desde el transcript anterior.
+11. RESEARCH_GATE se usa cuando una decisión material depende de información externa mutable.
+12. TECHNICAL PERMISSION != WORKFLOW AUTHORITY.
+13. Capacidades inexistentes se marcan NOT CONFIGURED; no se inventan.
+14. Issue posterior dependiente no comienza hasta que se cumpla su dependencia explícita.
+
+---
+
+# 30. Estado especial de Issue #1 y transición del bootstrap
+
+Issue #1 instala/adapta este workflow. Hasta que el Supervisor emita SEMANTIC_ACCEPTED para el HEAD de su PR:
+
+- AGENTE_IMPLEMENTADOR.md continúa siendo el bootstrap residente;
+- este archivo es una propuesta para revisión, no una autoaceptación;
+- no se inicia Issue #2 ni ninguna tarea que dependa de la aceptación de #1.
+
+Después de que el Supervisor acepte semánticamente este documento para un SHA y lo integre en main:
+
+- este archivo pasa a ser la referencia operativa principal del workflow de Estadis;
+- AGENTE_IMPLEMENTADOR.md permanece como bootstrap del rol implementador;
+- cualquier cambio posterior a este workflow requiere un Work Item autorizado y nueva revisión por SHA.
+
+---
+
+# 31. Adaptaciones realizadas respecto de la fuente de referencia
+
+La fuente de referencia fue persistida específicamente para permitir esta adaptación. Su contenido operativo se trató así:
+
+| Elemento de la fuente | Tratamiento en Estadis |
+|---|---|
+| Roles Humano / Supervisor / Implementador / GitHub | PRESERVED |
+| GitHub como memoria persistente | PRESERVED |
+| Issue como Work Item | PRESERVED |
+| Semantic Scope + Path Scope | PRESERVED |
+| branch / commit / PR | PRESERVED |
+| bootstrap y cambio de sesión | PRESERVED |
+| revisión y decisión por SHA | PRESERVED |
+| SEMANTIC_ACCEPTED / REWORK / HOLD / ESCALATE | PRESERVED |
+| CI como evidencia | PRESERVED; infraestructura concreta = NOT CONFIGURED |
+| merge reservado al Supervisor | PRESERVED |
+| RESEARCH_GATE + STRATEGIC_RATIONALE | PRESERVED |
+| TECHNICAL PERMISSION != WORKFLOW AUTHORITY | PRESERVED |
+| AI Studio como rol subordinado/no-write | PRESERVED como regla potencial; operador concreto = NOT CONFIGURED |
+| nombres de repositorios ajenos | REMOVED como hechos operativos |
+| Issues/PR/SHA históricos del proyecto de procedencia | REMOVED como autoridad de Estadis |
+| rutas de documentación inexistentes | REMOVED como supuestos; se resuelven desde cada Work Item |
+| comandos npm/build/test heredados | REMOVED; comandos de producto = NOT CONFIGURED |
+| workflow GitHub Actions heredado | REMOVED como hecho; CI = NOT CONFIGURED |
+| contrato AI_STUDIO_OPERATOR.md heredado | REMOVED como dependencia; contrato = NOT CONFIGURED |
+| checkout/preview/deploy específicos de AI Studio | REMOVED como hechos; requieren Work Item futuro |
+| restricciones de GitHub App dirigidas a otro repositorio | REMOVED |
+| namespace de escritura/evidencia de otro proyecto | REMOVED |
+| GoFlow y comandos auxiliares heredados | NO REQUIRED por este workflow |
+
+No se importó ninguna capacidad sólo porque apareciera en la fuente de referencia.
+
+---
+
+# 32. Verificación mínima de este documento
+
+Para Issue #1, la verificación requerida debe confirmar como mínimo:
+
+1. el diff se limita al Authorized Scope;
+2. no comienza análisis estadístico ni trabajo de producto;
+3. no introduce comandos de build/test no existentes;
+4. no declara CI como configurado;
+5. no declara AI Studio como configurado;
+6. no contiene nombres operativos de otros repositorios;
+7. no usa Issues, PR o SHA históricos de otro proyecto como autoridad vigente;
+8. conserva roles y separación Supervisor/Implementador;
+9. conserva Semantic Scope + Path Scope;
+10. conserva revisión por SHA;
+11. conserva los cuatro estados formales;
+12. conserva CI como evidencia, no aprobación;
+13. conserva bootstrap/handoff/cambio de sesión;
+14. conserva RESEARCH_GATE;
+15. conserva TECHNICAL PERMISSION != WORKFLOW AUTHORITY;
+16. el PR identifica el HEAD exacto que el Supervisor debe revisar.
+
+---
 
 # Resultado
 
-Este workflow elimina completamente:
+Estadis queda gobernado por un protocolo que conserva el significado operacional del workflow de referencia sin importar como hechos infraestructura o decisiones históricas de otro proyecto.
 
-```text
-GoFlow
-.workflow/index.json
-.workflow/project.json
-wf status
-wf begin
-wf context
-wf scope
-wf verify
-wf ci
-wf review
-```
+La cadena canónica es:
 
-y conserva la parte esencial del sistema:
-
-```text
+~~~text
 Humano
-     ↓
-Chat Web GPT
-     ↓
+  ↓
+Supervisor
+  ↓
 GitHub Issue
-     ↓
+  ↓
 Agente implementador
-     ↓
-Branch + code + tests + PR
-     ↓
-GitHub
-     ↓
-Chat Web GPT
-     ↓
-SEMANTIC_ACCEPTED / REWORK / HOLD / ESCALATE
-```
+  ↓
+Branch + Commit + PR + evidencia
+  ↓
+Supervisor revisa HEAD exacto
+  ↓
+SEMANTIC_ACCEPTED | REWORK | HOLD | ESCALATE
+~~~
 
-Es menos robusto mecánicamente que el workflow completo porque **scope, selección de contexto y verificación ya no están reforzados por software determinista**. Pero para probar colaboración **Chat Web GPT + Agente implementador + AI_STUDIO_OPERATOR + GitHub**, mantiene las partes más importantes sin introducir infraestructura adicional.
-
-
----
-
-# Apéndice A — Provenance de mejoras consolidadas
-
-| Fuente | Estado antes de la consolidación de #47 | Evidencia de integración / estado actual | Tratamiento en este documento |
-|---|---|---|---|
-| Issue #4 / PR #5 | CANONICAL | PR #5 merged; merge `7ceb98e7cff1621f21b3d9b5929acc7a264af739` | PRESERVED en §24 |
-| Issue #26 / PR #27 | CANONICAL | PR #27 merged; merge `3fa731a13fd2a77531392fd5b22fd240c9091ba6` | PRESERVED en §22 |
-| Issue #32 / PR #33 | CANONICAL | PR #33 merged; merge `d2325a23232e72599ffecc96a354c41490b5f527` | PRESERVED en §29 |
-| Issue #36 / PR #38 | CANONICAL | PR #38 merged; merge `1a4167c1e29b46efaf09662b8fb11919bfac44cf` | PRESERVED en §29 + `AI_STUDIO_OPERATOR.md` |
-| Issue #35 | OPERATIONAL_PENDING | Regla integrada canónicamente por Issue #47 / PR #49; Issue permanece OPEN | NEW §30, consolidado canónicamente por PR #49 |
-| Issue #39 | OPERATIONAL_PENDING | Regla integrada canónicamente por Issue #47 / PR #49; Issue permanece OPEN; PR #40 siguió closed/not merged | NEW §31, consolidado canónicamente por PR #49 |
-| PR #40 | SUPERSEDED as implementation evidence | Persisted #39 handoff invalidates reuse after role-separation violation | Excluded as canonical integration evidence |
-| PR #49 | PROPOSED antes del merge | MERGED; merge `866d7aaa793cb9d1a2675965f911c6ddb37275e9` | Vehículo de integración canónica de Issue #47 |
-
-
----
-
-# Apéndice B — Handover canónico
-
-Desde la integración de PR #49 en `main@866d7aaa793cb9d1a2675965f911c6ddb37275e9`, la fuente normativa vigente es:
-
-`WORKFLOW_CANONICO_SUPERVISOR_GITHUB_IMPLEMENTADOR_AI_STUDIO.md` en `main`.
-
-El handover canónico quedó aplicado así:
-
-- `WORKFLOW_CANONICO_SUPERVISOR_GITHUB_IMPLEMENTADOR_AI_STUDIO.md` es la fuente canónica activa del workflow;
-- `WORKFLOW_SIMPLIFICADO_CHAT_WEB_GPT_GEMINI_3_8.md` queda retenido únicamente para trazabilidad histórica y contiene una referencia explícita al nuevo archivo;
-- no deben tratarse ambos archivos como workflows canónicos simultáneamente;
-- el merge de #47 no cierra automáticamente Issues #35 o #39; su cierre requiere evidencia y decisión conforme a su estado real.
-
-La autoridad canónica descrita aquí proviene del estado integrado en `main`, no de la antigua branch o PR de trabajo.
-
-
----
-
-# Apéndice C — Matriz completa de trazabilidad del baseline
-
-Criterios:
-
-- `PRESERVED`: contenido operativo del baseline se conserva semánticamente.
-- `MOVED`: contenido trasladado sin pérdida semántica.
-- `EXPANDED`: contenido existente conservado y ampliado por una regla ya autorizada.
-- `NEW`: contenido sin sección equivalente en el baseline, sustentado por evidencia autorizada.
-- `REMOVED`: eliminación propuesta; requiere justificación y autorización expresa.
-
-Para las 49 secciones/subsecciones estructurales del baseline, `PRESERVED` es el resultado. No se propone `MOVED`, `EXPANDED` ni `REMOVED` sobre contenido del baseline; las reglas operativas validadas se incorporan como secciones nuevas para evitar reescritura silenciosa del material vigente.
-
-| Sección/subsección del baseline | Clasificación | Ubicación nueva | Nota |
-|---|---|---|---|
-| 1. Objetivo | PRESERVED | 1. Objetivo | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 2. Principio fundamental | PRESERVED | 2. Principio fundamental | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 3. Responsabilidades | PRESERVED | 3. Responsabilidades | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 3.1 Chat Web GPT | PRESERVED | 3.1 Chat Web GPT | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 4. Agente implementador | PRESERVED | 4. Agente implementador | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 5. GitHub | PRESERVED | 5. GitHub | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 6. Documentación del proyecto | PRESERVED | 6. Documentación del proyecto | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 7. Unidad de trabajo: GitHub Issue | PRESERVED | 7. Unidad de trabajo: GitHub Issue | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 8. Dos tipos de scope | PRESERVED | 8. Dos tipos de scope | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| Semantic Scope | PRESERVED | Semantic Scope | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| Path Scope | PRESERVED | Path Scope | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 9. Flujo completo | PRESERVED | 9. Flujo completo | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| Fase A — intención | PRESERVED | Fase A — intención | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| Fase B — creación del Work Item | PRESERVED | Fase B — creación del Work Item | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 10. Inicio del Agente implementador | PRESERVED | 10. Inicio del Agente implementador | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 11. Bootstrap del Agente implementador | PRESERVED | 11. Bootstrap del Agente implementador | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 12. Política de lectura | PRESERVED | 12. Política de lectura | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 13. Implementación | PRESERVED | 13. Implementación | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 14. Problemas descubiertos durante el trabajo | PRESERVED | 14. Problemas descubiertos durante el trabajo | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 15. Verificación local | PRESERVED | 15. Verificación local | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 16. Publicación | PRESERVED | 16. Publicación | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 17. Handoff del Agente implementador | PRESERVED | 17. Handoff del Agente implementador | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 18. Revisión de Chat Web GPT | PRESERVED | 18. Revisión de Chat Web GPT | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 19. Significado de las decisiones | PRESERVED | 19. Significado de las decisiones | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| SEMANTIC_ACCEPTED | PRESERVED | SEMANTIC_ACCEPTED | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| REWORK | PRESERVED | REWORK | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| HOLD | PRESERVED | HOLD | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| ESCALATE | PRESERVED | ESCALATE | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 20. REWORK | PRESERVED | 20. REWORK | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 21. Decisión vigente | PRESERVED | 21. Decisión vigente | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 22. CI | PRESERVED | 22. CI | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 23. Integración | PRESERVED | 23. Integración | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 24. Merge | PRESERVED | 24. Merge | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 25. Cambio de sesión del Agente implementador | PRESERVED | 25. Cambio de sesión del Agente implementador | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 26. Cambio de sesión de Chat Web GPT | PRESERVED | 26. Cambio de sesión de Chat Web GPT | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 27. Rol del humano | PRESERVED | 27. Rol del humano | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 28. Reglas esenciales | PRESERVED | 28. Reglas esenciales | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29. AI_STUDIO_OPERATOR — protocolo subordinado de operación externa | PRESERVED | 29. AI_STUDIO_OPERATOR — protocolo subordinado de operación externa | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.1 Permission Matrix | PRESERVED | 29.1 Permission Matrix | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.2 Inicio: AI_STUDIO_REQUEST | PRESERVED | 29.2 Inicio: AI_STUDIO_REQUEST | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.3 Modos y disciplina de prompts | PRESERVED | 29.3 Modos y disciplina de prompts | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.4 SHA Gate | PRESERVED | 29.4 SHA Gate | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.5 Ventanas de intervención | PRESERVED | 29.5 Ventanas de intervención | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.6 Clasificación y diagnóstico | PRESERVED | 29.6 Clasificación y diagnóstico | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.7 Protocolo PUBLISH | PRESERVED | 29.7 Protocolo PUBLISH | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.8 SPIKE_READ_ONLY para integraciones Google | PRESERVED | 29.8 SPIKE_READ_ONLY para integraciones Google | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.9 Regla absoluta de no escritura | PRESERVED | 29.9 Regla absoluta de no escritura | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| 29.10 Fin: AI_STUDIO_REPORT y evidencia | PRESERVED | 29.10 Fin: AI_STUDIO_REPORT y evidencia | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| Resultado | PRESERVED | Resultado | Contenido operativo del baseline conservado; sin cambio silencioso de autoridad o lifecycle. |
-| Issue #35 — RESEARCH_GATE + STRATEGIC_RATIONALE | NEW | §30 | Regla operativa humana validada; OPEN antes de PR #49; integrada canónicamente vía Issue #47 / PR #49; Issue permanece OPEN. |
-| Issue #39 — TECHNICAL PERMISSION != WORKFLOW AUTHORITY | NEW | §31 | Regla operativa humana validada; OPEN antes de PR #49; integrada canónicamente vía Issue #47 / PR #49; PR #40 no se usa como integración canónica; Issue permanece OPEN. |
-| Provenance histórica validada | NEW | Apéndice A | Metadato de trazabilidad; no crea autoridad nueva. |
-| Handover old → new | NEW | Apéndice B | Mecánica de reemplazo ejecutada mediante el merge de PR #49; evita dos fuentes aparentemente canónicas. |
-
-Resumen:
-
-- baseline estructural: **49/49 representado**;
-- `PRESERVED`: 49;
-- `MOVED`: 0;
-- `EXPANDED`: 0;
-- `REMOVED`: 0;
-- reglas operativas nuevas respecto del baseline: 2, ambas respaldadas por decisiones humanas persistidas (#35 y #39);
-- recomendaciones no adoptadas importadas: 0.
+CI y operadores externos pueden incorporarse más adelante mediante Work Items separados. Mientras no exista evidencia persistida de su configuración, permanecen explícitamente NOT CONFIGURED.
