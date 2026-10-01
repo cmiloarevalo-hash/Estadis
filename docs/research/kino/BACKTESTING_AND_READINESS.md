@@ -23,8 +23,7 @@ Bajo H0:
 Si (A_t) se construye **sólo con información previa a (t)**, entonces, condicionalmente al historial y a (A_t):
 
 ```text
-P(|A_t ∩ D_t|=k)=
-(C(14,k) * C(11,14-k)) / (C(25,14)).
+P(|A_t ∩ D_t| = k) = C(14,k) * C(11,14-k) / C(25,14).
 ```
 
 Consecuencia: bajo H0, cualquier selector history-only que siempre entregue 14 números tiene la misma distribución exacta de aciertos que una combinación fija o aleatoria, salvo que explote una dependencia real del proceso.
@@ -121,7 +120,7 @@ No borrar candidatos fallidos.
 **Número de aciertos por sorteo**:
 
 ```text
-K_t=|A_t ∩ D_t|.
+K_t = |A_t ∩ D_t|.
 ```
 
 Reportar:

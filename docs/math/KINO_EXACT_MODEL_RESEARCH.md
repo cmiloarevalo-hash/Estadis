@@ -28,9 +28,7 @@ Este es el **modelo nulo ideal de sorteo aleatorio**. La reglamentación confirm
 Como el orden no importa:
 
 ```text
-|Omega| = C(25,14)
-= (25!) / (14! * 11!)
-= 4,457,400.
+|Omega| = C(25,14) = 25! / (14! * 11!) = 4,457,400.
 ```
 
 Para un boleto fijo de 14 números, todos los resultados posibles del sorteo son los subconjuntos de 14 elementos del universo de 25.
@@ -48,8 +46,7 @@ Parámetros hipergeométricos:
 Entonces:
 
 ```text
-P(K=k)=
-(C(14,k) * C(11,14-k)) / (C(25,14)).
+P(K=k) = C(14,k) * C(11,14-k) / C(25,14).
 ```
 
 Referencia matemática:
@@ -76,7 +73,7 @@ K ∈ {3, 4, ..., 14}.
 
 ## 6. Distribución exacta completa
 
-Denominador común: (C(25,14)=4,457,400).
+Denominador común: C(25,14) = 4,457,400.
 
 | k aciertos | Resultados favorables (C(14,k) * C(11,14-k)) | Probabilidad exacta | Probabilidad decimal | % |
 |---:|---:|---:|---:|---:|
@@ -103,7 +100,7 @@ Suma de favorables:
 Luego:
 
 ```text
-sum[k=3..14] P(K=k)=1
+sum[k=3..14] P(K=k) = 1
 ```
 
 por construcción combinatoria.
@@ -123,10 +120,7 @@ La reglamentación define categorías de 10, 11, 12, 13 y 14 aciertos.
 La probabilidad de caer en **alguna de las categorías numéricas 10–14** es:
 
 ```text
-P(K >= 10)
-=(395,550) / (4,457,400)
-=(2637) / (29716)
- ≈ 0.08874007269.
+P(K >= 10) = 395,550 / 4,457,400 = 2637 / 29716 ≈ 0.08874007269.
 ```
 
 Equivale a:

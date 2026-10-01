@@ -33,7 +33,7 @@ H0 combina dos componentes:
 Para todos los números:
 
 ```text
-P(X_{t,j}=1)=14/25.
+P(X_{t,j}=1) = 14/25.
 ```
 
 ### H0-B — independencia temporal entre sorteos
@@ -55,21 +55,19 @@ Por tanto, los indicadores (X_{t,j}) no son independientes dentro de una fila.
 Para dos números distintos (a,b):
 
 ```text
-P(a ∈ A_t and b ∈ A_t)=91/300 ≈ 0.303333.
+P(a ∈ A_t and b ∈ A_t) = 91/300 ≈ 0.303333.
 ```
 
 Con (p=14/25=0.56):
 
 ```text
-Cov(X_{t,a},X_{t,b})
-=P(a,b)-p^2
- ≈ -0.0102667.
+Cov(X_{t,a}, X_{t,b}) = P(a,b) - p^2 ≈ -0.0102667.
 ```
 
 Equivalente al resultado de muestreo aleatorio simple sin reposición:
 
 ```text
-Cov=-(p(1-p)) / (25-1).
+Cov = -p * (1-p) / (25 - 1).
 ```
 
 Consecuencia: no es correcto asumir automáticamente que las (14T) apariciones agregadas son ensayos categóricos independientes.
@@ -79,8 +77,7 @@ Consecuencia: no es correcto asumir automáticamente que las (14T) apariciones a
 Puede definirse un estadístico descriptivo de discrepancia:
 
 ```text
-Q=sum_{j=1}^{25}((F_j-E)^2) / (E),
-where E = T(14/25).
+Q = sum[j=1..25] ((F_j - E)^2 / E), where E = T * (14/25).
 ```
 
 NIST describe el χ² de bondad de ajuste como comparación entre observados y esperados y advierte que necesita tamaño suficiente/esperados adecuados:
@@ -102,13 +99,13 @@ Esto evita un falso supuesto multinomial.
 Para cada número:
 
 ```text
-R_j=F_j-Tp
+R_j = F_j - T*p
 ```
 
 y residuo marginal estandarizado:
 
 ```text
-Z_j=(F_j-Tp) / (sqrt(Tp(1-p))).
+Z_j = (F_j - T*p) / sqrt(T*p*(1-p)).
 ```
 
 Usos:
@@ -161,7 +158,7 @@ NIST también recalca que autocorrelación nula no garantiza aleatoriedad.
 Definir:
 
 ```text
-Q_t=|A_t ∩ A_{t-1}|.
+Q_t = |A_t ∩ A_{t-1}|.
 ```
 
 Bajo independencia, su distribución marginal es la hipergeométrica derivada en #5.

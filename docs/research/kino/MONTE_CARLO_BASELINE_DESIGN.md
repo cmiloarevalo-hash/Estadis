@@ -98,12 +98,12 @@ Cada comparación debe registrar si es:
 
 Antes de confiar en una simulación futura, sus salidas deben aproximar con error Monte Carlo compatible:
 
-- (P(j aparece)=14/25);
-- (E[suma]=182);
-- (E[overlap consecutivo]=7.84);
+- (P(j aparece) = 14/25);
+- (E[suma] = 182);
+- (E[overlap consecutivo] = 7.84);
 - distribución de aciertos (K) de Issue #5;
-- (P(par específico)=91/300);
-- (P(trío específico)=91/575);
+- (P(par específico) = 91/300);
+- (P(trío específico) = 91/575);
 - distribución par/impar hipergeométrica (N=25,M=12,n=14).
 
 Un fallo en estos canaries invalida el uso inferencial del simulador.
@@ -115,7 +115,7 @@ No se fija un número universal como “10.000” por costumbre.
 Para una proporción Monte Carlo (p_hat):
 
 ```text
-MCSE(p_hat) ≈ sqrt(p_hat(1-p_hat)/N).
+MCSE(p_hat) ≈ sqrt(p_hat * (1-p_hat) / N).
 ```
 
 El número de réplicas debe elegirse para que el error Monte Carlo sea pequeño frente a la precisión estadística requerida.

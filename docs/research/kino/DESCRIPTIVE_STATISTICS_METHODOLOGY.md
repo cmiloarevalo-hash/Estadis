@@ -40,7 +40,7 @@ Cada fila tiene exactamente 14 unos.
 Bajo el baseline teórico i.i.d. de Issue #5:
 
 ```text
-P(X_{t,j}=1)=(14) / (25)=0.56.
+P(X_{t,j}=1) = 14 / 25 = 0.56.
 ```
 
 ## 3. Frecuencias absolutas y relativas
@@ -48,19 +48,19 @@ P(X_{t,j}=1)=(14) / (25)=0.56.
 Para número (j):
 
 ```text
-F_j=sum[t=1..T] X_{t,j}
+F_j = sum[t=1..T] X_{t,j}.
 ```
 
 y
 
 ```text
-p_hat_j=F_j/T.
+p_hat_j = F_j / T.
 ```
 
 Esperanza bajo baseline:
 
 ```text
-E[F_j]=T(14) / (25).
+E[F_j] = T * (14 / 25).
 ```
 
 Interpretación:
@@ -73,7 +73,7 @@ Interpretación:
 Desviación simple:
 
 ```text
-D_j=F_j-T(14/25).
+D_j = F_j - T * (14/25).
 ```
 
 Bajo independencia entre sorteos, el conteo marginal de un número tiene baseline binomial:
@@ -85,7 +85,7 @@ F_j ~ Binomial(T,14/25).
 Puede usarse residuo estandarizado marginal:
 
 ```text
-Z_j=(F_j-Tp) / (sqrt(Tp(1-p))),quad p=14/25.
+Z_j = (F_j - T*p) / sqrt(T*p*(1-p)), where p = 14/25.
 ```
 
 Advertencia:
@@ -100,7 +100,7 @@ https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm
 Para una ventana de (W) sorteos:
 
 ```text
-F_{j,t}^{(W)}=sum[s=t-W+1..t] X_{s,j}.
+F_{j,t}^{(W)} = sum[s=t-W+1..t] X_{s,j}.
 ```
 
 Reportar:
@@ -126,13 +126,13 @@ Sea (E_t) cantidad de pares en un sorteo.
 Bajo baseline:
 
 ```text
-E_t ~ Hypergeom(N=25,M=12,n=14).
+E_t ~ Hypergeom(N=25, M=12, n=14).
 ```
 
 Esperanza:
 
 ```text
-E[E_t]=14(12) / (25)=6.72.
+E[E_t] = 14 * (12/25) = 6.72.
 ```
 
 Describir:
@@ -148,13 +148,13 @@ No etiquetar una composición par/impar como “mejor” para apostar.
 Para números sorteados (Y_{t,1},...,Y_{t,14}):
 
 ```text
-S_t=sum_i Y_{t,i}.
+S_t = sum_i Y_{t,i}.
 ```
 
 La media poblacional de 1..25 es 13, por lo que:
 
 ```text
-E[S_t]=14 * 13=182.
+E[S_t] = 14 * 13 = 182.
 ```
 
 Reportar:
@@ -170,7 +170,7 @@ La suma condensa información y no identifica combinaciones únicas.
 Definir:
 
 ```text
-R_t=max(Y_t)-min(Y_t).
+R_t = max(Y_t) - min(Y_t).
 ```
 
 Reportar distribución, cuantiles y valores extremos. Un rango pequeño/grande puede ser raro sin ser predictivo.
@@ -180,7 +180,7 @@ Reportar distribución, cuantiles y valores extremos. Un rango pequeño/grande p
 Ordenar ascendentemente los 14 números y definir número de adyacencias consecutivas:
 
 ```text
-C_t=sum[i=1..13] I(Y_{t,i+1}=Y_{t,i}+1).
+C_t = sum[i=1..13] I(Y_{t,i+1} = Y_{t,i} + 1).
 ```
 
 Distinguir:
@@ -194,7 +194,7 @@ No contar dos veces sin declarar convención: 5-6-7 contiene dos adyacencias per
 Para sorteos consecutivos (A_t,A_{t-1}):
 
 ```text
-Q_t=|A_t ∩ A_{t-1}|.
+Q_t = |A_t ∩ A_{t-1}|.
 ```
 
 Si sorteos consecutivos fueran independientes y uniformes:
@@ -206,7 +206,7 @@ Q_t
 tiene la misma distribución hipergeométrica de intersección de Issue #5, con:
 
 ```text
-E[Q_t]=14(14) / (25)=7.84.
+E[Q_t] = 14 * (14/25) = 7.84.
 ```
 
 Esto es baseline descriptivo; la independencia temporal se evalúa en #7.
@@ -232,16 +232,13 @@ F_{ab} = sum_t I(a ∈ A_t and b ∈ A_t).
 Bajo un sorteo uniforme 14-de-25:
 
 ```text
-P(a ∈ A_t and b ∈ A_t)
-=(14) / (25)(13) / (24)
-=(91) / (300)
- ≈ 0.3033333.
+P(a ∈ A_t and b ∈ A_t) = (14/25) * (13/24) = 91/300 ≈ 0.3033333.
 ```
 
 Hay:
 
 ```text
-C(25,2)=300
+C(25,2) = 300
 ```
 
 pares posibles.
@@ -251,16 +248,13 @@ pares posibles.
 Para trío no ordenado ({a,b,c}):
 
 ```text
-P(a ∈ A_t and b ∈ A_t and c ∈ A_t)
-=(14) / (25)(13) / (24)(12) / (23)
-=(91) / (575)
- ≈ 0.1582609.
+P(a ∈ A_t and b ∈ A_t and c ∈ A_t) = (14/25) * (13/24) * (12/23) = 91/575 ≈ 0.1582609.
 ```
 
 Hay:
 
 ```text
-C(25,3)=2300
+C(25,3) = 2300
 ```
 
 tríos posibles.
