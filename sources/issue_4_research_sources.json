@@ -1,0 +1,94 @@
+{
+  "checkpoint": 4,
+  "consulted_on": "2026-10-01",
+  "official_sources": [
+    {
+      "id": "I4-H1",
+      "title": "Sorteos en Vivo",
+      "publisher": "Lotería de Concepción",
+      "url": "https://www.sorteosenvivo.cl/sorteosenvivo",
+      "facts": [
+        "search by draw number/date",
+        "last 60 days video statement"
+      ]
+    },
+    {
+      "id": "I4-H2",
+      "title": "Consulta de resultados",
+      "publisher": "Lotería de Concepción",
+      "url": "https://www.loteria.cl/resultados/consulta-resultado/",
+      "facts": [
+        "official results interface"
+      ]
+    },
+    {
+      "id": "I4-H3",
+      "title": "Compras y Servicios Digitales",
+      "publisher": "Lotería de Concepción",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=874&zoneid=47",
+      "facts": [
+        "historical statistics published",
+        "manual collection caveat"
+      ]
+    },
+    {
+      "id": "I4-H4",
+      "title": "Productos y Reglamentación Kino",
+      "publisher": "Lotería de Concepción",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47",
+      "facts": [
+        "draw 2893 regime change",
+        "official results statement"
+      ]
+    },
+    {
+      "id": "I4-H5",
+      "title": "Novedades",
+      "publisher": "Lotería de Concepción",
+      "url": "https://www.loteria.cl/contenido/novedades/",
+      "facts": [
+        "special draw/monthly notices"
+      ]
+    },
+    {
+      "id": "I4-H6",
+      "title": "Pendón Kino",
+      "publisher": "Lotería de Concepción",
+      "url": "https://pendon-kino.loteria.cl/pendonkino",
+      "facts": [
+        "manual metadata sample draw 3285 / 2026-09-27 / estimated prize display"
+      ]
+    }
+  ],
+  "repository_references": [
+    {
+      "repository": "alphatrl/sg-lottery-scraper",
+      "url": "https://github.com/alphatrl/sg-lottery-scraper",
+      "license": "MIT",
+      "language": "TypeScript",
+      "relevance": "official-source lottery scraping pattern",
+      "limitation": "different jurisdiction/source; no Kino authority"
+    },
+    {
+      "repository": "szczyglis-dev/python-lottery-dataset-analyze",
+      "url": "https://github.com/szczyglis-dev/python-lottery-dataset-analyze",
+      "license": "MIT",
+      "language": "Jupyter Notebook/Python",
+      "relevance": "historical CSV configuration and analysis reference",
+      "limitation": "different games/data sources"
+    },
+    {
+      "repository": "yongyct/singapore-pools-analysis",
+      "url": "https://github.com/yongyct/singapore-pools-analysis",
+      "license": "NOT_DECLARED",
+      "language": "Jupyter Notebook/Python",
+      "relevance": "lottery data acquisition/analysis comparison",
+      "limitation": "no explicit license; do not reuse code by default"
+    }
+  ],
+  "unresolved": [
+    "Earliest officially queryable Kino draw not verified.",
+    "No documented complete public export/API verified.",
+    "No official numeric 14-number result sample captured in static evidence."
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "master_work_item": 13,
+  "checkpoint_range": "3-10",
+  "consulted_on": "2026-10-01",
+  "official_kino": [
+    {
+      "publisher": "Lotería de Concepción",
+      "title": "Productos y Reglamentación Kino",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47"
+    },
+    {
+      "publisher": "Lotería de Concepción",
+      "title": "Kino",
+      "url": "https://www.loteria.cl/juegos/kino/"
+    },
+    {
+      "publisher": "Lotería de Concepción",
+      "title": "Sorteos en Vivo",
+      "url": "https://www.sorteosenvivo.cl/sorteosenvivo"
+    },
+    {
+      "publisher": "Lotería de Concepción",
+      "title": "Consulta de resultados",
+      "url": "https://www.loteria.cl/resultados/consulta-resultado/"
+    },
+    {
+      "publisher": "Lotería de Concepción",
+      "title": "Compras y Servicios Digitales",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=874&zoneid=47"
+    },
+    {
+      "publisher": "Lotería de Concepción",
+      "title": "Novedades",
+      "url": "https://www.loteria.cl/contenido/novedades/"
+    },
+    {
+      "publisher": "Lotería de Concepción",
+      "title": "Pendón Kino",
+      "url": "https://pendon-kino.loteria.cl/pendonkino"
+    },
+    {
+      "publisher": "BCN/LeyChile",
+      "title": "Decreto Supremo N°659",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=75710"
+    }
+  ],
+  "data_provenance": [
+    {
+      "publisher": "W3C",
+      "title": "PROV-DM",
+      "url": "https://www.w3.org/TR/2013/REC-prov-dm-20130430/"
+    },
+    {
+      "publisher": "W3C",
+      "title": "PROV Namespace",
+      "url": "https://www.w3.org/ns/prov"
+    },
+    {
+      "publisher": "Frictionless Data",
+      "title": "Tabular Data Resource",
+      "url": "https://specs.frictionlessdata.io/tabular-data-resource/"
+    },
+    {
+      "publisher": "Frictionless Data",
+      "title": "Tabular Data Package",
+      "url": "https://specs.frictionlessdata.io/tabular-data-package/"
+    }
+  ],
+  "statistics_math": [
+    {
+      "publisher": "Penn State",
+      "title": "STAT 414 — Hypergeometric Distribution",
+      "url": "https://online.stat.psu.edu/stat414/Lesson07"
+    },
+    {
+      "publisher": "Statistics LibreTexts",
+      "title": "The Hypergeometric Distribution",
+      "url": "https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_%28Siegrist%29/12%253A_Finite_Sampling_Models/12.02%253A_The_Hypergeometric_Distribution"
+    },
+    {
+      "publisher": "NIST",
+      "title": "Exploratory Data Analysis",
+      "url": "https://www.nist.gov/publications/nistsematech-e-handbook-statistical-methods-chapter-1-exploratory-data-analysis"
+    },
+    {
+      "publisher": "NIST",
+      "title": "Chi-Square Goodness-of-Fit Test",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm"
+    },
+    {
+      "publisher": "NIST",
+      "title": "Runs Test",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm"
+    },
+    {
+      "publisher": "NIST",
+      "title": "Autocorrelation",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35c.htm"
+    },
+    {
+      "title": "Holm 1979 — sequentially rejective multiple test",
+      "doi": "10.2307/4615733"
+    },
+    {
+      "title": "Benjamini & Hochberg 1995 — False Discovery Rate",
+      "doi": "10.1111/j.2517-6161.1995.tb02031.x"
+    }
+  ],
+  "monte_carlo": [
+    {
+      "publisher": "NIST",
+      "title": "Uncertainty Evaluation by Monte Carlo Method",
+      "url": "https://www.nist.gov/publications/preface-uncertainty-evaluation-monte-carlo-method"
+    },
+    {
+      "publisher": "NIST",
+      "title": "Consistency in Monte Carlo Uncertainty Analyses",
+      "url": "https://www.nist.gov/publications/consistency-monte-carlo-uncertainty-analyses",
+      "doi": "10.1088/1681-7575/aba5aa"
+    },
+    {
+      "publisher": "NumPy",
+      "title": "Generator.choice",
+      "url": "https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.choice.html"
+    }
+  ],
+  "prototype_tech": [
+    {
+      "name": "Streamlit",
+      "docs": "https://docs.streamlit.io/",
+      "repo": "https://github.com/streamlit/streamlit",
+      "license": "Apache-2.0",
+      "status": "proposed candidate not adopted"
+    },
+    {
+      "name": "Gradio",
+      "docs": "https://www.gradio.app/",
+      "repo": "https://github.com/gradio-app/gradio",
+      "license": "Apache-2.0",
+      "status": "alternative"
+    },
+    {
+      "name": "Plotly Dash",
+      "docs": "https://dash.plotly.com/deployment",
+      "repo": "https://github.com/plotly/dash",
+      "license": "MIT",
+      "status": "alternative"
+    }
+  ],
+  "backtesting": [
+    {
+      "publisher": "scikit-learn",
+      "title": "TimeSeriesSplit",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html"
+    },
+    {
+      "publisher": "scikit-learn",
+      "title": "Common pitfalls — data leakage",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+    },
+    {
+      "authors": [
+        "Rob J Hyndman",
+        "George Athanasopoulos"
+      ],
+      "title": "Forecasting: Principles and Practice — Time series cross-validation",
+      "url": "https://otexts.com/fpp3/tscv.html"
+    },
+    {
+      "author": "Halbert White",
+      "title": "A Reality Check for Data Snooping",
+      "year": 2000,
+      "doi": "10.1111/1468-0262.00152",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1468-0262.00152"
+    }
+  ],
+  "github_comparisons": [
+    {
+      "repo": "alphatrl/sg-lottery-scraper",
+      "license": "MIT"
+    },
+    {
+      "repo": "szczyglis-dev/python-lottery-dataset-analyze",
+      "license": "MIT"
+    },
+    {
+      "repo": "yongyct/singapore-pools-analysis",
+      "license": "NOT_DECLARED"
+    },
+    {
+      "repo": "yenseechen-data/lottery-predictability-monte-carlo",
+      "license": "NOT_DECLARED"
+    },
+    {
+      "repo": "forsing/Monte-Carlo-Lottery-739-535",
+      "license": "NOT_DECLARED",
+      "archived": true
+    }
+  ],
+  "unresolved": [
+    "Earliest/full official historical coverage not verified.",
+    "No complete documented official API/export verified.",
+    "No static official 14-number raw sample captured in research batch.",
+    "No validated historical dataset exists.",
+    "Technology candidate not adopted.",
+    "No executable analysis/simulation/backtest performed by design."
+  ]
+}

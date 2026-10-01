@@ -1,0 +1,61 @@
+{
+  "checkpoint": 8,
+  "consulted_on": "2026-10-01",
+  "sources": [
+    {
+      "id": "I8-S1",
+      "publisher": "NIST",
+      "title": "Preface: Uncertainty Evaluation by Monte Carlo Method",
+      "url": "https://www.nist.gov/publications/preface-uncertainty-evaluation-monte-carlo-method"
+    },
+    {
+      "id": "I8-S2",
+      "publisher": "NIST",
+      "title": "Consistency in Monte Carlo Uncertainty Analyses",
+      "url": "https://www.nist.gov/publications/consistency-monte-carlo-uncertainty-analyses",
+      "doi": "10.1088/1681-7575/aba5aa"
+    },
+    {
+      "id": "I8-S3",
+      "publisher": "NIST",
+      "title": "Monte Carlo Tool",
+      "url": "https://www.nist.gov/services-resources/software/monte-carlo-tool"
+    },
+    {
+      "id": "I8-S4",
+      "publisher": "NumPy",
+      "title": "numpy.random.Generator.choice",
+      "url": "https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.choice.html",
+      "role": "future implementation feasibility only"
+    },
+    {
+      "id": "I8-S5",
+      "publisher": "NumPy",
+      "title": "What's new or different — random Generator",
+      "url": "https://numpy.org/doc/stable/reference/random/new-or-different.html",
+      "role": "RNG architecture/reproducibility metadata"
+    },
+    {
+      "id": "I8-R1",
+      "repository": "yenseechen-data/lottery-predictability-monte-carlo",
+      "url": "https://github.com/yenseechen-data/lottery-predictability-monte-carlo",
+      "language": "Jupyter Notebook",
+      "license": "NOT_DECLARED",
+      "limitation": "no code reuse; different lottery; recent repository"
+    },
+    {
+      "id": "I8-R2",
+      "repository": "forsing/Monte-Carlo-Lottery-739-535",
+      "url": "https://github.com/forsing/Monte-Carlo-Lottery-739-535",
+      "language": "Python",
+      "license": "NOT_DECLARED",
+      "archived": true,
+      "limitation": "archived, different rules, no code reuse"
+    }
+  ],
+  "design": {
+    "generator": "uniform sample of 14 distinct values from 1..25 without replacement",
+    "seed_policy": "persist algorithm/library/version plus seed or RNG state",
+    "exact_first": true
+  }
+}

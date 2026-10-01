@@ -1,0 +1,50 @@
+{
+  "checkpoint": 5,
+  "consulted_on": "2026-10-01",
+  "sources": [
+    {
+      "id": "I5-S1",
+      "publisher": "Lotería de Concepción",
+      "title": "Productos y Reglamentación Kino",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47",
+      "role": "official 14-of-25 mechanics and prize categories"
+    },
+    {
+      "id": "I5-S2",
+      "publisher": "Penn State",
+      "title": "STAT 414 Lesson 7.4 Hypergeometric Distribution",
+      "url": "https://online.stat.psu.edu/stat414/Lesson07",
+      "role": "academic hypergeometric formula for sampling without replacement"
+    },
+    {
+      "id": "I5-S3",
+      "publisher": "Statistics LibreTexts",
+      "title": "The Hypergeometric Distribution",
+      "url": "https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_%28Siegrist%29/12%253A_Finite_Sampling_Models/12.02%253A_The_Hypergeometric_Distribution",
+      "role": "finite sampling combinatorial derivation"
+    }
+  ],
+  "derivation": {
+    "sample_space": 4457400,
+    "support": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "numeric_prize_probability_10_to_14": "395550/4457400 = 2637/29716",
+    "sum_check": "4457400/4457400 = 1"
+  },
+  "limitations": [
+    "Equiprobability of all 14-subsets is the theoretical null model, not an empirical finding.",
+    "Club/promotional prize mechanisms are excluded from P(K>=10)."
+  ]
+}

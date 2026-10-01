@@ -1,0 +1,26 @@
+{
+  "checkpoint": 4,
+  "samples": [
+    {
+      "sample_id": "official_future_draw_metadata_3285",
+      "source_url": "https://pendon-kino.loteria.cl/pendonkino",
+      "observed_from_index": "2026-09-26/2026-09-27 vicinity",
+      "draw_number": 3285,
+      "draw_date": "2026-09-27",
+      "status": "pre-draw metadata",
+      "prize_total_estimate_text": "$6.200 Millones",
+      "numbers": null,
+      "note": "Not a result record; used only to validate metadata/provenance fields."
+    },
+    {
+      "sample_id": "official_rule_regime_2893",
+      "source_url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47",
+      "draw_number": 2893,
+      "draw_date": "2024-03-27",
+      "status": "rule-regime evidence",
+      "numbers": null,
+      "note": "Official restructuring marker, not a captured numeric result."
+    }
+  ],
+  "numeric_result_sample_status": "UNRESOLVED_NO_INVENTION"
+}
