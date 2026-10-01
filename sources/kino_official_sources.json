@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "work_item": 2,
+  "repository": "cmiloarevalo-hash/Estadis",
+  "consulted_on": "2026-10-01",
+  "base_sha": "8e15f80b364b5b0d6fe5734e11393b6ae890d44e",
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "Lotería de Concepción",
+      "title": "Productos y Reglamentación Kino",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47",
+      "source_type": "official_primary_operational_rules",
+      "status": "CURRENT_PRIMARY",
+      "supports": [
+        "14-of-25 rules",
+        "draw without replacement",
+        "order irrelevant",
+        "base prize categories",
+        "base price",
+        "47% prize fund",
+        "current paid additional games",
+        "draw 2893 restructuring",
+        "official-results statement"
+      ],
+      "limitations": [
+        "page does not expose an obvious publication/update timestamp in retrieved text",
+        "special draws may vary prices"
+      ]
+    },
+    {
+      "id": "S2",
+      "publisher": "Lotería de Concepción",
+      "title": "Jugar Kino Online | Sorteos, Pozos Millonarios y Resultados",
+      "url": "https://www.loteria.cl/juegos/kino/",
+      "source_type": "official_primary_product_page",
+      "status": "CURRENT_SUPPLEMENTARY",
+      "supports": [
+        "current existence of Kino product",
+        "navigation to results/statistics"
+      ],
+      "limitations": [
+        "retrieved text exposes limited structured rule content; S1 is used for detailed rules"
+      ]
+    },
+    {
+      "id": "S3",
+      "publisher": "Lotería de Concepción",
+      "title": "Sorteos en Vivo",
+      "url": "https://www.sorteosenvivo.cl/sorteosenvivo",
+      "source_type": "official_primary_draw_service",
+      "status": "CURRENT_PRIMARY",
+      "supports": [
+        "Kino schedule Wednesday Friday Sunday 22:30",
+        "search of previous draws by draw number/date",
+        "video retention statement of last 60 days"
+      ],
+      "limitations": [
+        "interactive interface is not established here as a complete machine-readable historical dataset"
+      ]
+    },
+    {
+      "id": "S4",
+      "publisher": "Lotería de Concepción",
+      "title": "Productos y Reglamentación Compras y Servicios Digitales",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=874&zoneid=47",
+      "source_type": "official_primary_digital_terms",
+      "status": "OFFICIAL_BUT_STALE_FOR_CURRENT_KINO_PRODUCT_STRUCTURE",
+      "supports": [
+        "digital-service terms",
+        "public statistics are historical/manual and may contain errors",
+        "online result consultation caveat"
+      ],
+      "contradictions": [
+        "still lists Chanchito Regalón, Combo Marraqueta and Chao Jefe $1 Millón that S1 says were removed from draw 2893 onward",
+        "does not reflect RequeteKino and Súper Combo Marraqueta structure in S1"
+      ],
+      "limitations": [
+        "must not be used as current authority for Kino product composition/prices when it conflicts with S1"
+      ]
+    },
+    {
+      "id": "S5",
+      "publisher": "Biblioteca del Congreso Nacional de Chile / LeyChile",
+      "title": "Decreto Supremo N°659 — autoriza a Lotería de Concepción para administrar sorteo de números",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=75710",
+      "source_type": "official_legal_framework",
+      "status": "CURRENT_LEGAL_REFERENCE",
+      "supports": [
+        "legal authorization",
+        "without-replacement framework",
+        "Lotería authority to define categories/modalities/additional draws/prices and conditions"
+      ],
+      "limitations": [
+        "does not by itself define the current 14-of-25 operational configuration; S1 does"
+      ]
+    },
+    {
+      "id": "S6",
+      "publisher": "Lotería de Concepción",
+      "title": "Novedades",
+      "url": "https://www.loteria.cl/contenido/novedades/",
+      "source_type": "official_primary_notices",
+      "status": "CURRENT_SUPPLEMENTARY",
+      "supports": [
+        "current October 2026 Kino notices",
+        "channel for special-draw/product announcements"
+      ],
+      "limitations": [
+        "not a consolidated rules source"
+      ]
+    },
+    {
+      "id": "S7",
+      "publisher": "Lotería de Concepción",
+      "title": "Issue-provided Sorteos en Vivo path",
+      "url": "https://www.loteria.cl/sorteosenvivo",
+      "source_type": "issue_supplied_official_url",
+      "status": "BROKEN_404_OBSERVED_2026_10_01",
+      "supports": [],
+      "limitations": [
+        "returned 404 during Issue #2 verification",
+        "operational service observed at S3"
+      ]
+    }
+  ],
+  "source_priority": [
+    "S1",
+    "S5",
+    "S3",
+    "S2",
+    "S6",
+    "S4",
+    "S7"
+  ],
+  "contradictions": [
+    {
+      "id": "C1",
+      "topic": "current additional games and price ladder",
+      "preferred_source": "S1",
+      "conflicting_source": "S4",
+      "treatment": "preserve contradiction explicitly; use S1 for current operational rules because it expressly records the 2024 restructuring and current product sections"
+    }
+  ]
+}
