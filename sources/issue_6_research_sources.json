@@ -1,0 +1,45 @@
+{
+  "checkpoint": 6,
+  "consulted_on": "2026-10-01",
+  "sources": [
+    {
+      "id": "I6-S1",
+      "publisher": "NIST",
+      "title": "NIST/SEMATECH e-Handbook Chapter 1: Exploratory Data Analysis",
+      "url": "https://www.nist.gov/publications/nistsematech-e-handbook-statistical-methods-chapter-1-exploratory-data-analysis"
+    },
+    {
+      "id": "I6-S2",
+      "publisher": "NIST",
+      "title": "Confidence intervals",
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm"
+    },
+    {
+      "id": "I6-S3",
+      "publisher": "NIST",
+      "title": "Introduction to Time Series Analysis",
+      "url": "https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm"
+    },
+    {
+      "id": "I6-S4",
+      "publisher": "Penn State",
+      "title": "STAT 502 Lesson 2 — Multiple Comparisons",
+      "url": "https://online.stat.psu.edu/stat502/Lesson02"
+    },
+    {
+      "id": "I6-S5",
+      "publisher": "Estadis",
+      "title": "Issue #5 exact mathematical model",
+      "url": "docs/math/KINO_EXACT_MODEL_RESEARCH.md"
+    }
+  ],
+  "derived_baselines": {
+    "marginal_number_probability": "14/25",
+    "expected_sum": 182,
+    "expected_overlap_between_independent_draws": 7.84,
+    "pair_probability": "91/300",
+    "triple_probability": "91/575",
+    "pair_count": 300,
+    "triple_count": 2300
+  }
+}
