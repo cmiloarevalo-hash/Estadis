@@ -1,0 +1,54 @@
+{
+  "checkpoint": 9,
+  "consulted_on": "2026-10-01",
+  "research_gate": {
+    "decision_point": "future framework for minimal statistical data app",
+    "status": "DRAFT_PROPOSAL_NOT_ADOPTED",
+    "proposed": "Streamlit"
+  },
+  "options": [
+    {
+      "name": "Streamlit",
+      "official_docs": [
+        "https://docs.streamlit.io/",
+        "https://docs.streamlit.io/deploy",
+        "https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy",
+        "https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app"
+      ],
+      "repository": "https://github.com/streamlit/streamlit",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "fit": "data apps",
+      "proposal": "preferred candidate"
+    },
+    {
+      "name": "Gradio",
+      "official_docs": [
+        "https://www.gradio.app/",
+        "https://gradio.app/guides/sharing-your-app",
+        "https://www.gradio.app/guides/quickstart"
+      ],
+      "repository": "https://github.com/gradio-app/gradio",
+      "license": "Apache-2.0",
+      "language": "Python",
+      "fit": "ML demos/apps",
+      "proposal": "alternative"
+    },
+    {
+      "name": "Plotly Dash",
+      "official_docs": [
+        "https://dash.plotly.com/deployment"
+      ],
+      "repository": "https://github.com/plotly/dash",
+      "license": "MIT",
+      "language": "Python",
+      "fit": "data apps/dashboards",
+      "proposal": "alternative for greater UI/control needs"
+    }
+  ],
+  "constraints": [
+    "No dependency adoption in research batch.",
+    "No deployment authorization.",
+    "GitHub/cloud permissions require separate review."
+  ]
+}
