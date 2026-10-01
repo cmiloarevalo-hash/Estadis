@@ -17,15 +17,15 @@ La hipótesis de mejora debe ser tratada como una afirmación extraordinaria fre
 Para cada sorteo futuro (D_t), una predicción válida (A_t) contiene exactamente 14 números distintos de 1 a 25.
 
 Bajo H0:
-- (D_t) es uniforme entre los (inom{25}{14}) subconjuntos;
+- (D_t) es uniforme entre los (C(25,14)) subconjuntos;
 - (D_t) es independiente de toda información anterior disponible al método.
 
 Si (A_t) se construye **sólo con información previa a (t)**, entonces, condicionalmente al historial y a (A_t):
 
-[
-P(|A_tcap D_t|=k)=
-rac{inom{14}{k}inom{11}{14-k}}{inom{25}{14}}.
-]
+```text
+P(|A_t ∩ D_t|=k)=
+(C(14,k) * C(11,14-k)) / (C(25,14)).
+```
 
 Consecuencia: bajo H0, cualquier selector history-only que siempre entregue 14 números tiene la misma distribución exacta de aciertos que una combinación fija o aleatoria, salvo que explote una dependencia real del proceso.
 
@@ -120,9 +120,9 @@ No borrar candidatos fallidos.
 
 **Número de aciertos por sorteo**:
 
-[
-K_t=|A_tcap D_t|.
-]
+```text
+K_t=|A_t ∩ D_t|.
+```
 
 Reportar:
 - media;
@@ -134,7 +134,7 @@ Reportar:
 ### Categorías de premio
 
 Secundaria:
-- tasa de (Kge10);
+- tasa de (K >= 10);
 - tasas 10,11,12,13,14 por separado;
 - comparar con probabilidades exactas de #5.
 

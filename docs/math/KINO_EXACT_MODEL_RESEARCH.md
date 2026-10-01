@@ -27,11 +27,11 @@ Este es el **modelo nulo ideal de sorteo aleatorio**. La reglamentación confirm
 
 Como el orden no importa:
 
-[
-|Omega| = inom{25}{14}
-= rac{25!}{14!11!}
-= 4{,}457{,}400.
-]
+```text
+|Omega| = C(25,14)
+= (25!) / (14! * 11!)
+= 4,457,400.
+```
 
 Para un boleto fijo de 14 números, todos los resultados posibles del sorteo son los subconjuntos de 14 elementos del universo de 25.
 
@@ -47,11 +47,10 @@ Parámetros hipergeométricos:
 
 Entonces:
 
-[
+```text
 P(K=k)=
-rac{inom{14}{k}inom{11}{14-k}}
-{inom{25}{14}}.
-]
+(C(14,k) * C(11,14-k)) / (C(25,14)).
+```
 
 Referencia matemática:
 Penn State STAT 414, sección Hypergeometric Distribution:
@@ -65,21 +64,21 @@ No es posible tener menos de 3 aciertos.
 
 La intersección mínima entre dos subconjuntos de tamaño 14 dentro de un universo de 25 es:
 
-[
+```text
 14 + 14 - 25 = 3.
-]
+```
 
 Por tanto:
 
-[
-K in {3,4,ldots,14}.
-]
+```text
+K ∈ {3, 4, ..., 14}.
+```
 
 ## 6. Distribución exacta completa
 
-Denominador común: (inom{25}{14}=4{,}457{,}400).
+Denominador común: (C(25,14)=4,457,400).
 
-| k aciertos | Resultados favorables (inom{14}{k}inom{11}{14-k}) | Probabilidad exacta | Probabilidad decimal | % |
+| k aciertos | Resultados favorables (C(14,k) * C(11,14-k)) | Probabilidad exacta | Probabilidad decimal | % |
 |---:|---:|---:|---:|---:|
 | 3 | 364 | 364 / 4,457,400 | 0.0000816619554 | 0.00816619554% |
 | 4 | 11,011 | 11,011 / 4,457,400 | 0.002470274151 | 0.2470274151% |
@@ -96,16 +95,16 @@ Denominador común: (inom{25}{14}=4{,}457{,}400).
 
 Suma de favorables:
 
-[
+```text
 364+11011+110110+495495+1132560+1387386+924924+330330+60060+5005+154+1
-=4{,}457{,}400.
-]
+=4,457,400.
+```
 
 Luego:
 
-[
-sum_{k=3}^{14}P(K=k)=1
-]
+```text
+sum[k=3..14] P(K=k)=1
+```
 
 por construcción combinatoria.
 
@@ -123,12 +122,12 @@ La reglamentación define categorías de 10, 11, 12, 13 y 14 aciertos.
 
 La probabilidad de caer en **alguna de las categorías numéricas 10–14** es:
 
-[
-P(Kge10)
-=rac{395{,}550}{4{,}457{,}400}
-=rac{2637}{29716}
-approx0.08874007269.
-]
+```text
+P(K >= 10)
+=(395,550) / (4,457,400)
+=(2637) / (29716)
+ ≈ 0.08874007269.
+```
 
 Equivale a:
 - 8.874007269%;

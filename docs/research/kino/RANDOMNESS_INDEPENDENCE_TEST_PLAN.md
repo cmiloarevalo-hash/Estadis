@@ -24,7 +24,7 @@ NIST advierte que ausencia de autocorrelación significativa no implica aleatori
 
 ## 2. Modelo nulo principal
 
-Por sorteo (t), sea (X_{t,j}in{0,1}) indicador de aparición del número (j).
+Por sorteo (t), sea (X_{t,j} ∈ {0,1}) indicador de aparición del número (j).
 
 H0 combina dos componentes:
 
@@ -32,9 +32,9 @@ H0 combina dos componentes:
 
 Para todos los números:
 
-[
+```text
 P(X_{t,j}=1)=14/25.
-]
+```
 
 ### H0-B — independencia temporal entre sorteos
 
@@ -54,23 +54,23 @@ Por tanto, los indicadores (X_{t,j}) no son independientes dentro de una fila.
 
 Para dos números distintos (a,b):
 
-[
-P(a,bin A_t)=91/300approx0.303333.
-]
+```text
+P(a ∈ A_t and b ∈ A_t)=91/300 ≈ 0.303333.
+```
 
 Con (p=14/25=0.56):
 
-[
+```text
 Cov(X_{t,a},X_{t,b})
 =P(a,b)-p^2
-approx-0.0102667.
-]
+ ≈ -0.0102667.
+```
 
 Equivalente al resultado de muestreo aleatorio simple sin reposición:
 
-[
-Cov=-rac{p(1-p)}{25-1}.
-]
+```text
+Cov=-(p(1-p)) / (25-1).
+```
 
 Consecuencia: no es correcto asumir automáticamente que las (14T) apariciones agregadas son ensayos categóricos independientes.
 
@@ -78,10 +78,10 @@ Consecuencia: no es correcto asumir automáticamente que las (14T) apariciones a
 
 Puede definirse un estadístico descriptivo de discrepancia:
 
-[
-Q=sum_{j=1}^{25}rac{(F_j-E)^2}{E},
-quad E=T(14/25).
-]
+```text
+Q=sum_{j=1}^{25}((F_j-E)^2) / (E),
+where E = T(14/25).
+```
 
 NIST describe el χ² de bondad de ajuste como comparación entre observados y esperados y advierte que necesita tamaño suficiente/esperados adecuados:
 https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm
@@ -101,15 +101,15 @@ Esto evita un falso supuesto multinomial.
 
 Para cada número:
 
-[
+```text
 R_j=F_j-Tp
-]
+```
 
 y residuo marginal estandarizado:
 
-[
-Z_j=rac{F_j-Tp}{sqrt{Tp(1-p)}}.
-]
+```text
+Z_j=(F_j-Tp) / (sqrt(Tp(1-p))).
+```
 
 Usos:
 - diagnóstico;
@@ -160,9 +160,9 @@ NIST también recalca que autocorrelación nula no garantiza aleatoriedad.
 
 Definir:
 
-[
-Q_t=|A_tcap A_{t-1}|.
-]
+```text
+Q_t=|A_t ∩ A_{t-1}|.
+```
 
 Bajo independencia, su distribución marginal es la hipergeométrica derivada en #5.
 

@@ -16,7 +16,7 @@ La simulación no sustituye la combinatoria exacta de Issue #5.
 
 Una réplica de sorteo debe:
 
-1. definir el universo ({1,ldots,25});
+1. definir el universo {1, ..., 25};
 2. seleccionar uniformemente 14 elementos **sin reposición**;
 3. conservarlos como conjunto para inferencia;
 4. ordenarlos sólo para representación canónica.
@@ -98,12 +98,12 @@ Cada comparación debe registrar si es:
 
 Antes de confiar en una simulación futura, sus salidas deben aproximar con error Monte Carlo compatible:
 
-- (P(j	ext{ aparece})=14/25);
-- (E[	ext{suma}]=182);
-- (E[	ext{overlap consecutivo}]=7.84);
+- (P(j aparece)=14/25);
+- (E[suma]=182);
+- (E[overlap consecutivo]=7.84);
 - distribución de aciertos (K) de Issue #5;
-- (P(	ext{par específico})=91/300);
-- (P(	ext{trío específico})=91/575);
+- (P(par específico)=91/300);
+- (P(trío específico)=91/575);
 - distribución par/impar hipergeométrica (N=25,M=12,n=14).
 
 Un fallo en estos canaries invalida el uso inferencial del simulador.
@@ -112,11 +112,11 @@ Un fallo en estos canaries invalida el uso inferencial del simulador.
 
 No se fija un número universal como “10.000” por costumbre.
 
-Para una proporción Monte Carlo (hat p):
+Para una proporción Monte Carlo (p_hat):
 
-[
-MCSE(hat p)approxsqrt{hat p(1-hat p)/N}.
-]
+```text
+MCSE(p_hat) ≈ sqrt(p_hat(1-p_hat)/N).
+```
 
 El número de réplicas debe elegirse para que el error Monte Carlo sea pequeño frente a la precisión estadística requerida.
 
@@ -156,7 +156,7 @@ El procedimiento exacto de corrección finita se fijará en el Work Item de desa
 
 Usar solución exacta cuando existe y es manejable:
 
-- (inom{25}{14});
+- (C(25,14));
 - probabilidades de 3–14 aciertos;
 - probabilidades 10–14;
 - marginal (14/25);
@@ -171,7 +171,7 @@ Monte Carlo se reserva para:
 - procedimientos de selección/multiplicidad;
 - validación de implementación.
 
-Para el jackpot 14/14, estimar (1/4{,}457{,}400) por simulación naïve sería especialmente ineficiente frente al resultado exacto.
+Para el jackpot 14/14, estimar (1/4,457,400) por simulación naïve sería especialmente ineficiente frente al resultado exacto.
 
 ## 12. Comparación histórico vs baseline
 

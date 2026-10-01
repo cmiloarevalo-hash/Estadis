@@ -67,7 +67,7 @@ Entradas:
 - combinación opcional de 14 números.
 
 Salidas:
-- (inom{25}{14});
+- (C(25,14));
 - distribución exacta de aciertos;
 - probabilidades 10–14;
 - explicación de montos variables versus probabilidad.
