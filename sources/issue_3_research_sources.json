@@ -1,0 +1,52 @@
+{
+  "checkpoint": 3,
+  "consulted_on": "2026-10-01",
+  "sources": [
+    {
+      "id": "I3-S1",
+      "publisher": "Lotería de Concepción",
+      "title": "Productos y Reglamentación Kino",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47",
+      "role": "official rules"
+    },
+    {
+      "id": "I3-S2",
+      "publisher": "W3C",
+      "title": "PROV-DM",
+      "url": "https://www.w3.org/TR/2013/REC-prov-dm-20130430/",
+      "role": "provenance model"
+    },
+    {
+      "id": "I3-S3",
+      "publisher": "W3C",
+      "title": "PROV Namespace",
+      "url": "https://www.w3.org/ns/prov",
+      "role": "provenance terminology"
+    },
+    {
+      "id": "I3-S4",
+      "publisher": "Frictionless Data",
+      "title": "Tabular Data Resource",
+      "url": "https://specs.frictionlessdata.io/tabular-data-resource/",
+      "role": "tabular schema reference"
+    },
+    {
+      "id": "I3-S5",
+      "publisher": "Frictionless Data",
+      "title": "Tabular Data Package",
+      "url": "https://specs.frictionlessdata.io/tabular-data-package/",
+      "role": "dataset packaging reference"
+    },
+    {
+      "id": "I3-S6",
+      "publisher": "Frictionless Framework",
+      "title": "Describing Data",
+      "url": "https://framework.frictionlessdata.io/docs/guides/describing-data",
+      "role": "types and constraints reference"
+    }
+  ],
+  "limitations": [
+    "No numeric draw record was invented.",
+    "Frictionless is a design reference only; no dependency is adopted."
+  ]
+}
