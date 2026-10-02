@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "status": "INCOMPLETE",
+  "records": [
+    {
+      "draw_id": "kino:1829",
+      "draw_number": 1829,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:1836",
+      "draw_number": 1836,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:1842",
+      "draw_number": 1842,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:1843",
+      "draw_number": 1843,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:1856",
+      "draw_number": 1856,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:1858",
+      "draw_number": 1858,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:1892",
+      "draw_number": 1892,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:1903",
+      "draw_number": 1903,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        null
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_pre_2893_unknown_detail",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:2893",
+      "draw_number": 2893,
+      "draw_date": "2024-03-27",
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        "kino.official.institutional.reglamentacion"
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_product_from_draw_2893",
+      "record_version": 1
+    },
+    {
+      "draw_id": "kino:3130",
+      "draw_number": 3130,
+      "draw_date": "2025-10-01",
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "confidence_status": "INCOMPLETE",
+      "classification_reason": "No observation contains all core fields including 14 numbers.",
+      "evidence_relation": "MISSING_SOURCE",
+      "observation_count": 1,
+      "independent_group_count": 1,
+      "corroborating_sources": [],
+      "official_evidence_sources": [
+        "kino.official.institutional.juego_responsable_report"
+      ],
+      "official_complete_numeric_sources": [],
+      "conflict_notes": null,
+      "rule_regime_id": "kino_product_from_draw_2893",
+      "record_version": 1
+    }
+  ]
+}
