@@ -1,0 +1,72 @@
+{
+  "checkpoint": 20,
+  "consulted_on": "2026-10-02",
+  "sources": [
+    {
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "publisher": "ResultadosKinoChile.com",
+      "format": "HTML per-draw/archive",
+      "license_terms": "No explicit reuse license identified in T5; factual observations only",
+      "observed_coverage": "3280–3286 acquired in T5; T1 observed archive examples back to 1505",
+      "independence_group": "resultadoskinochile",
+      "records_acquired": 7
+    },
+    {
+      "source_id": "kino.secondary.db.chileresultados",
+      "publisher": "ChileResultados.com",
+      "format": "HTML per-draw/search by date",
+      "license_terms": "site disclaimer: unofficial, unaffiliated, errors possible",
+      "observed_coverage": "3281–3286 acquired in T5; older examples visible",
+      "independence_group": "chileresultados",
+      "records_acquired": 6
+    },
+    {
+      "source_id": "kino.secondary.media.epicentrochile",
+      "publisher": "Epicentro Chile",
+      "format": "news articles",
+      "license_terms": "no dataset license; factual observations only",
+      "observed_coverage": "3281–3286 acquired in T5",
+      "independence_group": "epicentrochile",
+      "records_acquired": 6
+    },
+    {
+      "source_id": "kino.secondary.media.prensadigital",
+      "publisher": "PrensaDigital.cl",
+      "format": "news articles",
+      "license_terms": "no dataset license; discovery/corroboration only",
+      "observed_coverage": "examples 3281,3282,3283,3285 verified",
+      "independence_group": "prensadigital",
+      "records_acquired": 0
+    },
+    {
+      "source_id": "kino.community.github.77ruben_kino_scraper",
+      "publisher": "GitHub user 77ruben",
+      "format": "repository",
+      "license_terms": "NOT_DECLARED",
+      "observed_coverage": "README self-states ~1506–3226; CSV absent from current tree",
+      "independence_group": "resultadoskinochile",
+      "records_acquired": 0,
+      "derived_from": "kino.secondary.db.resultadoskinochile"
+    },
+    {
+      "source_id": "kino.community.github.fernando8955_kino",
+      "publisher": "GitHub user Fernando8955",
+      "format": "JSON repository",
+      "license_terms": "NOT_DECLARED",
+      "observed_coverage": "recent kino-polla.json records",
+      "independence_group": "chileresultados",
+      "records_acquired": 0,
+      "derived_from": "kino.secondary.db.chileresultados"
+    },
+    {
+      "source_id": "kino.community.github.gaaguile_kino2026",
+      "publisher": "GitHub user gaaguile",
+      "format": "JSON/XML repository",
+      "license_terms": "NOT_DECLARED",
+      "observed_coverage": "2023-11 to 2026 examples; draw identity ambiguity",
+      "independence_group": "gaaguile_unverified",
+      "records_acquired": 0
+    }
+  ],
+  "note": "Only three source groups supplied draw-level raw observations in T5. Derived repositories do not add independent corroboration."
+}
