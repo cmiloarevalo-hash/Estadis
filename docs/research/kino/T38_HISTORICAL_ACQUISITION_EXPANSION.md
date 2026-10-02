@@ -63,3 +63,16 @@ This does not claim every historical HTML page was captured. It means further ma
 ## Next
 
 Proceed immediately to #39 and rebuild the final auditable dataset.
+
+## Manual closure of 2026 draw-number gap
+
+After the bulk acquisition, the only result gap inside the modern target span was #3268–#3279. Public pages were manually reviewed without automation:
+
+- Sortuo: #3268–#3274;
+- OpenLoto: #3275–#3279.
+
+All 12 observations contain draw_number, draw_date and 14 distinct numbers in 1–25. They are persisted in `data/raw/kino/secondary/manual_gap_3268_3279_t38.json`.
+
+Combined with the historical bulk (#799–#3267) and previously acquired recent evidence (#3280–#3286), the **observed complete draw-number span is continuous from #799 through #3286 (2,488 draws)**.
+
+This continuity is observational; it does not upgrade source authority. The 12 manually captured records remain secondary evidence.

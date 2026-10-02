@@ -77,5 +77,14 @@
       "required_automation": "historical link/page enumeration if deeper archive exists",
       "implementation_authorized": false
     }
-  ]
+  ],
+  "manual_gap_resolution": {
+    "draws": "3268–3279",
+    "sources": [
+      "kino.secondary.db.sortuo",
+      "kino.secondary.db.openloto"
+    ],
+    "result": "12 complete draw/date/numbers observations acquired manually; no automation used"
+  },
+  "remaining_result_gap_within_799_3286": 0
 }
