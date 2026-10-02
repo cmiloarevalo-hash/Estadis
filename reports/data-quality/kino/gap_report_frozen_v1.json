@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "kino-history-v1.0.0",
+  "gap_count": 5,
+  "gaps": [
+    {
+      "gap_id": "G1",
+      "type": "ACQUISITION_GAP",
+      "affected_draws": "recent and historical official-query targets",
+      "status": "UNRESOLVED",
+      "description": "Official dynamic result interfaces do not expose complete numeric historical payload through permitted static/manual path; further exhaustive acquisition would require prohibited automation/endpoint work."
+    },
+    {
+      "gap_id": "G2",
+      "type": "VALIDATION_GAP",
+      "affected_draws": [
+        3280,
+        3281,
+        3282,
+        3283,
+        3284,
+        3285,
+        3286
+      ],
+      "status": "UNRESOLVED",
+      "description": "Complete secondary numeric evidence exists but no acquired official source contains the full 14-number result."
+    },
+    {
+      "gap_id": "G3",
+      "type": "SOURCE_GAP",
+      "affected_draws": [
+        1829,
+        1836,
+        1842,
+        1843,
+        1856,
+        1858,
+        1892,
+        1903,
+        2893,
+        3130
+      ],
+      "status": "UNRESOLVED",
+      "description": "Observed official records lack one or more core fields; eight video pages lack date and numbers, two institutional records lack numbers."
+    },
+    {
+      "gap_id": "G4",
+      "type": "REGIME_GAP",
+      "affected_draws": [
+        1829,
+        1836,
+        1842,
+        1843,
+        1856,
+        1858,
+        1892,
+        1903
+      ],
+      "status": "UNRESOLVED",
+      "description": "Detailed pre-2893 product rule regime was not established for these old observations."
+    },
+    {
+      "gap_id": "G5",
+      "type": "UNKNOWN_GAP",
+      "affected_draws": "historical sequence outside acquired sample",
+      "status": "UNRESOLVED",
+      "description": "Historical continuity was not exhaustively enumerated; absence from v1 cannot be interpreted as a missing lottery draw."
+    }
+  ]
+}

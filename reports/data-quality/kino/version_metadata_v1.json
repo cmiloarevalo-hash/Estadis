@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "kino-history-v1.0.0",
+  "master_work_item": 15,
+  "canonical_processed_observations": {
+    "path": "data/processed/kino/observations_v2_t9.json",
+    "git_blob_sha": "538f27d9c30962f996f947bb81da08e831876a96"
+  },
+  "canonical_evidence_matrix": {
+    "path": "data/processed/kino/evidence_matrix_v2.json",
+    "git_blob_sha": "ac8ad37f0980deb1967e84346ce59282c73422f2"
+  },
+  "source_catalog": {
+    "path": "sources/kino_historical_source_catalog_v1.json",
+    "git_blob_sha": "4d1bb3543b942f60da5f74fa46a5539fe8e7eeba"
+  },
+  "gap_report_source": {
+    "path": "reports/data-quality/kino/gap_report_v1.json",
+    "git_blob_sha": "fcd72b183baacc1ff33c842b71aa0bb3ebc7743b"
+  },
+  "confidence_taxonomy": [
+    "VALIDATED",
+    "PROVISIONAL",
+    "CONFLICTED",
+    "INCOMPLETE",
+    "REJECTED"
+  ],
+  "historical_coverage": "PARTIAL",
+  "acquisition_saturation": "REACHED",
+  "development": "NOT STARTED",
+  "analysis": "NOT STARTED",
+  "master_26": "BLOCKED / NOT STARTED"
+}
