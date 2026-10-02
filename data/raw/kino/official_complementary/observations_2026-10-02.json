@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "master_work_item": 15,
+  "issue": 19,
+  "retrieved_at": "2026-10-02T01:24:00-03:00",
+  "observations": [
+    {
+      "record_id": "official-rules-2893",
+      "draw_number": 2893,
+      "draw_date": "2024-03-27",
+      "numbers": null,
+      "game": "kino",
+      "modality": "product_rule_regime",
+      "source_id": "kino.official.institutional.reglamentacion",
+      "source_url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47",
+      "source_type": "OFFICIAL_INSTITUTIONAL",
+      "observed_fields": [
+        "draw_number",
+        "draw_date",
+        "rule_change"
+      ],
+      "rule_change": "additional-game restructuring effective from draw 2893",
+      "raw_representation": "Lotería de Concepción reglamentación Kino: a partir del sorteo número 2893, de 27 de marzo de 2024, se reestructuran juegos adicionales.",
+      "raw_representation_sha256": "f626c12b134b3beefa1d512e7177a84ab5a208bc9d92ecef515962c94837b1a6",
+      "missing_core_fields": [
+        "numbers[14]"
+      ],
+      "evidence_role": "rule_regime"
+    },
+    {
+      "record_id": "official-report-3130",
+      "draw_number": 3130,
+      "draw_date": "2025-10-01",
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.official.institutional.juego_responsable_report",
+      "source_url": "https://www.loteria.cl/LoteriaWeb/Content/sincronizacion/IndicadoresJR.pdf",
+      "source_type": "OFFICIAL_INSTITUTIONAL",
+      "observed_fields": [
+        "draw_number",
+        "draw_date"
+      ],
+      "raw_representation": "Lotería de Concepción Informe Indicadores Juego Responsable: imagen de Kino muestra SORTEO N° 3.130 y FECHA 01/10/2025.",
+      "raw_representation_sha256": "f001a456e2c4d9c9b195b9252d7f118fe5adc585d29301edf60d3ae383d76634",
+      "missing_core_fields": [
+        "numbers[14]"
+      ],
+      "evidence_role": "institutional_context"
+    },
+    {
+      "record_id": "official-pendon-3285",
+      "draw_number": 3285,
+      "draw_date": "2026-09-27",
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.official.institutional.pendon",
+      "source_url": "https://pendon-kino.loteria.cl/pendonkino",
+      "source_type": "OFFICIAL_INSTITUTIONAL",
+      "observed_fields": [
+        "draw_number",
+        "draw_date",
+        "jackpot_estimate_total",
+        "prize_estimates"
+      ],
+      "jackpot_estimate_total_clp": 6200000000,
+      "prize_estimates_text": [
+        "Kino $270 millones",
+        "ReKino $2.610 millones",
+        "RequeteKino $40 millones",
+        "Chao Jefe $2M: $1.200 millones",
+        "Chao Jefe $3M: $1.080 millones",
+        "Súper Combo Marraqueta: $1.000 millones"
+      ],
+      "raw_representation": "Pendón Kino Lotería: Próximo Sorteo Nº 3285, 27 de septiembre 2026, total estimado $6.200 millones y desglose promocional.",
+      "raw_representation_sha256": "07fcf51a94ee921d30bbb68a8c9bd5118dfd7030a10cc1d9475f9ee374b29b8f",
+      "missing_core_fields": [
+        "numbers[14]"
+      ],
+      "evidence_role": "pre_draw_metadata"
+    }
+  ],
+  "non_draw_sources": [
+    {
+      "source_id": "kino.official.stats.estadisticas",
+      "url": "https://www.loteria.cl/resultados/estadisticas/",
+      "observed": "official statistics surface exists; draw-level raw schema not statically visible"
+    },
+    {
+      "source_id": "kino.official.institutional.novedades",
+      "url": "https://www.loteria.cl/contenido/novedades/",
+      "observed": "September/October 2026 Kino notices and reprogramming notices visible"
+    },
+    {
+      "source_id": "kino.official.institutional.ganadores",
+      "url": "https://www.loteria.cl/contenido/ganadores/",
+      "observed": "official winners publication surface; sampled indexed content concerns promotional winners rather than 14-number Kino result"
+    }
+  ],
+  "quality_notice": {
+    "source_url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=874&zoneid=47",
+    "statement": "Lotería describes its published historical statistics as manually compiled and does not guarantee complete absence of errors.",
+    "implication": "official statistics remain evidence, but raw preservation and cross-source checking are required."
+  }
+}
