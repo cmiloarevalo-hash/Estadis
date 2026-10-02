@@ -1,0 +1,28 @@
+{
+  "checkpoint": 38,
+  "state": "ACQUISITION_EXPANSION_COMPLETE",
+  "sources_discovered_total": 25,
+  "sources_acquired_new": 2,
+  "independent_source_groups_evaluated": 9,
+  "raw_source_rows_added": 4157,
+  "unique_modern_complete_draws_from_bulk": 2469,
+  "earliest_complete": {
+    "draw_number": 799,
+    "date": "Sunday, Jan 08, 2006"
+  },
+  "latest_complete": {
+    "draw_number": 3267,
+    "date": "Sunday, Aug 16, 2026"
+  },
+  "years_observed": "2006–2026",
+  "modern_internal_gaps": 0,
+  "numeric_crosscheck": {
+    "overlap": 889,
+    "exact_matches": 889,
+    "mismatches": 0,
+    "rate": 1
+  },
+  "automation_required_sources": 6,
+  "acquisition_saturation_reassessment": "REACHED_WITHIN_NO_AUTOMATION_SCOPE",
+  "note": "Remaining material scale expansion from deep HTML/search archives requires scraper/crawler/query automation forbidden by Master #15."
+}

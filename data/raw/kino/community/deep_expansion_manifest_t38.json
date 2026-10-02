@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "master_work_item": 15,
+  "checkpoint": 38,
+  "retrieved_at": "2026-10-02T02:30:00-03:00",
+  "raw_snapshots": [
+    {
+      "source_id": "kino.community.github.gaaguile_kino2026_history_a498fd8",
+      "raw_reference": "data/raw/kino/community/gaaguile/kino-history_a498fd81.json",
+      "upstream_commit": "a498fd81bbb89c672f04c0dc53b414ee7da57ad0",
+      "upstream_blob_sha": "ec82bb2b2859e8c2211edda5c9aabc92d20c9b77"
+    },
+    {
+      "source_id": "kino.community.github.nicovh_kino_principal",
+      "raw_reference": "data/raw/kino/community/nicovh/kino_principal.csv",
+      "upstream_blob_sha": "06a45d9312a91a422510d7d917e3c99dc9ebb15a"
+    }
+  ],
+  "gaaguile": {
+    "source_rows_total": 3268,
+    "modern_14_number_complete_rows": 2469,
+    "modern_draw_range": [
+      799,
+      3267
+    ],
+    "draw_number_span_count": 2469,
+    "internal_draw_number_gaps": [],
+    "earliest_date": "Sunday, Jan 08, 2006",
+    "latest_date": "Sunday, Aug 16, 2026",
+    "years_observed": [
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "rows_by_year": {
+      "2006": 86,
+      "2007": 104,
+      "2008": 105,
+      "2009": 103,
+      "2010": 104,
+      "2011": 104,
+      "2012": 105,
+      "2013": 104,
+      "2014": 105,
+      "2015": 104,
+      "2016": 104,
+      "2017": 105,
+      "2018": 104,
+      "2019": 104,
+      "2020": 147,
+      "2021": 157,
+      "2022": 156,
+      "2023": 157,
+      "2024": 156,
+      "2025": 157,
+      "2026": 98
+    },
+    "legacy_pre_799_rows": 799,
+    "legacy_note": "pre-799 rows contain 15 numbers and are preserved raw but excluded from modern 14-number target dataset"
+  },
+  "nicovh": {
+    "rows": 889,
+    "draw_range": [
+      2362,
+      3264
+    ],
+    "date_field_present": false,
+    "overlap_with_gaaguile": 889,
+    "exact_number_matches": 889,
+    "number_mismatches": []
+  },
+  "scale_assessment": {
+    "preferred_ten_year_window_exceeded": true,
+    "complete_modern_draws_available_from_bulk": 2469,
+    "operational_scale": ">=1000 preferred scale"
+  }
+}

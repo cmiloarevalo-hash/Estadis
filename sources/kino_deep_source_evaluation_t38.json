@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": 38,
+  "retrieved_at": "2026-10-02T02:30:00-03:00",
+  "sources": [
+    {
+      "source_id": "kino.community.github.gaaguile_kino2026_history_a498fd8",
+      "publisher": "GitHub user gaaguile",
+      "url": "https://github.com/gaaguile/Kino2026/blob/a498fd81bbb89c672f04c0dc53b414ee7da57ad0/kino-history.json",
+      "source_type": "COMMUNITY_DATASET",
+      "independence_group": "gaaguile_xlsx_origin_unverified",
+      "earliest_observed_draw": 799,
+      "latest_observed_draw": 3267,
+      "earliest_observed_date": "Sunday, Jan 08, 2006",
+      "latest_observed_date": "Sunday, Aug 16, 2026",
+      "archive_depth": 2469,
+      "pagination": false,
+      "search_by_draw": "file scan",
+      "search_by_date": "file scan",
+      "available_fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]"
+      ],
+      "provenance": {
+        "upstream_repo": "gaaguile/Kino2026",
+        "upstream_commit": "a498fd81bbb89c672f04c0dc53b414ee7da57ad0",
+        "upstream_blob_sha": "ec82bb2b2859e8c2211edda5c9aabc92d20c9b77",
+        "build_script_blob_sha": "fbcb8bbd6993bb680774eccf691fb0f047a2e4c3",
+        "xlsx_blob_sha": "a799deb4a0a4c77a5c07edb7b748f19b786bb8f0",
+        "derivation": "same commit contains stats/estadisticas-kino.xlsx and build-from-xlsx.ts; original XLSX publisher is not documented"
+      },
+      "limitations": [
+        "no license declared",
+        "upstream XLSX publisher/lineage not documented",
+        "records before draw 799 use a 15-number regime and are excluded from modern 14-number v1"
+      ]
+    },
+    {
+      "source_id": "kino.community.github.nicovh_kino_principal",
+      "publisher": "Nicovh-Analytics",
+      "url": "https://github.com/Nicovh-Analytics/analisis-loteria-chile/blob/main/data/kino_principal.csv",
+      "source_type": "COMMUNITY_DATASET",
+      "independence_group": "chileresultados",
+      "earliest_observed_draw": 2362,
+      "latest_observed_draw": 3264,
+      "earliest_observed_date": "UNKNOWN",
+      "latest_observed_date": "UNKNOWN",
+      "archive_depth": 889,
+      "pagination": false,
+      "search_by_draw": "file scan",
+      "search_by_date": false,
+      "available_fields": [
+        "draw_number",
+        "numbers[14]"
+      ],
+      "provenance": {
+        "upstream_repo": "Nicovh-Analytics/analisis-loteria-chile",
+        "upstream_blob_sha": "06a45d9312a91a422510d7d917e3c99dc9ebb15a",
+        "lineage": "repository scraper targets ChileResultados; CSV omits draw_date"
+      },
+      "limitations": [
+        "date absent from CSV",
+        "derived from ChileResultados and therefore not independent of that publisher"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "publisher": "ResultadosKinoChile.com",
+      "url": "https://www.resultadoskinochile.com/resultados-kino/",
+      "source_type": "SECONDARY_DATABASE",
+      "independence_group": "resultadoskinochile",
+      "earliest_observed_draw": 1505,
+      "latest_observed_draw": 3286,
+      "earliest_observed_date": "2012-12-16",
+      "latest_observed_date": "2026-09-30",
+      "archive_depth": "289+ paginated archive pages observed; continuity not exhaustively acquired",
+      "pagination": true,
+      "search_by_draw": true,
+      "search_by_date": true,
+      "available_fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14] on individual pages",
+        "prizes",
+        "winners",
+        "additional_games"
+      ],
+      "provenance": "public HTML archive/per-draw pages",
+      "limitations": [
+        "mass acquisition would require pagination automation or repetitive manual capture",
+        "not official"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.db.chileresultados",
+      "publisher": "ChileResultados.com",
+      "url": "https://chileresultados.com/kino/sorteos",
+      "source_type": "SECONDARY_DATABASE",
+      "independence_group": "chileresultados",
+      "earliest_observed_draw": 2500,
+      "latest_observed_draw": 3277,
+      "earliest_observed_date": "2021-09-22",
+      "latest_observed_date": "2026-09-09",
+      "archive_depth": "searchable historical database; older examples observed in prior source map",
+      "pagination": true,
+      "search_by_draw": true,
+      "search_by_date": true,
+      "available_fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "prizes",
+        "winners",
+        "additional_games"
+      ],
+      "provenance": "public HTML per-draw pages",
+      "limitations": [
+        "site states results are unofficial and may contain errors",
+        "bulk acquisition would require repeated query automation"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.db.lotero",
+      "publisher": "Lotero.cl",
+      "url": "https://lotero.cl/resultados-kino/todos/",
+      "source_type": "SECONDARY_DATABASE",
+      "independence_group": "lotero_family_unverified",
+      "earliest_observed_draw": 3184,
+      "latest_observed_draw": 3283,
+      "earliest_observed_date": "2026-02-04",
+      "latest_observed_date": "2026-09-23",
+      "archive_depth": "aggregate history page exposes many recent draws; deep extent not verified",
+      "pagination": "not verified",
+      "search_by_draw": "per-draw links",
+      "search_by_date": true,
+      "available_fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "prizes",
+        "winners",
+        "additional_games"
+      ],
+      "provenance": "public HTML aggregate/per-draw pages",
+      "limitations": [
+        "historical depth beyond visible recent aggregate not verified",
+        "relationship to loterochile.cl unresolved"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.db.sortuo",
+      "publisher": "Sortuo.cl",
+      "url": "https://sortuo.cl/resultados/",
+      "source_type": "SECONDARY_DATABASE",
+      "independence_group": "sortuo",
+      "earliest_observed_draw": 3265,
+      "latest_observed_draw": 3274,
+      "earliest_observed_date": "2026-08-12",
+      "latest_observed_date": "2026-09-02",
+      "archive_depth": "UI states navigation up to 50 recent draws plus draw-number search",
+      "pagination": true,
+      "search_by_draw": true,
+      "search_by_date": false,
+      "available_fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "winner state"
+      ],
+      "provenance": "public HTML local archive",
+      "limitations": [
+        "only recent window navigable in bulk without automation",
+        "upstream data lineage not documented"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.db.openloto",
+      "publisher": "Open Loto",
+      "url": "https://www.openloto.cl/resultados-del-kino/",
+      "source_type": "SECONDARY_DATABASE",
+      "independence_group": "openloto",
+      "earliest_observed_draw": 3272,
+      "latest_observed_draw": 3286,
+      "earliest_observed_date": "2026-08-28",
+      "latest_observed_date": "2026-09-30",
+      "archive_depth": "recent linked history",
+      "pagination": "not verified",
+      "search_by_draw": true,
+      "search_by_date": "recent navigation",
+      "available_fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "jackpot/pozo context"
+      ],
+      "provenance": "public HTML; current page states source Lotería de Concepción",
+      "limitations": [
+        "independent community site, not official",
+        "deep archive not exposed in current listing"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.db.kinohistorico",
+      "publisher": "KinoHistorico.cl",
+      "url": "https://kinohistorico.cl/search/",
+      "source_type": "SECONDARY_DATABASE",
+      "independence_group": "kinohistorico",
+      "earliest_observed_draw": "UNKNOWN",
+      "latest_observed_draw": "current service",
+      "earliest_observed_date": "UNKNOWN",
+      "latest_observed_date": "UNKNOWN",
+      "archive_depth": "site describes thousands of historical draws",
+      "pagination": "search application",
+      "search_by_draw": true,
+      "search_by_date": "claimed/history",
+      "available_fields": [
+        "draw search interface; exact bulk fields not statically verified"
+      ],
+      "provenance": "public web application",
+      "limitations": [
+        "bulk export not found",
+        "upstream lineage generic",
+        "automation required for exhaustive capture"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.db.indicadoresydatos",
+      "publisher": "Indicadores y Datos",
+      "url": "https://indicadoresydatos.cl/azar/estadisticas-loto-kino",
+      "source_type": "SECONDARY_DATABASE",
+      "independence_group": "indicadoresydatos",
+      "earliest_observed_draw": 799,
+      "latest_observed_draw": 3286,
+      "earliest_observed_date": "2006 (site-stated start)",
+      "latest_observed_date": "2026-09-30",
+      "archive_depth": "site states >2500 historical draws and Kino registry from #799 onward",
+      "pagination": "not publicly exposed in static page",
+      "search_by_draw": "not verified",
+      "search_by_date": "not verified",
+      "available_fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14] in visible recent table"
+      ],
+      "provenance": "site states consolidation/mining of official Polla/Lotería archives",
+      "limitations": [
+        "static page exposes recent Kino rows only",
+        "no public bulk export/API found",
+        "bulk historical capture would require automation"
+      ]
+    },
+    {
+      "source_id": "kino.secondary.stats.loterator",
+      "publisher": "LoterAtor",
+      "url": "https://loterator.com/cl/kino/estadisticas/",
+      "source_type": "SECONDARY_STATISTICS",
+      "independence_group": "loterator",
+      "earliest_observed_draw": "UNKNOWN",
+      "latest_observed_draw": "UNKNOWN",
+      "earliest_observed_date": "2010-01-03 (site-stated analysis start)",
+      "latest_observed_date": "2026-09-17 (site-stated analysis end)",
+      "archive_depth": "site states 2083 draws analyzed",
+      "pagination": false,
+      "search_by_draw": false,
+      "search_by_date": false,
+      "available_fields": [
+        "aggregate frequencies",
+        "last appearance dates"
+      ],
+      "provenance": "public statistics page; draw-level export not found",
+      "limitations": [
+        "not a draw-level dataset surface",
+        "underlying records not publicly exported"
+      ]
+    }
+  ],
+  "automation_required": [
+    {
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "apparent_coverage": "draws ~1505–3286 via 289+ archive pages",
+      "mechanism": "paginate archive and open per-draw pages",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "prizes",
+        "winners"
+      ],
+      "required_automation": "crawler/scraper across pagination/per-draw links",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.chileresultados",
+      "apparent_coverage": "historical search + per-draw URLs",
+      "mechanism": "iterate draw/date queries",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "prizes",
+        "winners"
+      ],
+      "required_automation": "query/per-draw acquisition bot",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.indicadoresydatos",
+      "apparent_coverage": "#799 onward, >2500 draws claimed",
+      "mechanism": "underlying historical table/data source not bulk-exposed",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]"
+      ],
+      "required_automation": "discover/use page data endpoint or automate historical table extraction",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.kinohistorico",
+      "apparent_coverage": "thousands of draws claimed",
+      "mechanism": "search application",
+      "fields": [
+        "draw-level historical results"
+      ],
+      "required_automation": "automated query enumeration",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.sortuo",
+      "apparent_coverage": "50 recent + draw-number search",
+      "mechanism": "per-draw search",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "winner state"
+      ],
+      "required_automation": "draw-number enumeration",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.openloto",
+      "apparent_coverage": "recent linked draws; older depth unclear",
+      "mechanism": "follow individual draw pages",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "pozo"
+      ],
+      "required_automation": "historical link/page enumeration if deeper archive exists",
+      "implementation_authorized": false
+    }
+  ]
+}
