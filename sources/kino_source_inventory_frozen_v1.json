@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "kino-history-v1.0.0",
+  "mapped_source_count": 23,
+  "catalog_reference": "sources/kino_historical_source_catalog_v1.json",
+  "catalog_blob_sha": "4d1bb3543b942f60da5f74fa46a5539fe8e7eeba",
+  "sources_acquired_count": 11,
+  "acquired_source_ids": [
+    "kino.official.direct.sorteos_en_vivo",
+    "kino.official.direct.consulta_resultado",
+    "kino.official.stats.estadisticas",
+    "kino.official.institutional.novedades",
+    "kino.official.institutional.ganadores",
+    "kino.official.institutional.reglamentacion",
+    "kino.official.institutional.juego_responsable_report",
+    "kino.official.institutional.pendon",
+    "kino.secondary.db.resultadoskinochile",
+    "kino.secondary.db.chileresultados",
+    "kino.secondary.media.epicentrochile"
+  ],
+  "additions_after_t1": [
+    {
+      "source_id": "kino.official.institutional.juego_responsable_report",
+      "publisher": "Lotería de Concepción",
+      "url": "https://www.loteria.cl/LoteriaWeb/Content/sincronizacion/IndicadoresJR.pdf",
+      "class": "OFFICIAL_INSTITUTIONAL",
+      "observed": "draw 3130 / 2025-10-01 metadata",
+      "independence_group": "official_loteria"
+    },
+    {
+      "source_id": "kino.official.institutional.pendon",
+      "publisher": "Lotería de Concepción",
+      "url": "https://pendon-kino.loteria.cl/pendonkino",
+      "class": "OFFICIAL_INSTITUTIONAL",
+      "observed": "draw 3285 / 2026-09-27 pre-draw prize estimates",
+      "independence_group": "official_loteria"
+    }
+  ]
+}

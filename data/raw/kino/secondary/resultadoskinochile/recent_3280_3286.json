@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0",
+  "source_id": "kino.secondary.db.resultadoskinochile",
+  "retrieved_at": "2026-10-02T01:24:00-03:00",
+  "observations": [
+    {
+      "record_id": "kino.secondary.db.resultadoskinochile:3280",
+      "draw_number": 3280,
+      "draw_date": "2026-09-16",
+      "numbers": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        18,
+        20,
+        22,
+        24,
+        25
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "source_url": "https://www.resultadoskinochile.com/2026/09/16/resultados-kino-sorteo-3280-hoy-16-de-septiembre-de-2026/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_DATABASE",
+      "capture_method": "manual_public_web",
+      "prizes_by_category": {
+        "10": {
+          "total": 24502000,
+          "winners": 24502,
+          "payout": 1000
+        },
+        "11": {
+          "total": 15498000,
+          "winners": 4428,
+          "payout": 3500
+        },
+        "12": {
+          "total": 4060000,
+          "winners": 406,
+          "payout": 10000
+        },
+        "13": {
+          "total": 9536320,
+          "winners": 9,
+          "payout": 1038399
+        },
+        "14": {
+          "total": 780164958,
+          "winners": 0,
+          "payout": null
+        }
+      },
+      "raw_snapshot_status": "structured factual capture; original page bytes not persisted",
+      "independence_group": "resultadoskinochile"
+    },
+    {
+      "record_id": "kino.secondary.db.resultadoskinochile:3281",
+      "draw_number": 3281,
+      "draw_date": "2026-09-18",
+      "numbers": [
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        18,
+        20,
+        21,
+        23,
+        24,
+        25
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "source_url": "https://www.resultadoskinochile.com/2026/09/18/resultados-kino-sorteo-3281-hoy-18-de-septiembre-de-2026/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_DATABASE",
+      "capture_method": "manual_public_web",
+      "prizes_by_category": {
+        "10": {
+          "total": 14528000,
+          "winners": 14528,
+          "payout": 1000
+        },
+        "11": {
+          "total": 9103500,
+          "winners": 2601,
+          "payout": 3500
+        },
+        "12": {
+          "total": 1870000,
+          "winners": 187,
+          "payout": 10000
+        },
+        "13": {
+          "total": 5692078,
+          "winners": 6,
+          "payout": 929706
+        },
+        "14": {
+          "total": 819763713,
+          "winners": 0,
+          "payout": null
+        }
+      },
+      "raw_snapshot_status": "structured factual capture; original page bytes not persisted",
+      "independence_group": "resultadoskinochile"
+    },
+    {
+      "record_id": "kino.secondary.db.resultadoskinochile:3282",
+      "draw_number": 3282,
+      "draw_date": "2026-09-20",
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        9,
+        11,
+        13,
+        15,
+        16,
+        17,
+        19,
+        21,
+        22
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "source_url": "https://www.resultadoskinochile.com/2026/09/20/resultados-kino-sorteo-3282-hoy-20-de-septiembre-de-2026/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_DATABASE",
+      "capture_method": "manual_public_web",
+      "prizes_by_category": {
+        "10": {
+          "total": 19655000,
+          "winners": 19655,
+          "payout": 1000
+        },
+        "11": {
+          "total": 15022000,
+          "winners": 4292,
+          "payout": 3500
+        },
+        "12": {
+          "total": 4280000,
+          "winners": 428,
+          "payout": 10000
+        },
+        "13": {
+          "total": 7264259,
+          "winners": 18,
+          "payout": 395499
+        },
+        "14": {
+          "total": 865297196,
+          "winners": 1,
+          "payout": 847991252
+        }
+      },
+      "raw_snapshot_status": "structured factual capture; original page bytes not persisted",
+      "independence_group": "resultadoskinochile"
+    },
+    {
+      "record_id": "kino.secondary.db.resultadoskinochile:3283",
+      "draw_number": 3283,
+      "draw_date": "2026-09-23",
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        12,
+        13,
+        16,
+        17,
+        19,
+        21,
+        23,
+        25
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "source_url": "https://www.resultadoskinochile.com/2026/09/23/resultados-kino-sorteo-3283-hoy-23-de-septiembre-de-2026/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_DATABASE",
+      "capture_method": "manual_public_web",
+      "prizes_by_category": {
+        "10": {
+          "total": 22301000,
+          "winners": 22301,
+          "payout": 1000
+        },
+        "11": {
+          "total": 15284500,
+          "winners": 4367,
+          "payout": 3500
+        },
+        "12": {
+          "total": 3780000,
+          "winners": 378,
+          "payout": 10000
+        },
+        "13": {
+          "total": 8118535,
+          "winners": 14,
+          "payout": 568297
+        },
+        "14": {
+          "total": 53661054,
+          "winners": 0,
+          "payout": null
+        }
+      },
+      "raw_snapshot_status": "structured factual capture; original page bytes not persisted",
+      "independence_group": "resultadoskinochile"
+    },
+    {
+      "record_id": "kino.secondary.db.resultadoskinochile:3284",
+      "draw_number": 3284,
+      "draw_date": "2026-09-25",
+      "numbers": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        18,
+        19,
+        20,
+        23
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "source_url": "https://www.resultadoskinochile.com/2026/09/25/resultados-kino-sorteo-3284-hoy-25-de-septiembre-de-2026/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_DATABASE",
+      "capture_method": "manual_public_web",
+      "prizes_by_category": {
+        "10": {
+          "total": 14138000,
+          "winners": 14138,
+          "payout": 1000
+        },
+        "11": {
+          "total": 8141000,
+          "winners": 2326,
+          "payout": 3500
+        },
+        "12": {
+          "total": 2170000,
+          "winners": 217,
+          "payout": 10000
+        },
+        "13": {
+          "total": 6421140,
+          "winners": 9,
+          "payout": 699191
+        },
+        "14": {
+          "total": 103304073,
+          "winners": 0,
+          "payout": null
+        }
+      },
+      "raw_snapshot_status": "structured factual capture; original page bytes not persisted",
+      "independence_group": "resultadoskinochile"
+    },
+    {
+      "record_id": "kino.secondary.db.resultadoskinochile:3285",
+      "draw_number": 3285,
+      "draw_date": "2026-09-27",
+      "numbers": [
+        1,
+        4,
+        6,
+        9,
+        10,
+        11,
+        14,
+        15,
+        17,
+        19,
+        20,
+        21,
+        23,
+        24
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "source_url": "https://www.resultadoskinochile.com/2026/09/27/resultados-kino-sorteo-3285-hoy-27-de-septiembre-de-2026/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_DATABASE",
+      "capture_method": "manual_public_web",
+      "prizes_by_category": {
+        "10": {
+          "total": 19130000,
+          "winners": 19130,
+          "payout": 1000
+        },
+        "11": {
+          "total": 12092500,
+          "winners": 3455,
+          "payout": 3500
+        },
+        "12": {
+          "total": 2840000,
+          "winners": 284,
+          "payout": 10000
+        },
+        "13": {
+          "total": 8534607,
+          "winners": 6,
+          "payout": 1393986
+        },
+        "14": {
+          "total": 169399690,
+          "winners": 0,
+          "payout": null
+        }
+      },
+      "raw_snapshot_status": "structured factual capture; original page bytes not persisted",
+      "independence_group": "resultadoskinochile"
+    },
+    {
+      "record_id": "kino.secondary.db.resultadoskinochile:3286",
+      "draw_number": 3286,
+      "draw_date": "2026-09-30",
+      "numbers": [
+        1,
+        2,
+        3,
+        5,
+        9,
+        12,
+        13,
+        15,
+        17,
+        18,
+        20,
+        21,
+        23,
+        24
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "source_url": "https://www.resultadoskinochile.com/2026/09/30/resultados-kino-sorteo-3286-hoy-30-de-septiembre-de-2026/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_DATABASE",
+      "capture_method": "manual_public_web",
+      "prizes_by_category": {
+        "10": {
+          "total": 20366000,
+          "winners": 20366,
+          "payout": 1000
+        },
+        "11": {
+          "total": 13135500,
+          "winners": 3753,
+          "payout": 3500
+        },
+        "12": {
+          "total": 3310000,
+          "winners": 331,
+          "payout": 10000
+        },
+        "13": {
+          "total": 7766678,
+          "winners": 16,
+          "payout": 475709
+        },
+        "14": {
+          "total": 223275184,
+          "winners": 0,
+          "payout": null
+        }
+      },
+      "raw_snapshot_status": "structured factual capture; original page bytes not persisted",
+      "independence_group": "resultadoskinochile"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "master_work_item": 15,
+  "issue": 18,
+  "source_id": "kino.official.direct.consulta_resultado",
+  "source_type": "OFFICIAL_DIRECT_RESULT",
+  "source_url": "https://www.loteria.cl/resultados/consulta-resultado/",
+  "retrieved_at": "2026-10-02T01:24:00-03:00",
+  "capture_method": "public_web/manual_no_automation",
+  "captured_representation": "Consultar Resultados de Sorteos | Loteria.cl\nURL: https://www.loteria.cl/resultados/consulta-resultado/\nObserved 2026-10-02. Public official interface; static representation did not expose historical draw records or query controls.",
+  "captured_representation_sha256": "2ca877c3966d9feef25316d78f36c47cb593009aec2fc47b44fe12a7a1feb9f4",
+  "historical_draw_records_acquired": [],
+  "access_result": {
+    "interface_public": true,
+    "static_index_exposes_records": false,
+    "query_controls_static_visibility": "NOT_VERIFIED",
+    "historic_payload_visibility": "NOT_VERIFIED",
+    "limitation": "No draw-level result could be independently attributed to this source without interactive/browser automation or an undocumented endpoint."
+  }
+}

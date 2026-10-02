@@ -1,0 +1,35 @@
+{
+  "checkpoint": 22,
+  "unique_draws": 17,
+  "relation_counts": {
+    "MISSING_SOURCE": 11,
+    "EXACT_MATCH": 5,
+    "PARTIAL_MATCH": 1
+  },
+  "exact_match_draws": [
+    3281,
+    3282,
+    3283,
+    3284,
+    3286
+  ],
+  "partial_match_draws": [
+    3285
+  ],
+  "missing_source_draws": [
+    1829,
+    1836,
+    1842,
+    1843,
+    1856,
+    1858,
+    1892,
+    1903,
+    2893,
+    3130,
+    3280
+  ],
+  "date_conflicts": [],
+  "numbers_conflicts": [],
+  "note": "EXACT_MATCH is a cross-source relation, not a confidence status. Secondary-only exact matches do not automatically become VALIDATED."
+}

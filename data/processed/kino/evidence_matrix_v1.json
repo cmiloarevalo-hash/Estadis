@@ -1,0 +1,1058 @@
+{
+  "schema_version": "1.0",
+  "master_work_item": 15,
+  "checkpoint": 22,
+  "draw_count": 17,
+  "relation_counts": {
+    "MISSING_SOURCE": 11,
+    "EXACT_MATCH": 5,
+    "PARTIAL_MATCH": 1
+  },
+  "rows": [
+    {
+      "draw_id": "kino:1829",
+      "draw_number": 1829,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1829",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:1836",
+      "draw_number": 1836,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1836",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:1842",
+      "draw_number": 1842,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1842",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:1843",
+      "draw_number": 1843,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1843",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:1856",
+      "draw_number": 1856,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1856",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:1858",
+      "draw_number": 1858,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1858",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:1892",
+      "draw_number": 1892,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1892",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:1903",
+      "draw_number": 1903,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "sev-index-1903",
+          "source_id": null,
+          "source_type": "OFFICIAL_DIRECT_RESULT",
+          "independence_group": "official_loteria",
+          "draw_date": null,
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:2893",
+      "draw_number": 2893,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [
+        "2024-03-27"
+      ],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "official-rules-2893",
+          "source_id": "kino.official.institutional.reglamentacion",
+          "source_type": "OFFICIAL_INSTITUTIONAL",
+          "independence_group": "official_loteria",
+          "draw_date": "2024-03-27",
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/official_complementary/observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3130",
+      "draw_number": 3130,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 1,
+      "secondary_observation_count": 0,
+      "dates_observed": [
+        "2025-10-01"
+      ],
+      "complete_number_variants": [],
+      "complete_numeric_observation_count": 0,
+      "sources": [
+        {
+          "observation_id": "official-report-3130",
+          "source_id": "kino.official.institutional.juego_responsable_report",
+          "source_type": "OFFICIAL_INSTITUTIONAL",
+          "independence_group": "official_loteria",
+          "draw_date": "2025-10-01",
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/official_complementary/observations_2026-10-02.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3280",
+      "draw_number": 3280,
+      "relation": "MISSING_SOURCE",
+      "source_observation_count": 1,
+      "independent_group_count": 1,
+      "official_observation_count": 0,
+      "secondary_observation_count": 1,
+      "dates_observed": [
+        "2026-09-16"
+      ],
+      "complete_number_variants": [
+        [
+          1,
+          2,
+          5,
+          6,
+          9,
+          10,
+          11,
+          13,
+          14,
+          18,
+          20,
+          22,
+          24,
+          25
+        ]
+      ],
+      "complete_numeric_observation_count": 1,
+      "sources": [
+        {
+          "observation_id": "kino.secondary.db.resultadoskinochile:3280",
+          "source_id": "kino.secondary.db.resultadoskinochile",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "resultadoskinochile",
+          "draw_date": "2026-09-16",
+          "numbers": [
+            1,
+            2,
+            5,
+            6,
+            9,
+            10,
+            11,
+            13,
+            14,
+            18,
+            20,
+            22,
+            24,
+            25
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3281",
+      "draw_number": 3281,
+      "relation": "EXACT_MATCH",
+      "source_observation_count": 3,
+      "independent_group_count": 3,
+      "official_observation_count": 0,
+      "secondary_observation_count": 3,
+      "dates_observed": [
+        "2026-09-18"
+      ],
+      "complete_number_variants": [
+        [
+          5,
+          6,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          18,
+          20,
+          21,
+          23,
+          24,
+          25
+        ]
+      ],
+      "complete_numeric_observation_count": 3,
+      "sources": [
+        {
+          "observation_id": "kino.secondary.db.resultadoskinochile:3281",
+          "source_id": "kino.secondary.db.resultadoskinochile",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "resultadoskinochile",
+          "draw_date": "2026-09-18",
+          "numbers": [
+            5,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            18,
+            20,
+            21,
+            23,
+            24,
+            25
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.db.chileresultados:3281",
+          "source_id": "kino.secondary.db.chileresultados",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "chileresultados",
+          "draw_date": "2026-09-18",
+          "numbers": [
+            5,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            18,
+            20,
+            21,
+            23,
+            24,
+            25
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.media.epicentrochile:3281",
+          "source_id": "kino.secondary.media.epicentrochile",
+          "source_type": "SECONDARY_MEDIA",
+          "independence_group": "epicentrochile",
+          "draw_date": "2026-09-18",
+          "numbers": [
+            5,
+            6,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            18,
+            20,
+            21,
+            23,
+            24,
+            25
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3282",
+      "draw_number": 3282,
+      "relation": "EXACT_MATCH",
+      "source_observation_count": 3,
+      "independent_group_count": 3,
+      "official_observation_count": 0,
+      "secondary_observation_count": 3,
+      "dates_observed": [
+        "2026-09-20"
+      ],
+      "complete_number_variants": [
+        [
+          1,
+          2,
+          3,
+          4,
+          7,
+          9,
+          11,
+          13,
+          15,
+          16,
+          17,
+          19,
+          21,
+          22
+        ]
+      ],
+      "complete_numeric_observation_count": 3,
+      "sources": [
+        {
+          "observation_id": "kino.secondary.db.resultadoskinochile:3282",
+          "source_id": "kino.secondary.db.resultadoskinochile",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "resultadoskinochile",
+          "draw_date": "2026-09-20",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            9,
+            11,
+            13,
+            15,
+            16,
+            17,
+            19,
+            21,
+            22
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.db.chileresultados:3282",
+          "source_id": "kino.secondary.db.chileresultados",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "chileresultados",
+          "draw_date": "2026-09-20",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            9,
+            11,
+            13,
+            15,
+            16,
+            17,
+            19,
+            21,
+            22
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.media.epicentrochile:3282",
+          "source_id": "kino.secondary.media.epicentrochile",
+          "source_type": "SECONDARY_MEDIA",
+          "independence_group": "epicentrochile",
+          "draw_date": "2026-09-20",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            9,
+            11,
+            13,
+            15,
+            16,
+            17,
+            19,
+            21,
+            22
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3283",
+      "draw_number": 3283,
+      "relation": "EXACT_MATCH",
+      "source_observation_count": 3,
+      "independent_group_count": 3,
+      "official_observation_count": 0,
+      "secondary_observation_count": 3,
+      "dates_observed": [
+        "2026-09-23"
+      ],
+      "complete_number_variants": [
+        [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          12,
+          13,
+          16,
+          17,
+          19,
+          21,
+          23,
+          25
+        ]
+      ],
+      "complete_numeric_observation_count": 3,
+      "sources": [
+        {
+          "observation_id": "kino.secondary.db.resultadoskinochile:3283",
+          "source_id": "kino.secondary.db.resultadoskinochile",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "resultadoskinochile",
+          "draw_date": "2026-09-23",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            12,
+            13,
+            16,
+            17,
+            19,
+            21,
+            23,
+            25
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.db.chileresultados:3283",
+          "source_id": "kino.secondary.db.chileresultados",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "chileresultados",
+          "draw_date": "2026-09-23",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            12,
+            13,
+            16,
+            17,
+            19,
+            21,
+            23,
+            25
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.media.epicentrochile:3283",
+          "source_id": "kino.secondary.media.epicentrochile",
+          "source_type": "SECONDARY_MEDIA",
+          "independence_group": "epicentrochile",
+          "draw_date": "2026-09-23",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            12,
+            13,
+            16,
+            17,
+            19,
+            21,
+            23,
+            25
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3284",
+      "draw_number": 3284,
+      "relation": "EXACT_MATCH",
+      "source_observation_count": 3,
+      "independent_group_count": 3,
+      "official_observation_count": 0,
+      "secondary_observation_count": 3,
+      "dates_observed": [
+        "2026-09-25"
+      ],
+      "complete_number_variants": [
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          18,
+          19,
+          20,
+          23
+        ]
+      ],
+      "complete_numeric_observation_count": 3,
+      "sources": [
+        {
+          "observation_id": "kino.secondary.db.resultadoskinochile:3284",
+          "source_id": "kino.secondary.db.resultadoskinochile",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "resultadoskinochile",
+          "draw_date": "2026-09-25",
+          "numbers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            18,
+            19,
+            20,
+            23
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.db.chileresultados:3284",
+          "source_id": "kino.secondary.db.chileresultados",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "chileresultados",
+          "draw_date": "2026-09-25",
+          "numbers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            18,
+            19,
+            20,
+            23
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.media.epicentrochile:3284",
+          "source_id": "kino.secondary.media.epicentrochile",
+          "source_type": "SECONDARY_MEDIA",
+          "independence_group": "epicentrochile",
+          "draw_date": "2026-09-25",
+          "numbers": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            18,
+            19,
+            20,
+            23
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3285",
+      "draw_number": 3285,
+      "relation": "PARTIAL_MATCH",
+      "source_observation_count": 4,
+      "independent_group_count": 4,
+      "official_observation_count": 1,
+      "secondary_observation_count": 3,
+      "dates_observed": [
+        "2026-09-27"
+      ],
+      "complete_number_variants": [
+        [
+          1,
+          4,
+          6,
+          9,
+          10,
+          11,
+          14,
+          15,
+          17,
+          19,
+          20,
+          21,
+          23,
+          24
+        ]
+      ],
+      "complete_numeric_observation_count": 3,
+      "sources": [
+        {
+          "observation_id": "official-pendon-3285",
+          "source_id": "kino.official.institutional.pendon",
+          "source_type": "OFFICIAL_INSTITUTIONAL",
+          "independence_group": "official_loteria",
+          "draw_date": "2026-09-27",
+          "numbers": null,
+          "validation_status": "INCOMPLETE",
+          "raw_reference": "data/raw/kino/official_complementary/observations_2026-10-02.json"
+        },
+        {
+          "observation_id": "kino.secondary.db.resultadoskinochile:3285",
+          "source_id": "kino.secondary.db.resultadoskinochile",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "resultadoskinochile",
+          "draw_date": "2026-09-27",
+          "numbers": [
+            1,
+            4,
+            6,
+            9,
+            10,
+            11,
+            14,
+            15,
+            17,
+            19,
+            20,
+            21,
+            23,
+            24
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.db.chileresultados:3285",
+          "source_id": "kino.secondary.db.chileresultados",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "chileresultados",
+          "draw_date": "2026-09-27",
+          "numbers": [
+            1,
+            4,
+            6,
+            9,
+            10,
+            11,
+            14,
+            15,
+            17,
+            19,
+            20,
+            21,
+            23,
+            24
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.media.epicentrochile:3285",
+          "source_id": "kino.secondary.media.epicentrochile",
+          "source_type": "SECONDARY_MEDIA",
+          "independence_group": "epicentrochile",
+          "draw_date": "2026-09-27",
+          "numbers": [
+            1,
+            4,
+            6,
+            9,
+            10,
+            11,
+            14,
+            15,
+            17,
+            19,
+            20,
+            21,
+            23,
+            24
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    },
+    {
+      "draw_id": "kino:3286",
+      "draw_number": 3286,
+      "relation": "EXACT_MATCH",
+      "source_observation_count": 3,
+      "independent_group_count": 3,
+      "official_observation_count": 0,
+      "secondary_observation_count": 3,
+      "dates_observed": [
+        "2026-09-30"
+      ],
+      "complete_number_variants": [
+        [
+          1,
+          2,
+          3,
+          5,
+          9,
+          12,
+          13,
+          15,
+          17,
+          18,
+          20,
+          21,
+          23,
+          24
+        ]
+      ],
+      "complete_numeric_observation_count": 3,
+      "sources": [
+        {
+          "observation_id": "kino.secondary.db.resultadoskinochile:3286",
+          "source_id": "kino.secondary.db.resultadoskinochile",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "resultadoskinochile",
+          "draw_date": "2026-09-30",
+          "numbers": [
+            1,
+            2,
+            3,
+            5,
+            9,
+            12,
+            13,
+            15,
+            17,
+            18,
+            20,
+            21,
+            23,
+            24
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.db.chileresultados:3286",
+          "source_id": "kino.secondary.db.chileresultados",
+          "source_type": "SECONDARY_DATABASE",
+          "independence_group": "chileresultados",
+          "draw_date": "2026-09-30",
+          "numbers": [
+            1,
+            2,
+            3,
+            5,
+            9,
+            12,
+            13,
+            15,
+            17,
+            18,
+            20,
+            21,
+            23,
+            24
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json"
+        },
+        {
+          "observation_id": "kino.secondary.media.epicentrochile:3286",
+          "source_id": "kino.secondary.media.epicentrochile",
+          "source_type": "SECONDARY_MEDIA",
+          "independence_group": "epicentrochile",
+          "draw_date": "2026-09-30",
+          "numbers": [
+            1,
+            2,
+            3,
+            5,
+            9,
+            12,
+            13,
+            15,
+            17,
+            18,
+            20,
+            21,
+            23,
+            24
+          ],
+          "validation_status": "VALID_STRUCTURAL",
+          "raw_reference": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json"
+        }
+      ],
+      "conflict_flags": {
+        "date_conflict": false,
+        "numbers_conflict": false,
+        "duplicate_candidate": false
+      }
+    }
+  ]
+}

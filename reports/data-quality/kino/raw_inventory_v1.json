@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "kino-history-v1.0.0",
+  "master_work_item": 15,
+  "draw_level_raw_records": 31,
+  "files": [
+    {
+      "path": "data/raw/kino/source_catalog/source_observations_2026-10-02.json",
+      "purpose": "source catalog",
+      "draw_records": 0
+    },
+    {
+      "path": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json",
+      "source_id": "kino.official.direct.sorteos_en_vivo",
+      "draw_records": 8
+    },
+    {
+      "path": "data/raw/kino/consulta_resultados/interface_observation_2026-10-02.json",
+      "source_id": "kino.official.direct.consulta_resultado",
+      "draw_records": 0
+    },
+    {
+      "path": "data/raw/kino/official_complementary/observations_2026-10-02.json",
+      "draw_records": 3
+    },
+    {
+      "path": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json",
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "draw_records": 7
+    },
+    {
+      "path": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json",
+      "source_id": "kino.secondary.db.chileresultados",
+      "draw_records": 6
+    },
+    {
+      "path": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json",
+      "source_id": "kino.secondary.media.epicentrochile",
+      "draw_records": 6
+    },
+    {
+      "path": "data/raw/kino/secondary/epicentrochile/gap_resolution_3280_2026-10-02.json",
+      "source_id": "kino.secondary.media.epicentrochile",
+      "draw_records": 1
+    }
+  ],
+  "invariant": "No raw file is overwritten; v1 freezes references to immutable evidence."
+}

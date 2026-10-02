@@ -1,0 +1,90 @@
+{
+  "checkpoint": 38,
+  "automation_required": [
+    {
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "apparent_coverage": "draws ~1505–3286 via 289+ archive pages",
+      "mechanism": "paginate archive and open per-draw pages",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "prizes",
+        "winners"
+      ],
+      "required_automation": "crawler/scraper across pagination/per-draw links",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.chileresultados",
+      "apparent_coverage": "historical search + per-draw URLs",
+      "mechanism": "iterate draw/date queries",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "prizes",
+        "winners"
+      ],
+      "required_automation": "query/per-draw acquisition bot",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.indicadoresydatos",
+      "apparent_coverage": "#799 onward, >2500 draws claimed",
+      "mechanism": "underlying historical table/data source not bulk-exposed",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]"
+      ],
+      "required_automation": "discover/use page data endpoint or automate historical table extraction",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.kinohistorico",
+      "apparent_coverage": "thousands of draws claimed",
+      "mechanism": "search application",
+      "fields": [
+        "draw-level historical results"
+      ],
+      "required_automation": "automated query enumeration",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.sortuo",
+      "apparent_coverage": "50 recent + draw-number search",
+      "mechanism": "per-draw search",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "winner state"
+      ],
+      "required_automation": "draw-number enumeration",
+      "implementation_authorized": false
+    },
+    {
+      "source_id": "kino.secondary.db.openloto",
+      "apparent_coverage": "recent linked draws; older depth unclear",
+      "mechanism": "follow individual draw pages",
+      "fields": [
+        "draw_number",
+        "draw_date",
+        "numbers[14]",
+        "pozo"
+      ],
+      "required_automation": "historical link/page enumeration if deeper archive exists",
+      "implementation_authorized": false
+    }
+  ],
+  "manual_gap_resolution": {
+    "draws": "3268–3279",
+    "sources": [
+      "kino.secondary.db.sortuo",
+      "kino.secondary.db.openloto"
+    ],
+    "result": "12 complete draw/date/numbers observations acquired manually; no automation used"
+  },
+  "remaining_result_gap_within_799_3286": 0
+}

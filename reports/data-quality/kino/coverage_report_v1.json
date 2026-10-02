@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "kino-history-v1.0.0",
+  "metrics": {
+    "sources_mapped": 23,
+    "sources_acquired": 11,
+    "raw_records": 31,
+    "processed_observations": 31,
+    "unique_draws": 17,
+    "VALIDATED": 0,
+    "PROVISIONAL": 7,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 10,
+    "REJECTED": 0,
+    "earliest_validated_draw": null,
+    "latest_validated_draw": null,
+    "known_gap_groups": 5,
+    "records_with_2plus_independent_sources": {
+      "count": 7,
+      "total": 17,
+      "percent": 41.176
+    },
+    "records_with_official_evidence": {
+      "count": 11,
+      "total": 17,
+      "percent": 64.706
+    }
+  },
+  "coverage": {
+    "historical": "PARTIAL",
+    "result": {
+      "status": "PARTIAL",
+      "numeric_complete_draws": 7,
+      "total": 17,
+      "percent": 41.176,
+      "validated_numeric_draws": 0
+    },
+    "prize": {
+      "status": "PARTIAL",
+      "draws": 7,
+      "total": 17,
+      "percent": 41.176
+    },
+    "winner_count": {
+      "status": "PARTIAL",
+      "draws": 7,
+      "total": 17,
+      "percent": 41.176
+    },
+    "jackpot": {
+      "status": "PARTIAL",
+      "draws_with_explicit_total_estimate": 2,
+      "total": 17,
+      "percent": 11.765
+    },
+    "sales": {
+      "status": "UNKNOWN",
+      "draws": 0,
+      "total": 17,
+      "percent": 0
+    }
+  },
+  "acquisition_saturation": "REACHED",
+  "interpretation": "PARTIAL BUT AUDITABLE > APPARENTLY COMPLETE BUT UNVERIFIED"
+}

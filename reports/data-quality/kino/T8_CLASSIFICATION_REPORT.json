@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": 23,
+  "unique_draws": 17,
+  "counts": {
+    "VALIDATED": 0,
+    "PROVISIONAL": 7,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 10,
+    "REJECTED": 0
+  },
+  "total_check": true,
+  "source_observation_counts": {
+    "null": 8,
+    "kino.official.institutional.reglamentacion": 1,
+    "kino.official.institutional.juego_responsable_report": 1,
+    "kino.official.institutional.pendon": 1,
+    "kino.secondary.db.resultadoskinochile": 7,
+    "kino.secondary.db.chileresultados": 6,
+    "kino.secondary.media.epicentrochile": 6
+  },
+  "classification_rules": {
+    "validated": "complete core fields + no conflict + official complete numeric evidence + independent corroboration",
+    "provisional": "complete/traced but insufficient official numeric corroboration",
+    "conflicted": "material conflict",
+    "incomplete": "missing one or more core fields",
+    "rejected": "demonstrably invalid/non-Kino/non-traceable"
+  }
+}
