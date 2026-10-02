@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "master_work_item": 15,
+  "issue": 17,
+  "source_id": "kino.official.direct.sorteos_en_vivo",
+  "source_type": "OFFICIAL_DIRECT_RESULT",
+  "retrieved_at": "2026-10-02T01:24:00-03:00",
+  "capture_method": "public_web_index/manual_browser_no_automation",
+  "interface": {
+    "url": "https://www.sorteosenvivo.cl/sorteosenvivo",
+    "alias": "https://loteria.cl/sorteosenvivo",
+    "query_capabilities_verified": [
+      "game selector",
+      "draw number input",
+      "date from",
+      "date to",
+      "consult button"
+    ],
+    "video_retention_statement": "Los videos disponibles corresponden a los realizados en los últimos 60 días.",
+    "kino_schedule": "Miércoles, Viernes y Domingo 22:30 hrs."
+  },
+  "observations": [
+    {
+      "record_id": "sev-index-1829",
+      "draw_number": 1829,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1829/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1829\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1829/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "3811f7aa0a0adaf22ba6ff85f3311eb2bb3cc2ffcbafb133b2d74dc359ebf06c",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    },
+    {
+      "record_id": "sev-index-1836",
+      "draw_number": 1836,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1836/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1836\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1836/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "995e08d0e9cc722e66ecbd13c33581e2419c0d07ec12226e3546f650017390a0",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    },
+    {
+      "record_id": "sev-index-1842",
+      "draw_number": 1842,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1842/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1842\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1842/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "97c63c980e8dd813657b7b9cc4db23512a695d29f2136d20fd38cef9fb37541e",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    },
+    {
+      "record_id": "sev-index-1843",
+      "draw_number": 1843,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1843/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1843\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1843/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "a277cee903ac9d16f41b10a70f5d600b65a4899caa786548ed9556f3a18161ca",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    },
+    {
+      "record_id": "sev-index-1856",
+      "draw_number": 1856,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1856/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1856\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1856/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "6e70cf5babf4e2408e6ff8006ed995a67c4928896a2a6558934f460adcb7139b",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    },
+    {
+      "record_id": "sev-index-1858",
+      "draw_number": 1858,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1858/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1858\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1858/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "7399de5b16e59e1b611c601caffa73ecbb5e763c43da7b9159e2631e701a0df7",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    },
+    {
+      "record_id": "sev-index-1892",
+      "draw_number": 1892,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1892/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1892\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1892/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "f67650fe592bc187bb888beea56a9b752886a87ca7692516c80dfd4741d28bed",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    },
+    {
+      "record_id": "sev-index-1903",
+      "draw_number": 1903,
+      "draw_date": null,
+      "numbers": null,
+      "game": "kino",
+      "modality": "kino_base",
+      "source_url": "https://loteria.cl/SorteosEnVivo/home/verVideo/3/1903/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "raw_representation": "KINO SORTEO 1903\niframe\nSource: https://loteria.cl/SorteosEnVivo/home/verVideo/3/1903/\nObserved via indexed public page on 2026-10-02.",
+      "raw_representation_sha256": "5407e1b01472563f86e9e7bcca9dc04f58076d92b2bd7a4f2dd8ec71aa835893",
+      "fields_observed": [
+        "draw_number",
+        "game"
+      ],
+      "missing_core_fields": [
+        "draw_date",
+        "numbers[14]"
+      ],
+      "acquisition_status": "INCOMPLETE_EVIDENCE"
+    }
+  ],
+  "access_failures": [
+    {
+      "target": "historical numeric results through current interactive query",
+      "result": "not exposed in static/indexed response used in T2",
+      "consequence": "no 14-number result can be attributed to this source without interactive extraction/automation",
+      "action": "do not copy numbers from secondary sources into this official raw partition"
+    }
+  ]
+}
