@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "C39.4",
+  "verification": "PASS",
+  "total": 2488,
+  "status_counts": {
+    "PROVISIONAL": 2488
+  },
+  "evidence_grade_counts": {
+    "SINGLE_SOURCE": 2481,
+    "CONSENSUS_MEDIUM": 1,
+    "CONSENSUS_HIGH": 6
+  },
+  "fully_official_numeric_dated": 0,
+  "high_consensus_draw_numbers": [
+    3281,
+    3282,
+    3283,
+    3284,
+    3285,
+    3286
+  ],
+  "medium_consensus_draw_numbers": [
+    3280
+  ],
+  "source_independence_rule": "Nicovh is derived from ChileResultados; gaaguile XLSX original publisher not verified. A date-free numeric match from this pair is not counted as independent date+number corroboration.",
+  "high_consensus_rule": "3 distinct traceable secondary publisher groups with exact draw_number + draw_date + 14 numbers; remains PROVISIONAL, no official numeric corroboration.",
+  "number_of_structural_failures": 0,
+  "confidence_no_unjustified_promotion": true,
+  "source_raw_references_preserved": true,
+  "rule_regime_change_at_draw": 2893,
+  "legacy_regime_excluded_pre_draw": 799
+}
