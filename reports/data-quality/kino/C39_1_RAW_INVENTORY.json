@@ -40,7 +40,7 @@
     },
     {
       "path": "data/raw/kino/official_complementary/observations_2026-10-02.json",
-      "git_blob_sha1": "52603e54f73dcd53a2047680b9a54760dda6a04760",
+      "git_blob_sha1": "52603e54f73dcd53a2047680b9a54760dda6a047",
       "observed_rows": 3,
       "retrieved_at": "2026-10-02T01:24:00-03:00",
       "identity_basis": "git_blob_sha1",
