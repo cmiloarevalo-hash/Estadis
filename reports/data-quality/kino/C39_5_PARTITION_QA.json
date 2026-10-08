@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "C39.5",
+  "tests": {
+    "strict_is_validated_only": true,
+    "high_is_provisional_consensus_high": true,
+    "quarantine_sum_is_2488": true,
+    "partition_status_total": true,
+    "unique_dataset_keys": true,
+    "high_keys_3281_3286": true,
+    "rejected_zero": true,
+    "conflicts_zero": true,
+    "economic_separate": true
+  },
+  "verification": "PASS",
+  "counts": {
+    "unique": 2488,
+    "VALIDATED": 0,
+    "PROVISIONAL": 2488,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 0,
+    "REJECTED": 0,
+    "strict_dataset": 0,
+    "high_confidence_research_dataset": 6,
+    "observation_level_incomplete": 900
+  },
+  "reminder": "No validated draw and no actual analysis readiness. High-confidence is secondary-only research subset."
+}
