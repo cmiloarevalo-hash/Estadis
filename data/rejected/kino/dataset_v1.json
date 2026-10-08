@@ -1,6 +1,8 @@
 {
-  "schema_version": "1.0",
-  "dataset_version": "kino-history-v1.0.0",
+  "schema_version": "1.1",
+  "dataset_version": "kino-history-v1.1.0",
+  "checkpoint": "C39.6",
   "status": "REJECTED",
+  "records_count": 0,
   "records": []
 }
