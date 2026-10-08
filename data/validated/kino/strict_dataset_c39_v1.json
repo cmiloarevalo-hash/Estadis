@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "C39.5",
+  "dataset": "STRICT_DATASET",
+  "criteria": "VALIDATED only",
+  "records_count": 0,
+  "records": [],
+  "readiness": "NOT_READY_NO_VALIDATED_RESULTS"
+}
