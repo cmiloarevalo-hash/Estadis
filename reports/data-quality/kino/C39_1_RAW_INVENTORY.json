@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "work_item": 39,
+  "checkpoint": "C39.1",
+  "date": "2026-10-08",
+  "reference_head_before_checkpoint": "89989300c0e8764aea945c8cee83d6eefdcebce7",
+  "snapshot_count": 12,
+  "raw_snapshots": [
+    {
+      "path": "data/raw/kino/community/deep_expansion_manifest_t38.json",
+      "git_blob_sha1": "481cccfada1b0f6bec2d49cb2165a250bacfefc0",
+      "observed_rows": 2,
+      "retrieved_at": "2026-10-02T02:30:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/community/gaaguile/kino-history_a498fd81.json",
+      "git_blob_sha1": "ec82bb2b2859e8c2211edda5c9aabc92d20c9b77",
+      "observed_rows": 3268,
+      "retrieved_at": "2026-10-02T02:30:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/community/nicovh/kino_principal.csv",
+      "git_blob_sha1": "06a45d9312a91a422510d7d917e3c99dc9ebb15a",
+      "observed_rows": 889,
+      "retrieved_at": "2026-10-02T02:30:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/consulta_resultados/interface_observation_2026-10-02.json",
+      "git_blob_sha1": "322a72702437f605843244501e86d755771d9309",
+      "observed_rows": 0,
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/official_complementary/observations_2026-10-02.json",
+      "git_blob_sha1": "52603e54f73dcd53a2047680b9a54760dda6a04760",
+      "observed_rows": 3,
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json",
+      "git_blob_sha1": "3ab78045707a8ec1eae8afa09fcce4df09e875e5",
+      "observed_rows": 6,
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/secondary/epicentrochile/gap_resolution_3280_2026-10-02.json",
+      "git_blob_sha1": "b21b94016d6bd90043d9cd1d25ac12385588fc13",
+      "observed_rows": 1,
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json",
+      "git_blob_sha1": "ed85b3a292e1fee6c2b2cc024e84566f8f951a1d",
+      "observed_rows": 6,
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/secondary/manual_gap_3268_3279_t38.json",
+      "git_blob_sha1": "3025ce2ab2340c91ad986b3aaf055cd7c45721c5",
+      "observed_rows": 12,
+      "retrieved_at": "2026-10-02T02:45:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json",
+      "git_blob_sha1": "039da5ce1f9b6fb92b5af78b123214e529006cda",
+      "observed_rows": 7,
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json",
+      "git_blob_sha1": "5b436bdabb02ebd970f8734e84f15f3a0661f701",
+      "observed_rows": 8,
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    },
+    {
+      "path": "data/raw/kino/source_catalog/source_observations_2026-10-02.json",
+      "git_blob_sha1": "e690339b50ffba1409202d6ce67fb3959115bd8d",
+      "observed_rows": 0,
+      "retrieved_at": "2026-10-02",
+      "identity_basis": "git_blob_sha1",
+      "upstream_http_byte_hash_verified": false
+    }
+  ],
+  "duplicate_identical_blob_pairs": 0,
+  "raw_mutations": 0,
+  "limitations": [
+    "Rows in manifests/catalog are metadata rather than draw observations; avoid treating the aggregate of observed_rows as a draw count.",
+    "Previous manual web captures are structured observations; original upstream HTTP bytes not necessarily preserved.",
+    "gaaguile pre-799 15-number records are excluded from modern game.",
+    "Nicovh and gaaguile lineage independence remains unknown."
+  ],
+  "lineage": [
+    {
+      "group": "gaaguile",
+      "original_xlsx_publisher": "UNKNOWN",
+      "independent_of_nicovh": "UNVERIFIED"
+    },
+    {
+      "group": "nicovh",
+      "contains_dates": false,
+      "independent_of_gaaguile": "UNVERIFIED"
+    },
+    {
+      "group": "Fernando8955",
+      "derived_from": "ChileResultados",
+      "count_as_independent_source": false
+    }
+  ],
+  "source_metadata": [
+    "sources/kino_deep_source_evaluation_t38.json",
+    "sources/kino_historical_source_catalog_v1.json",
+    "data/raw/kino/community/deep_expansion_manifest_t38.json"
+  ]
+}
