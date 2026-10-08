@@ -1,65 +1,104 @@
 {
-  "schema_version": "1.0",
-  "dataset_version": "kino-history-v1.0.0",
+  "schema_version": "1.1",
+  "dataset_version": "kino-history-v1.1.0",
+  "checkpoint": "C39.6",
+  "coverage_status": "PARTIAL",
+  "DATASET_ANALYSIS_READY": "NO",
   "metrics": {
-    "sources_mapped": 23,
-    "sources_acquired": 11,
-    "raw_records": 31,
-    "processed_observations": 31,
-    "unique_draws": 17,
+    "sources_mapped_unique": 26,
+    "previous_t38_reported_sources": 25,
+    "source_ids_observed": 11,
+    "source_groups_observed": 7,
+    "source_groups_evaluated_t38": 9,
+    "raw_draw_observations_including_legacy": 4200,
+    "processed_modern_observations": 3401,
+    "unique_draws": 2488,
+    "observed_complete": 2488,
     "VALIDATED": 0,
-    "PROVISIONAL": 7,
+    "PROVISIONAL": 2488,
     "CONFLICTED": 0,
-    "INCOMPLETE": 10,
+    "INCOMPLETE": 0,
     "REJECTED": 0,
-    "earliest_validated_draw": null,
-    "latest_validated_draw": null,
-    "known_gap_groups": 5,
-    "records_with_2plus_independent_sources": {
-      "count": 7,
-      "total": 17,
-      "percent": 41.176
-    },
-    "records_with_official_evidence": {
-      "count": 11,
-      "total": 17,
-      "percent": 64.706
-    }
+    "first_validated": null,
+    "last_validated": null,
+    "strict_dataset_size": 0,
+    "high_confidence_research_dataset_size": 6,
+    "draws_with_two_or_more_source_observations": 904,
+    "percent_two_or_more_source_observations": 36.33,
+    "draws_with_independent_full_date_number_secondary_consensus": 7,
+    "percent_independent_full_consensus": 0.28,
+    "draws_with_any_official_partial_or_complete_evidence": 11,
+    "percent_any_official_evidence": 0.44
   },
   "coverage": {
-    "historical": "PARTIAL",
-    "result": {
-      "status": "PARTIAL",
-      "numeric_complete_draws": 7,
-      "total": 17,
-      "percent": 41.176,
-      "validated_numeric_draws": 0
+    "target_window_start": "2006-01-08",
+    "target_window_end": "2026-09-30",
+    "target_draw_numbers": [
+      799,
+      3286
+    ],
+    "expected_draws_external_schedule": null,
+    "coverage_percent_external": null,
+    "observed_number_span_cardinality": 2488,
+    "internal_number_gaps": 0,
+    "years": 21,
+    "longest_observed_number_continuity": {
+      "first": 799,
+      "last": 3286,
+      "count": 2488,
+      "first_date": "2006-01-08",
+      "last_date": "2026-09-30"
+    },
+    "annual_coverage_reference": "reports/data-quality/kino/C39_5_COVERAGE_REPORT.json",
+    "economic_coverage_reference": "reports/data-quality/kino/C39_5_ECONOMIC_FIELD_COVERAGE.json",
+    "result_numbers": {
+      "draws": 2488,
+      "percent": 100,
+      "validated": 0
     },
     "prize": {
-      "status": "PARTIAL",
       "draws": 7,
-      "total": 17,
-      "percent": 41.176
+      "percent": 0.28,
+      "draw_numbers": [
+        3280,
+        3281,
+        3282,
+        3283,
+        3284,
+        3285,
+        3286
+      ]
     },
-    "winner_count": {
-      "status": "PARTIAL",
+    "winners": {
       "draws": 7,
-      "total": 17,
-      "percent": 41.176
+      "percent": 0.28,
+      "draw_numbers": [
+        3280,
+        3281,
+        3282,
+        3283,
+        3284,
+        3285,
+        3286
+      ]
     },
-    "jackpot": {
-      "status": "PARTIAL",
-      "draws_with_explicit_total_estimate": 2,
-      "total": 17,
-      "percent": 11.765
+    "jackpot_estimates": {
+      "draws": 2,
+      "percent": 0.08,
+      "draw_numbers": [
+        3280,
+        3285
+      ]
     },
     "sales": {
-      "status": "UNKNOWN",
       "draws": 0,
-      "total": 17,
+      "percent": 0
+    },
+    "ticket_price": {
+      "draws": 0,
       "percent": 0
     }
   },
-  "acquisition_saturation": "REACHED",
-  "interpretation": "PARTIAL BUT AUDITABLE > APPARENTLY COMPLETE BUT UNVERIFIED"
+  "unresolved_gaps": 7,
+  "interpretation": "Observed numeric continuity and raw scale cannot substitute for official validation or publisher independence; analysis readiness is NO. Master #26 is blocked."
 }
