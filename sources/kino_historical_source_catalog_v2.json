@@ -1,0 +1,902 @@
+{
+  "schema_version": "2.0",
+  "master_work_item": 15,
+  "work_item": 39,
+  "checkpoint": "C39.6",
+  "dataset_version": "kino-history-v1.1.0",
+  "previous_catalog": "sources/kino_historical_source_catalog_v1.json",
+  "deep_evaluation": "sources/kino_deep_source_evaluation_t38.json",
+  "prior_t38_reported_discovered_sources": 25,
+  "canonical_reconciled_unique_source_ids": 26,
+  "discrepancy": "T38 summary reports 25; union of 23 catalog IDs and 10 deep-evaluation IDs gives 26 because three deep IDs were not in the original 23.",
+  "source_id_policy": {
+    "format": "kino.<authority>.<class>.<slug>",
+    "stability": "source_id is immutable once assigned; URL changes are recorded as aliases, not by renaming source_id",
+    "independence_rule": "Derived/mirrored sources do not count as independent corroboration unless publisher/data lineage independence is verified."
+  },
+  "added_source_ids": [
+    "kino.community.github.gaaguile_kino2026_history_a498fd8",
+    "kino.community.github.nicovh_kino_principal",
+    "kino.secondary.stats.loterator"
+  ],
+  "sources": [
+    {
+      "source_id": "kino.official.direct.sorteos_en_vivo",
+      "publisher": "Lotería de Concepción",
+      "class": "OFFICIAL_DIRECT_RESULT",
+      "url": "https://www.sorteosenvivo.cl/sorteosenvivo",
+      "aliases": [
+        "https://loteria.cl/sorteosenvivo"
+      ],
+      "format": [
+        "interactive HTML",
+        "video for recent draws"
+      ],
+      "query": {
+        "by_draw_number": true,
+        "by_date": true,
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "game selector",
+        "draw-number filter",
+        "date-from filter",
+        "date-to filter",
+        "recent draw videos",
+        "Kino draw schedule"
+      ],
+      "fields_to_verify_in_capture": [
+        "draw_number returned",
+        "draw_date returned",
+        "14 Kino numbers",
+        "additional-game numbers",
+        "prize tables"
+      ],
+      "coverage": {
+        "verified": "Historical query interface exists; videos explicitly limited to last 60 days.",
+        "earliest": "NOT_VERIFIED",
+        "latest": "current interface",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "official current service; dynamic/interactively rendered",
+      "visible_restrictions": [
+        "videos available only for last 60 days",
+        "no public bulk export/API documented in T1"
+      ],
+      "verification": "VERIFIED_INTERFACE",
+      "independence_group": "official_loteria"
+    },
+    {
+      "source_id": "kino.official.direct.consulta_resultado",
+      "publisher": "Lotería de Concepción",
+      "class": "OFFICIAL_DIRECT_RESULT",
+      "url": "https://www.loteria.cl/resultados/consulta-resultado/",
+      "format": [
+        "interactive HTML"
+      ],
+      "query": {
+        "by_draw_number": "NOT_VERIFIED",
+        "by_date": "NOT_VERIFIED",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "official result-query surface exists"
+      ],
+      "fields_to_verify_in_capture": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "prizes",
+        "additional modalities"
+      ],
+      "coverage": {
+        "verified": "public official query page exists",
+        "earliest": "NOT_VERIFIED",
+        "latest": "current interface",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "official current service; static indexing exposes little detail",
+      "visible_restrictions": [
+        "Lotería terms say Internet results are referential and may contain errors"
+      ],
+      "verification": "VERIFIED_INTERFACE",
+      "independence_group": "official_loteria"
+    },
+    {
+      "source_id": "kino.official.stats.estadisticas",
+      "publisher": "Lotería de Concepción",
+      "class": "OFFICIAL_STATISTICS",
+      "url": "https://www.loteria.cl/resultados/estadisticas/",
+      "format": [
+        "interactive HTML/statistics"
+      ],
+      "query": {
+        "by_draw_number": "NOT_VERIFIED",
+        "by_date": "NOT_VERIFIED",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "official statistics surface exists"
+      ],
+      "fields_to_verify_in_capture": [
+        "number frequencies",
+        "period/range selector",
+        "underlying draw-level records if any"
+      ],
+      "coverage": {
+        "verified": "terms explicitly describe public historical statistics",
+        "earliest": "NOT_VERIFIED",
+        "latest": "NOT_VERIFIED",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "official current surface; underlying schema not verified",
+      "visible_restrictions": [
+        "official terms say historical statistics are manually collected and may contain errors"
+      ],
+      "verification": "VERIFIED_INTERFACE_PLUS_OFFICIAL_TERMS",
+      "independence_group": "official_loteria"
+    },
+    {
+      "source_id": "kino.official.institutional.novedades",
+      "publisher": "Lotería de Concepción",
+      "class": "OFFICIAL_INSTITUTIONAL",
+      "url": "https://www.loteria.cl/contenido/novedades/",
+      "format": [
+        "HTML articles"
+      ],
+      "query": {
+        "by_draw_number": false,
+        "by_date": "archive/navigation",
+        "download_export": false,
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "article title",
+        "publication context",
+        "monthly Kino draw notices",
+        "special-draw/reprogramming notices"
+      ],
+      "fields_to_verify_in_capture": [
+        "individual draw result numbers when present"
+      ],
+      "coverage": {
+        "verified": "2026 monthly Kino notices visible",
+        "earliest": "NOT_VERIFIED",
+        "latest": "2026-10 content visible",
+        "completeness": "not intended as complete result archive"
+      },
+      "stability": "official institutional archive",
+      "visible_restrictions": [
+        "sporadic/supporting evidence; not canonical draw-result table"
+      ],
+      "verification": "VERIFIED_INTERFACE",
+      "independence_group": "official_loteria"
+    },
+    {
+      "source_id": "kino.official.institutional.ganadores",
+      "publisher": "Lotería de Concepción",
+      "class": "OFFICIAL_INSTITUTIONAL",
+      "url": "https://www.loteria.cl/contenido/ganadores/",
+      "format": [
+        "HTML"
+      ],
+      "query": {
+        "by_draw_number": false,
+        "by_date": "manual",
+        "download_export": false,
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "winner-publication surface exists"
+      ],
+      "fields_to_verify_in_capture": [
+        "draw reference",
+        "winner location",
+        "prize",
+        "14 result numbers if present"
+      ],
+      "coverage": {
+        "verified": "recent winner publication surface",
+        "earliest": "NOT_VERIFIED",
+        "latest": "current surface",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "official institutional",
+      "visible_restrictions": [
+        "not designed as complete historical result source"
+      ],
+      "verification": "VERIFIED_INTERFACE",
+      "independence_group": "official_loteria"
+    },
+    {
+      "source_id": "kino.official.institutional.reglamentacion",
+      "publisher": "Lotería de Concepción",
+      "class": "OFFICIAL_INSTITUTIONAL",
+      "url": "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47",
+      "format": [
+        "HTML"
+      ],
+      "query": {
+        "by_draw_number": false,
+        "by_date": false,
+        "download_export": false,
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "game mechanics",
+        "prize rules",
+        "rule-regime changes",
+        "draw 2893 / 2024-03-27 restructuring marker"
+      ],
+      "coverage": {
+        "verified": "rule history evidence, not draw-result history",
+        "earliest": "not applicable",
+        "latest": "current rules page",
+        "completeness": "not a draw dataset"
+      },
+      "stability": "official rules page",
+      "visible_restrictions": [
+        "not a result source"
+      ],
+      "verification": "VERIFIED_CONTENT",
+      "independence_group": "official_loteria"
+    },
+    {
+      "source_id": "kino.secondary.db.resultadoskinochile",
+      "publisher": "ResultadosKinoChile.com",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://www.resultadoskinochile.com/resultados-kino/",
+      "format": [
+        "HTML archive",
+        "per-draw HTML"
+      ],
+      "query": {
+        "by_draw_number": "per-draw URL/search",
+        "by_date": "date-based article/archive",
+        "download_export": false,
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers on many draw pages",
+        "prize categories",
+        "winner counts",
+        "prize amounts",
+        "additional games on modern pages"
+      ],
+      "coverage": {
+        "verified": "draw 1505 (2012-12-16) through at least draw 3286 (2026-09-30) are publicly discoverable; continuity not yet verified",
+        "earliest": "1505 / 2012-12-16",
+        "latest": "3286 / 2026-09-30",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "long-lived archive with pagination/per-draw pages",
+      "visible_restrictions": [
+        "secondary source; publisher/source lineage not official",
+        "archive may contain missing/duplicate/mislabeled pages"
+      ],
+      "verification": "VERIFIED_EXAMPLES_AND_ARCHIVE",
+      "independence_group": "resultadoskinochile"
+    },
+    {
+      "source_id": "kino.secondary.db.chileresultados",
+      "publisher": "ChileResultados.com",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://chileresultados.com/kino",
+      "format": [
+        "HTML archive",
+        "per-draw HTML"
+      ],
+      "query": {
+        "by_draw_number": true,
+        "by_date": true,
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "Kino prize categories",
+        "winner counts",
+        "prize amounts",
+        "additional-game results on examples"
+      ],
+      "coverage": {
+        "verified": "examples verified at least for draw 2396 (2021-01-22), 2432 (2021-04-16), 2982 (2024-10-20), 3070 (2025-05-14); site states older draws can be searched by date",
+        "earliest": "at least 2396 / 2021-01-22 verified",
+        "latest": "current latest-draw surface; exact latest numeric record not frozen in T1",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active searchable secondary archive",
+      "visible_restrictions": [
+        "site explicitly says results are not official and may contain errors"
+      ],
+      "verification": "VERIFIED_EXAMPLES_AND_DISCLAIMER",
+      "independence_group": "chileresultados"
+    },
+    {
+      "source_id": "kino.secondary.db.loterochile",
+      "publisher": "LoteroChile.cl",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://loterochile.cl/resultados-kino/todos/",
+      "format": [
+        "HTML aggregate",
+        "per-draw pages"
+      ],
+      "query": {
+        "by_draw_number": "navigation/per-draw",
+        "by_date": true,
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "prize category total",
+        "winner count",
+        "prize per winner",
+        "additional games"
+      ],
+      "coverage": {
+        "verified": "latest example draw 3286 / 2026-09-30 and multiple 2026 historical examples visible",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3286 / 2026-09-30",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active secondary site",
+      "visible_restrictions": [
+        "publisher lineage and independence from lotero.cl not verified"
+      ],
+      "verification": "VERIFIED_EXAMPLES",
+      "independence_group": "lotero_family_unverified"
+    },
+    {
+      "source_id": "kino.secondary.db.lotero",
+      "publisher": "Lotero.cl",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://lotero.cl/resultados-kino/todos/",
+      "format": [
+        "HTML aggregate",
+        "per-draw pages"
+      ],
+      "query": {
+        "by_draw_number": "navigation/per-draw",
+        "by_date": true,
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "prize category total",
+        "winner count",
+        "prize per winner",
+        "additional games"
+      ],
+      "coverage": {
+        "verified": "examples through draw 3283 / 2026-09-23 and earlier 2026 draws visible in indexed copy",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3283 / 2026-09-23 observed in T1 index",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "secondary site; index may lag",
+      "visible_restrictions": [
+        "possible mirror/shared lineage with loterochile.cl not established"
+      ],
+      "verification": "VERIFIED_EXAMPLES",
+      "independence_group": "lotero_family_unverified"
+    },
+    {
+      "source_id": "kino.secondary.db.openloto",
+      "publisher": "Open Loto / Comunidad de Jugadores del Loto en Chile",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://www.openloto.cl/resultados-del-kino/",
+      "format": [
+        "HTML"
+      ],
+      "query": {
+        "by_draw_number": true,
+        "by_date": "recent navigation",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "recent draw links",
+        "pozo information"
+      ],
+      "coverage": {
+        "verified": "current draw 3286 and recent historical links visible",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3286 / 2026-09-30",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active secondary community site",
+      "visible_restrictions": [
+        "site states it is independent from official lottery entities"
+      ],
+      "verification": "VERIFIED_EXAMPLES",
+      "independence_group": "openloto"
+    },
+    {
+      "source_id": "kino.secondary.db.loteria_guru",
+      "publisher": "Loteria.guru",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://loteria.guru/resultados-loteria-chile/cl-kino/resultados-anteriores-kino-cl",
+      "format": [
+        "HTML"
+      ],
+      "query": {
+        "by_draw_number": "NOT_VERIFIED",
+        "by_date": "historical navigation",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_date",
+        "14 Kino numbers",
+        "frequency summaries"
+      ],
+      "coverage": {
+        "verified": "site states statistics cover results from 2021 to latest; recent 2026 draws visible",
+        "earliest": "2021 (SELF_STATED, not exhaustively verified)",
+        "latest": "recent/current",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active international lottery-results site",
+      "visible_restrictions": [
+        "secondary; draw_number not visible in sampled listing"
+      ],
+      "verification": "VERIFIED_EXAMPLES_PLUS_SELF_STATED_COVERAGE",
+      "independence_group": "loteria_guru"
+    },
+    {
+      "source_id": "kino.secondary.db.kinohistorico",
+      "publisher": "KinoHistorico.cl",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://kinohistorico.cl/search/",
+      "format": [
+        "HTML application"
+      ],
+      "query": {
+        "by_draw_number": true,
+        "by_date": "history section claimed",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw-number search form",
+        "historical-result service description"
+      ],
+      "fields_to_verify_in_capture": [
+        "draw_date",
+        "14 numbers",
+        "game/modality details",
+        "actual earliest record"
+      ],
+      "coverage": {
+        "verified": "site describes thousands of historical draws and draw-number search; exact range not verified",
+        "earliest": "NOT_VERIFIED",
+        "latest": "current service",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active secondary historical tool",
+      "visible_restrictions": [
+        "provenance statement is generic; upstream source lineage not independently verified"
+      ],
+      "verification": "VERIFIED_INTERFACE",
+      "independence_group": "kinohistorico"
+    },
+    {
+      "source_id": "kino.secondary.db.indicadoresydatos",
+      "publisher": "Indicadores y Datos",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://indicadoresydatos.cl/azar/estadisticas-loto-kino",
+      "format": [
+        "HTML table/statistics"
+      ],
+      "query": {
+        "by_draw_number": "table/navigation",
+        "by_date": "table/navigation",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "capture date",
+        "14 extracted numbers"
+      ],
+      "coverage": {
+        "verified": "visible sample includes draws 3264–3283 in indexed page",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3283 / 2026-09-23 in observed index",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active secondary statistics site",
+      "visible_restrictions": [
+        "secondary; exact upstream provenance and full historical range not verified"
+      ],
+      "verification": "VERIFIED_EXAMPLES",
+      "independence_group": "indicadoresydatos"
+    },
+    {
+      "source_id": "kino.secondary.db.sortuo",
+      "publisher": "Sortuo.cl",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://sortuo.cl/kino/",
+      "format": [
+        "HTML local archive"
+      ],
+      "query": {
+        "by_draw_number": true,
+        "by_date": "archive",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "winner-state text on sampled records"
+      ],
+      "coverage": {
+        "verified": "sampled records 3272–3274 visible",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3274 / 2026-09-02 in observed page",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active secondary app",
+      "visible_restrictions": [
+        "page labels results as local archive; upstream provenance not established"
+      ],
+      "verification": "VERIFIED_EXAMPLES",
+      "independence_group": "sortuo"
+    },
+    {
+      "source_id": "kino.secondary.db.yelu",
+      "publisher": "Yelu.cl",
+      "class": "SECONDARY_DATABASE",
+      "url": "https://www.yelu.cl/lottery/results/history",
+      "format": [
+        "HTML historical-results interface"
+      ],
+      "query": {
+        "by_draw_number": "NOT_VERIFIED",
+        "by_date": "month filter",
+        "download_export": "NOT_VERIFIED",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "game filter",
+        "month/date filter",
+        "draw date",
+        "game",
+        "winning numbers",
+        "draw number for listed lottery results"
+      ],
+      "coverage": {
+        "verified": "interface lists recent Lotería de Concepción results; Kino-specific range not verified",
+        "earliest": "NOT_VERIFIED",
+        "latest": "NOT_VERIFIED",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "active generic lottery-history site",
+      "visible_restrictions": [
+        "mixed games; Kino-specific coverage requires dedicated verification"
+      ],
+      "verification": "VERIFIED_INTERFACE",
+      "independence_group": "yelu"
+    },
+    {
+      "source_id": "kino.secondary.media.24horas",
+      "publisher": "24Horas.cl / TVN",
+      "class": "SECONDARY_MEDIA",
+      "url": "https://www.24horas.cl/tesirve/kino/",
+      "aliases": [
+        "https://www.24horas.cl/tesirve/kino/p/2"
+      ],
+      "format": [
+        "news articles",
+        "topic archive"
+      ],
+      "query": {
+        "by_draw_number": "site/article search",
+        "by_date": "chronological archive",
+        "download_export": false,
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers in result articles",
+        "prize/winner narrative"
+      ],
+      "coverage": {
+        "verified": "topic archive includes multiple draws in 2025–2026; exact start and continuity not verified",
+        "earliest": "at least 2025-12 examples visible",
+        "latest": "2026 topic current",
+        "completeness": "sporadic/not guaranteed"
+      },
+      "stability": "major media archive",
+      "visible_restrictions": [
+        "secondary media; not a systematic dataset"
+      ],
+      "verification": "VERIFIED_EXAMPLES",
+      "independence_group": "24horas"
+    },
+    {
+      "source_id": "kino.secondary.media.epicentrochile",
+      "publisher": "Epicentro Chile",
+      "class": "SECONDARY_MEDIA",
+      "url": "https://www.epicentrochile.com/",
+      "format": [
+        "news articles"
+      ],
+      "query": {
+        "by_draw_number": "site/article search",
+        "by_date": "article date",
+        "download_export": false,
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "additional modalities/prize narrative on sampled articles"
+      ],
+      "coverage": {
+        "verified": "draws 3284 and 3285 verified in T1 search",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3285 / 2026-09-27 sample",
+        "completeness": "sporadic/not guaranteed"
+      },
+      "stability": "active media site",
+      "visible_restrictions": [
+        "secondary media"
+      ],
+      "verification": "VERIFIED_EXAMPLES",
+      "independence_group": "epicentrochile"
+    },
+    {
+      "source_id": "kino.secondary.media.prensadigital",
+      "publisher": "PrensaDigital.cl",
+      "class": "SECONDARY_MEDIA",
+      "url": "https://www.prensadigital.cl/",
+      "format": [
+        "news articles"
+      ],
+      "query": {
+        "by_draw_number": "site/article search",
+        "by_date": "article date",
+        "download_export": false,
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "draw_number",
+        "draw_date",
+        "14 Kino numbers",
+        "prize details on sampled article"
+      ],
+      "coverage": {
+        "verified": "draw 3285 / 2026-09-27 verified in T1 search",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3285 sample",
+        "completeness": "sporadic/not guaranteed"
+      },
+      "stability": "active media site",
+      "visible_restrictions": [
+        "secondary media"
+      ],
+      "verification": "VERIFIED_EXAMPLE",
+      "independence_group": "prensadigital"
+    },
+    {
+      "source_id": "kino.community.github.77ruben_kino_scraper",
+      "publisher": "GitHub user 77ruben",
+      "class": "COMMUNITY_DATASET_TOOL",
+      "url": "https://github.com/77ruben/kino-scraper",
+      "format": [
+        "Git repository",
+        "Python scraper design",
+        "declared CSV output"
+      ],
+      "query": {
+        "by_draw_number": "generated dataset design",
+        "by_date": "generated dataset design",
+        "download_export": "repository clone; CSV declared but not present in current tree",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "README declares sorteo",
+        "fecha",
+        "n1..n14",
+        "url source"
+      ],
+      "coverage": {
+        "verified": "README declares approx draw 1506 (Dec 2012) to 3226 (May 2026); current repository tree does not contain the declared CSV output",
+        "earliest": "1506 / 2012-12 (SELF_STATED)",
+        "latest": "3226 / 2026-05 (SELF_STATED)",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "small community repository",
+      "visible_restrictions": [
+        "no license declared",
+        "depends on resultadoskinochile.com",
+        "do not count as independent corroboration"
+      ],
+      "verification": "VERIFIED_REPO_METADATA_AND_CODE",
+      "independence_group": "resultadoskinochile",
+      "derived_from_source_id": "kino.secondary.db.resultadoskinochile"
+    },
+    {
+      "source_id": "kino.community.github.gaaguile_kino2026",
+      "publisher": "GitHub user gaaguile",
+      "class": "COMMUNITY_DATASET",
+      "url": "https://github.com/gaaguile/Kino2026",
+      "format": [
+        "Git repository",
+        "JSON",
+        "XML"
+      ],
+      "query": {
+        "by_draw_number": "file scan",
+        "by_date": "file scan",
+        "download_export": "repository files",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "date",
+        "numbers[14]",
+        "drawNumber in kino-history.json"
+      ],
+      "coverage": {
+        "verified": "file begins at 2023-11-17; examples continue into 2026",
+        "earliest": "2023-11-17",
+        "latest": "at least 2026-09 examples",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "community repo; no license declared",
+      "visible_restrictions": [
+        "drawNumber is initially a local sequence (1,2,...) and later mixes official numbers (e.g. 3273), creating identity ambiguity",
+        "no upstream provenance verified",
+        "do not use without quarantine/reconciliation"
+      ],
+      "verification": "VERIFIED_FILE_CONTENT",
+      "independence_group": "gaaguile_unverified"
+    },
+    {
+      "source_id": "kino.community.github.blank2d_datos_de_azar",
+      "publisher": "GitHub user Blank2D",
+      "class": "COMMUNITY_TOOL",
+      "url": "https://github.com/Blank2D/datos-de-azar",
+      "format": [
+        "Git repository",
+        "Python/TypeScript",
+        "planned database"
+      ],
+      "query": {
+        "by_draw_number": "tooling supports draw endpoints",
+        "by_date": "tooling/database design",
+        "download_export": "repository clone",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "scraper code targets official latest URL and kinohistorico fallback",
+        "README says historical seed is not yet complete"
+      ],
+      "coverage": {
+        "verified": "no complete historical seed persisted in repository at T1",
+        "earliest": "NOT_APPLICABLE",
+        "latest": "tooling only",
+        "completeness": "NO_DATASET_VERIFIED"
+      },
+      "stability": "MIT-licensed community project",
+      "visible_restrictions": [
+        "not an independent dataset source unless concrete captured data are later persisted",
+        "fallback depends on kinohistorico"
+      ],
+      "verification": "VERIFIED_REPO_CODE",
+      "independence_group": "tool_not_data_source"
+    },
+    {
+      "source_id": "kino.community.github.fernando8955_kino",
+      "publisher": "GitHub user Fernando8955",
+      "class": "COMMUNITY_DATASET",
+      "url": "https://github.com/Fernando8955/kino",
+      "format": [
+        "Git repository",
+        "JSON",
+        "HTML"
+      ],
+      "query": {
+        "by_draw_number": "file scan",
+        "by_date": "file scan",
+        "download_export": "repository files",
+        "manual_navigation": true
+      },
+      "fields_verified": [
+        "kino-polla.json contains draw_number/date/14 numbers and declares source chileresultados.com",
+        "resultados.json contains a different daily-number series incompatible with normal Kino schedule/numbering"
+      ],
+      "coverage": {
+        "verified": "kino-polla.json includes recent official-numbered draws around 3281–3286; resultados.json is not trustworthy as Kino base evidence",
+        "earliest": "NOT_VERIFIED",
+        "latest": "3286 / 2026-09-30 in kino-polla.json",
+        "completeness": "NOT_VERIFIED"
+      },
+      "stability": "community repo; no license declared",
+      "visible_restrictions": [
+        "mixed/contaminated files",
+        "derived source chileresultados.com",
+        "must quarantine incompatible resultados.json",
+        "not independent corroboration"
+      ],
+      "verification": "VERIFIED_FILE_CONTENT",
+      "independence_group": "chileresultados",
+      "derived_from_source_id": "kino.secondary.db.chileresultados"
+    },
+    {
+      "source_id": "kino.community.github.gaaguile_kino2026_history_a498fd8",
+      "publisher": "GitHub user gaaguile",
+      "class": "COMMUNITY_DATASET",
+      "url": "https://github.com/gaaguile/Kino2026/blob/a498fd81bbb89c672f04c0dc53b414ee7da57ad0/kino-history.json",
+      "independence_group": "gaaguile_xlsx_origin_unverified",
+      "verification": "ACQUIRED_OR_PUBLIC_SOURCE_EVALUATION_IN_T38",
+      "provenance": {
+        "upstream_repo": "gaaguile/Kino2026",
+        "upstream_commit": "a498fd81bbb89c672f04c0dc53b414ee7da57ad0",
+        "upstream_blob_sha": "ec82bb2b2859e8c2211edda5c9aabc92d20c9b77",
+        "build_script_blob_sha": "fbcb8bbd6993bb680774eccf691fb0f047a2e4c3",
+        "xlsx_blob_sha": "a799deb4a0a4c77a5c07edb7b748f19b786bb8f0",
+        "derivation": "same commit contains stats/estadisticas-kino.xlsx and build-from-xlsx.ts; original XLSX publisher is not documented"
+      },
+      "limitations": [
+        "no license declared",
+        "upstream XLSX publisher/lineage not documented",
+        "records before draw 799 use a 15-number regime and are excluded from modern 14-number v1"
+      ],
+      "archive_depth": 2469
+    },
+    {
+      "source_id": "kino.community.github.nicovh_kino_principal",
+      "publisher": "Nicovh-Analytics",
+      "class": "COMMUNITY_DATASET",
+      "url": "https://github.com/Nicovh-Analytics/analisis-loteria-chile/blob/main/data/kino_principal.csv",
+      "independence_group": "chileresultados",
+      "verification": "ACQUIRED_OR_PUBLIC_SOURCE_EVALUATION_IN_T38",
+      "provenance": {
+        "upstream_repo": "Nicovh-Analytics/analisis-loteria-chile",
+        "upstream_blob_sha": "06a45d9312a91a422510d7d917e3c99dc9ebb15a",
+        "lineage": "repository scraper targets ChileResultados; CSV omits draw_date"
+      },
+      "limitations": [
+        "date absent from CSV",
+        "derived from ChileResultados and therefore not independent of that publisher"
+      ],
+      "archive_depth": 889
+    },
+    {
+      "source_id": "kino.secondary.stats.loterator",
+      "publisher": "LoterAtor",
+      "class": "SECONDARY_STATISTICS",
+      "url": "https://loterator.com/cl/kino/estadisticas/",
+      "independence_group": "loterator",
+      "verification": "ACQUIRED_OR_PUBLIC_SOURCE_EVALUATION_IN_T38",
+      "provenance": "public statistics page; draw-level export not found",
+      "limitations": [
+        "not a draw-level dataset surface",
+        "underlying records not publicly exported"
+      ],
+      "archive_depth": "site states 2083 draws analyzed"
+    }
+  ]
+}
