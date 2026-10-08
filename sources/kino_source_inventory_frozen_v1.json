@@ -1,39 +1,32 @@
 {
-  "schema_version": "1.0",
-  "dataset_version": "kino-history-v1.0.0",
-  "mapped_source_count": 23,
-  "catalog_reference": "sources/kino_historical_source_catalog_v1.json",
-  "catalog_blob_sha": "4d1bb3543b942f60da5f74fa46a5539fe8e7eeba",
-  "sources_acquired_count": 11,
-  "acquired_source_ids": [
+  "schema_version": "1.1",
+  "dataset_version": "kino-history-v1.1.0",
+  "checkpoint": "C39.6",
+  "unique_catalog_source_count": 26,
+  "previous_t38_discovered_count": 25,
+  "source_reconciliation_note": "Base T1 catalog 23 IDs, deep T38 evaluation adds three previously absent IDs => unique union 26; prior reported 25 is superseded.",
+  "active_source_catalog": "sources/kino_historical_source_catalog_v2.json",
+  "source_ids_represented_in_processed_draw_observations": 11,
+  "acquired_or_captured_draw_observation_source_ids": [
+    "kino.community.github.gaaguile_kino2026_history_a498fd8",
+    "kino.community.github.nicovh_kino_principal",
     "kino.official.direct.sorteos_en_vivo",
-    "kino.official.direct.consulta_resultado",
-    "kino.official.stats.estadisticas",
-    "kino.official.institutional.novedades",
-    "kino.official.institutional.ganadores",
-    "kino.official.institutional.reglamentacion",
     "kino.official.institutional.juego_responsable_report",
     "kino.official.institutional.pendon",
-    "kino.secondary.db.resultadoskinochile",
+    "kino.official.institutional.reglamentacion",
     "kino.secondary.db.chileresultados",
+    "kino.secondary.db.openloto",
+    "kino.secondary.db.resultadoskinochile",
+    "kino.secondary.db.sortuo",
     "kino.secondary.media.epicentrochile"
   ],
-  "additions_after_t1": [
-    {
-      "source_id": "kino.official.institutional.juego_responsable_report",
-      "publisher": "Lotería de Concepción",
-      "url": "https://www.loteria.cl/LoteriaWeb/Content/sincronizacion/IndicadoresJR.pdf",
-      "class": "OFFICIAL_INSTITUTIONAL",
-      "observed": "draw 3130 / 2025-10-01 metadata",
-      "independence_group": "official_loteria"
-    },
-    {
-      "source_id": "kino.official.institutional.pendon",
-      "publisher": "Lotería de Concepción",
-      "url": "https://pendon-kino.loteria.cl/pendonkino",
-      "class": "OFFICIAL_INSTITUTIONAL",
-      "observed": "draw 3285 / 2026-09-27 pre-draw prize estimates",
-      "independence_group": "official_loteria"
-    }
+  "raw_snapshot_files": 12,
+  "independence_groups_with_draw_observations": 7,
+  "source_groups_evaluated_t38": 9,
+  "source_acquisition_caveats": [
+    "These 11 IDs represent raw/processed draw observations, not 11 officially validated sources.",
+    "Nicovh is derived from ChileResultados and does not add an independent publisher group.",
+    "gaaguile XLSX publisher not documented; 889 matching numbers against Nicovh cannot prove independence.",
+    "Historical dynamic/paginated sources are not exhaustively acquired."
   ]
 }
