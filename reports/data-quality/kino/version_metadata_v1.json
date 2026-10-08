@@ -1,33 +1,323 @@
 {
-  "schema_version": "1.0",
-  "dataset_version": "kino-history-v1.0.0",
+  "schema_version": "1.1",
+  "dataset_version": "kino-history-v1.1.0",
   "master_work_item": 15,
-  "canonical_processed_observations": {
-    "path": "data/processed/kino/observations_v2_t9.json",
-    "git_blob_sha": "538f27d9c30962f996f947bb81da08e831876a96"
-  },
-  "canonical_evidence_matrix": {
-    "path": "data/processed/kino/evidence_matrix_v2.json",
-    "git_blob_sha": "ac8ad37f0980deb1967e84346ce59282c73422f2"
-  },
-  "source_catalog": {
-    "path": "sources/kino_historical_source_catalog_v1.json",
-    "git_blob_sha": "4d1bb3543b942f60da5f74fa46a5539fe8e7eeba"
-  },
-  "gap_report_source": {
-    "path": "reports/data-quality/kino/gap_report_v1.json",
-    "git_blob_sha": "fcd72b183baacc1ff33c842b71aa0bb3ebc7743b"
-  },
-  "confidence_taxonomy": [
-    "VALIDATED",
-    "PROVISIONAL",
-    "CONFLICTED",
-    "INCOMPLETE",
-    "REJECTED"
+  "work_item": 39,
+  "checkpoint": "C39.6",
+  "freeze_date": "2026-10-08",
+  "branch": "data-kino-historical-acquisition-v1",
+  "raw_source_head": "89989300c0e8764aea945c8cee83d6eefdcebce7",
+  "fingerprint_tree_snapshot_commit": "d9e9f1eb88f86001d794dc31344045410da1dbba",
+  "all_fingerprints_are_git_blob_sha1": true,
+  "upstream_http_sha256_fully_verified": false,
+  "artifacts": [
+    {
+      "path": "data/processed/kino/consolidated_c39_2006_2010.json",
+      "git_blob_sha1": "cf101a0a8cb84e703134821141125468c3280d4b",
+      "size_bytes": 568803
+    },
+    {
+      "path": "data/processed/kino/consolidated_c39_2011_2015.json",
+      "git_blob_sha1": "4d18e687beda83db80dbc05dbbfb5fdf5d391b7b",
+      "size_bytes": 592209
+    },
+    {
+      "path": "data/processed/kino/consolidated_c39_2016_2020.json",
+      "git_blob_sha1": "4e122a5c4c5cb5e77908354a731301ceb0bcfebc",
+      "size_bytes": 640202
+    },
+    {
+      "path": "data/processed/kino/consolidated_c39_2021_2023.json",
+      "git_blob_sha1": "8a3af3e12c10ed1e4e05d738071c815f848fc0b6",
+      "size_bytes": 539806
+    },
+    {
+      "path": "data/processed/kino/consolidated_c39_2024_2026.json",
+      "git_blob_sha1": "ee82840d75107e6c4876dc5444e18f92fea53007",
+      "size_bytes": 491162
+    },
+    {
+      "path": "data/processed/kino/evidence_matrix_c39_2006_2010.json",
+      "git_blob_sha1": "60e9022de8369c4d2eea21f75bbad90a1dcd950a",
+      "size_bytes": 413233
+    },
+    {
+      "path": "data/processed/kino/evidence_matrix_c39_2011_2015.json",
+      "git_blob_sha1": "56a6a5fbe1258de69b6fb42157099acdcdd70ce8",
+      "size_bytes": 430238
+    },
+    {
+      "path": "data/processed/kino/evidence_matrix_c39_2016_2020.json",
+      "git_blob_sha1": "372c11a6f5b49054c24b678c1561469833dc27c2",
+      "size_bytes": 473605
+    },
+    {
+      "path": "data/processed/kino/evidence_matrix_c39_2021_2023.json",
+      "git_blob_sha1": "088f34899fee468b470f085691dd27c626a15173",
+      "size_bytes": 558836
+    },
+    {
+      "path": "data/processed/kino/evidence_matrix_c39_2021_2026.json",
+      "git_blob_sha1": "b56b979f855301867eebb313fe797d6842eeb4de",
+      "size_bytes": 1067498
+    },
+    {
+      "path": "data/processed/kino/evidence_matrix_c39_2024_2026.json",
+      "git_blob_sha1": "84c1c677209318bfb0328b25a9100997bc42cf80",
+      "size_bytes": 508674
+    },
+    {
+      "path": "data/processed/kino/high_confidence_research_dataset_c39_v1.json",
+      "git_blob_sha1": "53f6744f07215e217b3ba85dbdbb882f5a4b118f",
+      "size_bytes": 11956
+    },
+    {
+      "path": "data/processed/kino/legacy_regime_exclusion_c39_v1.json",
+      "git_blob_sha1": "39f7ea5fd6e3823bfc88d1cf6eb77c2267bd5301",
+      "size_bytes": 7700
+    },
+    {
+      "path": "data/processed/kino/observations_c39_existing_and_manual_v1.json",
+      "git_blob_sha1": "5e7fd98c16b4ad20292a07f80153dc6a1e971496",
+      "size_bytes": 49877
+    },
+    {
+      "path": "data/processed/kino/observations_c39_gaaguile_2006_2010.json",
+      "git_blob_sha1": "281ae4e45b139212db5041567f516e40712857db",
+      "size_bytes": 475351
+    },
+    {
+      "path": "data/processed/kino/observations_c39_gaaguile_2011_2015.json",
+      "git_blob_sha1": "169f3e123d7a60e794997f28f9b82aa4c4ef73f4",
+      "size_bytes": 494853
+    },
+    {
+      "path": "data/processed/kino/observations_c39_gaaguile_2016_2020.json",
+      "git_blob_sha1": "a623448eaad62a82613054bba80651ea161e1c0b",
+      "size_bytes": 534584
+    },
+    {
+      "path": "data/processed/kino/observations_c39_gaaguile_2021_2026.json",
+      "git_blob_sha1": "5d4b494a76f4ee974280967463016e2c7e1628ae",
+      "size_bytes": 831168
+    },
+    {
+      "path": "data/processed/kino/observations_c39_nicovh_v1.json",
+      "git_blob_sha1": "cf5d2d9861d37da077a58d6f82d6d6d94fc38a6c",
+      "size_bytes": 753288
+    },
+    {
+      "path": "data/quarantine/kino/dataset_v1.json",
+      "git_blob_sha1": "4a7c5bea1fadc8bd8e1ce13ab61aae6ff4ba1868",
+      "size_bytes": 1009
+    },
+    {
+      "path": "data/quarantine/kino/partitions_c39_v1.json",
+      "git_blob_sha1": "59a10c5e0838f27ce84fbaf1385679373229e684",
+      "size_bytes": 925
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2006_2010.json",
+      "git_blob_sha1": "a92e43c81fdbd6dfd05c24622b51476da2dc4094",
+      "size_bytes": 568740
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2011_2015.json",
+      "git_blob_sha1": "88f3ff8ac53d1afef85103e7ea63332767786f32",
+      "size_bytes": 592146
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2016_2020.json",
+      "git_blob_sha1": "75f28c5e9248c8941244a3971eb703ac66b0a176",
+      "size_bytes": 640139
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2021_2023.json",
+      "git_blob_sha1": "536c45810c10687c5fba6ae358080d80686a64f4",
+      "size_bytes": 539743
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2024_2026.json",
+      "git_blob_sha1": "5799c9a2aa233cfb5305e15f28cc9ffe16528811",
+      "size_bytes": 491099
+    },
+    {
+      "path": "data/raw/kino/community/deep_expansion_manifest_t38.json",
+      "git_blob_sha1": "481cccfada1b0f6bec2d49cb2165a250bacfefc0",
+      "size_bytes": 2304
+    },
+    {
+      "path": "data/raw/kino/community/gaaguile/kino-history_a498fd81.json",
+      "git_blob_sha1": "ec82bb2b2859e8c2211edda5c9aabc92d20c9b77",
+      "size_bytes": 748139
+    },
+    {
+      "path": "data/raw/kino/community/nicovh/kino_principal.csv",
+      "git_blob_sha1": "06a45d9312a91a422510d7d917e3c99dc9ebb15a",
+      "size_bytes": 42727
+    },
+    {
+      "path": "data/raw/kino/consulta_resultados/interface_observation_2026-10-02.json",
+      "git_blob_sha1": "322a72702437f605843244501e86d755771d9309",
+      "size_bytes": 1123
+    },
+    {
+      "path": "data/raw/kino/official_complementary/observations_2026-10-02.json",
+      "git_blob_sha1": "52603e54f73dcd53a2047680b9a54760dda6a047",
+      "size_bytes": 4309
+    },
+    {
+      "path": "data/raw/kino/secondary/chileresultados/recent_3281_3286.json",
+      "git_blob_sha1": "3ab78045707a8ec1eae8afa09fcce4df09e875e5",
+      "size_bytes": 8390
+    },
+    {
+      "path": "data/raw/kino/secondary/epicentrochile/gap_resolution_3280_2026-10-02.json",
+      "git_blob_sha1": "b21b94016d6bd90043d9cd1d25ac12385588fc13",
+      "size_bytes": 2061
+    },
+    {
+      "path": "data/raw/kino/secondary/epicentrochile/recent_3281_3286.json",
+      "git_blob_sha1": "ed85b3a292e1fee6c2b2cc024e84566f8f951a1d",
+      "size_bytes": 5462
+    },
+    {
+      "path": "data/raw/kino/secondary/manual_gap_3268_3279_t38.json",
+      "git_blob_sha1": "3025ce2ab2340c91ad986b3aaf055cd7c45721c5",
+      "size_bytes": 9163
+    },
+    {
+      "path": "data/raw/kino/secondary/resultadoskinochile/recent_3280_3286.json",
+      "git_blob_sha1": "039da5ce1f9b6fb92b5af78b123214e529006cda",
+      "size_bytes": 10143
+    },
+    {
+      "path": "data/raw/kino/sorteos_en_vivo/indexed_video_observations_2026-10-02.json",
+      "git_blob_sha1": "5b436bdabb02ebd970f8734e84f15f3a0661f701",
+      "size_bytes": 7459
+    },
+    {
+      "path": "data/raw/kino/source_catalog/source_observations_2026-10-02.json",
+      "git_blob_sha1": "e690339b50ffba1409202d6ce67fb3959115bd8d",
+      "size_bytes": 3157
+    },
+    {
+      "path": "data/rejected/kino/dataset_v1.json",
+      "git_blob_sha1": "ebc1bd5bcfc754a3b946c0b81cc9ac5ea7b559f6",
+      "size_bytes": 162
+    },
+    {
+      "path": "data/rejected/kino/rejected_c39_v1.json",
+      "git_blob_sha1": "91634b309a664efe2cda22bbd5efe91561b2701c",
+      "size_bytes": 86
+    },
+    {
+      "path": "data/validated/kino/dataset_v1.json",
+      "git_blob_sha1": "a7caab6a90c86bf457e016e715613f29c5f5336d",
+      "size_bytes": 322
+    },
+    {
+      "path": "data/validated/kino/strict_dataset_c39_v1.json",
+      "git_blob_sha1": "526b0dfeffd6d8e6fc97d95990e4a691c0ed4f7a",
+      "size_bytes": 206
+    },
+    {
+      "path": "docs/data/C39_1_LINEAGE_AND_PROVENANCE.md",
+      "git_blob_sha1": "6a385825e2aacedb1d1f3060f2085f977fabcc45",
+      "size_bytes": 1560
+    },
+    {
+      "path": "docs/data/KINO_DATA_DICTIONARY_V1.md",
+      "git_blob_sha1": "2943f189ba70a9dbf1fe128c6d963a80f7b0c30a",
+      "size_bytes": 4535
+    },
+    {
+      "path": "reports/data-quality/kino/C39_1_RAW_INVENTORY.json",
+      "git_blob_sha1": "821b721fecf629292400701cd4df36f5f702e2b1",
+      "size_bytes": 5207
+    },
+    {
+      "path": "reports/data-quality/kino/C39_2_NORMALIZATION_QA.json",
+      "git_blob_sha1": "5b0346f106139783dc6ea4073a16c76e0dd362fa",
+      "size_bytes": 1325
+    },
+    {
+      "path": "reports/data-quality/kino/C39_3_EVIDENCE_MATRIX_QA.json",
+      "git_blob_sha1": "f5cf9d564e557c70b02ff310d48a108017accfcf",
+      "size_bytes": 1284
+    },
+    {
+      "path": "reports/data-quality/kino/C39_4_CLASSIFICATION_QA.json",
+      "git_blob_sha1": "9d0cb522b1d28e8b7323ea9fb29b7e480a2d3a84",
+      "size_bytes": 1054
+    },
+    {
+      "path": "reports/data-quality/kino/C39_5_COVERAGE_REPORT.json",
+      "git_blob_sha1": "21903007b63eb58e42757d1d26728a75089fa8a1",
+      "size_bytes": 6839
+    },
+    {
+      "path": "reports/data-quality/kino/C39_5_ECONOMIC_FIELD_COVERAGE.json",
+      "git_blob_sha1": "d5c8d515fda2fab4324952551ddc67f04f8d8405",
+      "size_bytes": 1365
+    },
+    {
+      "path": "reports/data-quality/kino/C39_5_PARTITION_QA.json",
+      "git_blob_sha1": "541432ad8041b452378f00d4600f4fe5c82ec60a",
+      "size_bytes": 781
+    },
+    {
+      "path": "reports/data-quality/kino/conflict_log_c39_v1.json",
+      "git_blob_sha1": "869d984c862d950cea760f66d90f429bca4abf58",
+      "size_bytes": 274
+    },
+    {
+      "path": "reports/data-quality/kino/coverage_report_v1.json",
+      "git_blob_sha1": "78bf44991de18002a832cfff7edef76f8c1f9630",
+      "size_bytes": 2737
+    },
+    {
+      "path": "reports/data-quality/kino/gap_report_frozen_v1.json",
+      "git_blob_sha1": "ffc7ff2520f6c578ed01c1fed683047bc63bfb26",
+      "size_bytes": 2816
+    },
+    {
+      "path": "sources/kino_historical_source_catalog_v2.json",
+      "git_blob_sha1": "3fe62764ec9bc50dac95cc15ca1cbbc5a945d039",
+      "size_bytes": 31389
+    },
+    {
+      "path": "sources/kino_source_inventory_frozen_v1.json",
+      "git_blob_sha1": "b9a353302b686c09c11cf3c3c98c1902faf13a58",
+      "size_bytes": 1578
+    }
   ],
-  "historical_coverage": "PARTIAL",
-  "acquisition_saturation": "REACHED",
+  "canonical_paths": {
+    "source_catalog": "sources/kino_historical_source_catalog_v2.json",
+    "source_inventory": "sources/kino_source_inventory_frozen_v1.json",
+    "observations_manifest": "reports/data-quality/kino/C39_2_NORMALIZATION_QA.json",
+    "evidence_matrix_manifest": "reports/data-quality/kino/C39_3_EVIDENCE_MATRIX_QA.json",
+    "consolidated_parts_pattern": "data/processed/kino/consolidated_c39_<years>.json",
+    "strict_dataset": "data/validated/kino/dataset_v1.json",
+    "research_dataset": "data/processed/kino/high_confidence_research_dataset_c39_v1.json",
+    "quarantine_manifest": "data/quarantine/kino/dataset_v1.json",
+    "coverage": "reports/data-quality/kino/coverage_report_v1.json",
+    "final_audit": "reports/data-quality/kino/FINAL_AUDIT_V1.md"
+  },
+  "metrics": {
+    "draws": 2488,
+    "observations": 3401,
+    "legacy_excluded": 799,
+    "VALIDATED": 0,
+    "PROVISIONAL": 2488,
+    "CONSENSUS_HIGH": 6,
+    "strict": 0,
+    "research": 6
+  },
+  "data_analysis_ready": "NO",
+  "master26": "BLOCKED_BY_DATA_QUALITY_OR_COVERAGE",
+  "ci": "NOT CONFIGURED",
   "development": "NOT STARTED",
-  "analysis": "NOT STARTED",
-  "master_26": "BLOCKED / NOT STARTED"
+  "supervisor_acceptance": "PENDING_REVIEW",
+  "note": "The metadata file and future FINAL_AUDIT/PR updates are not self-fingerprinted in this earlier snapshot. Use exact final PR HEAD to independently enumerate the full release tree."
 }
