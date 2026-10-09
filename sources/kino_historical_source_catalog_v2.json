@@ -1,9 +1,9 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "master_work_item": 15,
   "work_item": 39,
-  "checkpoint": "C39.6",
-  "dataset_version": "kino-history-v1.1.0",
+  "checkpoint": "C39.RW2",
+  "dataset_version": "kino-history-v1.1.1",
   "previous_catalog": "sources/kino_historical_source_catalog_v1.json",
   "deep_evaluation": "sources/kino_deep_source_evaluation_t38.json",
   "prior_t38_reported_discovered_sources": 25,
@@ -65,7 +65,11 @@
         "no public bulk export/API documented in T1"
       ],
       "verification": "VERIFIED_INTERFACE",
-      "independence_group": "official_loteria"
+      "independence_group": "official_loteria",
+      "source_authority": "OFFICIAL_DIRECT_RESULT",
+      "independence_evidence_status": "INSTITUTIONAL_ORIGIN_VERIFIED_NO_COMPLETE_NUMERIC_RESULT",
+      "independence_evidence_note": "Origin is official only for content actually observed. Independent full 14-number historical draw results have not been captured.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.official.direct.consulta_resultado",
@@ -102,7 +106,11 @@
         "Lotería terms say Internet results are referential and may contain errors"
       ],
       "verification": "VERIFIED_INTERFACE",
-      "independence_group": "official_loteria"
+      "independence_group": "official_loteria",
+      "source_authority": "OFFICIAL_DIRECT_RESULT",
+      "independence_evidence_status": "INSTITUTIONAL_ORIGIN_VERIFIED_NO_COMPLETE_NUMERIC_RESULT",
+      "independence_evidence_note": "Origin is official only for content actually observed. Independent full 14-number historical draw results have not been captured.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.official.stats.estadisticas",
@@ -137,7 +145,11 @@
         "official terms say historical statistics are manually collected and may contain errors"
       ],
       "verification": "VERIFIED_INTERFACE_PLUS_OFFICIAL_TERMS",
-      "independence_group": "official_loteria"
+      "independence_group": "official_loteria",
+      "source_authority": "OFFICIAL_STATISTICS",
+      "independence_evidence_status": "INSTITUTIONAL_ORIGIN_VERIFIED_NO_COMPLETE_NUMERIC_RESULT",
+      "independence_evidence_note": "Origin is official only for content actually observed. Independent full 14-number historical draw results have not been captured.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.official.institutional.novedades",
@@ -173,7 +185,11 @@
         "sporadic/supporting evidence; not canonical draw-result table"
       ],
       "verification": "VERIFIED_INTERFACE",
-      "independence_group": "official_loteria"
+      "independence_group": "official_loteria",
+      "source_authority": "OFFICIAL_INSTITUTIONAL",
+      "independence_evidence_status": "INSTITUTIONAL_ORIGIN_VERIFIED_NO_COMPLETE_NUMERIC_RESULT",
+      "independence_evidence_note": "Origin is official only for content actually observed. Independent full 14-number historical draw results have not been captured.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.official.institutional.ganadores",
@@ -209,7 +225,11 @@
         "not designed as complete historical result source"
       ],
       "verification": "VERIFIED_INTERFACE",
-      "independence_group": "official_loteria"
+      "independence_group": "official_loteria",
+      "source_authority": "OFFICIAL_INSTITUTIONAL",
+      "independence_evidence_status": "INSTITUTIONAL_ORIGIN_VERIFIED_NO_COMPLETE_NUMERIC_RESULT",
+      "independence_evidence_note": "Origin is official only for content actually observed. Independent full 14-number historical draw results have not been captured.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.official.institutional.reglamentacion",
@@ -242,7 +262,11 @@
         "not a result source"
       ],
       "verification": "VERIFIED_CONTENT",
-      "independence_group": "official_loteria"
+      "independence_group": "official_loteria",
+      "source_authority": "OFFICIAL_INSTITUTIONAL",
+      "independence_evidence_status": "INSTITUTIONAL_ORIGIN_VERIFIED_NO_COMPLETE_NUMERIC_RESULT",
+      "independence_evidence_note": "Origin is official only for content actually observed. Independent full 14-number historical draw results have not been captured.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.resultadoskinochile",
@@ -280,7 +304,11 @@
         "archive may contain missing/duplicate/mislabeled pages"
       ],
       "verification": "VERIFIED_EXAMPLES_AND_ARCHIVE",
-      "independence_group": "resultadoskinochile"
+      "independence_group": "resultadoskinochile",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.chileresultados",
@@ -317,7 +345,11 @@
         "site explicitly says results are not official and may contain errors"
       ],
       "verification": "VERIFIED_EXAMPLES_AND_DISCLAIMER",
-      "independence_group": "chileresultados"
+      "independence_group": "chileresultados",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.loterochile",
@@ -354,7 +386,11 @@
         "publisher lineage and independence from lotero.cl not verified"
       ],
       "verification": "VERIFIED_EXAMPLES",
-      "independence_group": "lotero_family_unverified"
+      "independence_group": "lotero_family_unverified",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.lotero",
@@ -391,7 +427,11 @@
         "possible mirror/shared lineage with loterochile.cl not established"
       ],
       "verification": "VERIFIED_EXAMPLES",
-      "independence_group": "lotero_family_unverified"
+      "independence_group": "lotero_family_unverified",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.openloto",
@@ -425,7 +465,11 @@
         "site states it is independent from official lottery entities"
       ],
       "verification": "VERIFIED_EXAMPLES",
-      "independence_group": "openloto"
+      "independence_group": "openloto",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.loteria_guru",
@@ -457,7 +501,11 @@
         "secondary; draw_number not visible in sampled listing"
       ],
       "verification": "VERIFIED_EXAMPLES_PLUS_SELF_STATED_COVERAGE",
-      "independence_group": "loteria_guru"
+      "independence_group": "loteria_guru",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.kinohistorico",
@@ -494,7 +542,11 @@
         "provenance statement is generic; upstream source lineage not independently verified"
       ],
       "verification": "VERIFIED_INTERFACE",
-      "independence_group": "kinohistorico"
+      "independence_group": "kinohistorico",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.indicadoresydatos",
@@ -526,7 +578,11 @@
         "secondary; exact upstream provenance and full historical range not verified"
       ],
       "verification": "VERIFIED_EXAMPLES",
-      "independence_group": "indicadoresydatos"
+      "independence_group": "indicadoresydatos",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.sortuo",
@@ -559,7 +615,11 @@
         "page labels results as local archive; upstream provenance not established"
       ],
       "verification": "VERIFIED_EXAMPLES",
-      "independence_group": "sortuo"
+      "independence_group": "sortuo",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.db.yelu",
@@ -594,7 +654,11 @@
         "mixed games; Kino-specific coverage requires dedicated verification"
       ],
       "verification": "VERIFIED_INTERFACE",
-      "independence_group": "yelu"
+      "independence_group": "yelu",
+      "source_authority": "SECONDARY_DATABASE",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.media.24horas",
@@ -631,7 +695,11 @@
         "secondary media; not a systematic dataset"
       ],
       "verification": "VERIFIED_EXAMPLES",
-      "independence_group": "24horas"
+      "independence_group": "24horas",
+      "source_authority": "SECONDARY_MEDIA",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.media.epicentrochile",
@@ -664,7 +732,11 @@
         "secondary media"
       ],
       "verification": "VERIFIED_EXAMPLES",
-      "independence_group": "epicentrochile"
+      "independence_group": "epicentrochile",
+      "source_authority": "SECONDARY_MEDIA",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.secondary.media.prensadigital",
@@ -697,7 +769,11 @@
         "secondary media"
       ],
       "verification": "VERIFIED_EXAMPLE",
-      "independence_group": "prensadigital"
+      "independence_group": "prensadigital",
+      "source_authority": "SECONDARY_MEDIA",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.community.github.77ruben_kino_scraper",
@@ -735,7 +811,11 @@
       ],
       "verification": "VERIFIED_REPO_METADATA_AND_CODE",
       "independence_group": "resultadoskinochile",
-      "derived_from_source_id": "kino.secondary.db.resultadoskinochile"
+      "derived_from_source_id": "kino.secondary.db.resultadoskinochile",
+      "source_authority": "COMMUNITY_DATASET_TOOL",
+      "independence_evidence_status": "KNOWN_DERIVED",
+      "independence_evidence_note": "Catalog states derived_from_source_id=kino.secondary.db.resultadoskinochile",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.community.github.gaaguile_kino2026",
@@ -771,7 +851,11 @@
         "do not use without quarantine/reconciliation"
       ],
       "verification": "VERIFIED_FILE_CONTENT",
-      "independence_group": "gaaguile_unverified"
+      "independence_group": "gaaguile_unverified",
+      "source_authority": "COMMUNITY_DATASET",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.community.github.blank2d_datos_de_azar",
@@ -805,7 +889,11 @@
         "fallback depends on kinohistorico"
       ],
       "verification": "VERIFIED_REPO_CODE",
-      "independence_group": "tool_not_data_source"
+      "independence_group": "tool_not_data_source",
+      "source_authority": "COMMUNITY_TOOL",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.community.github.fernando8955_kino",
@@ -842,7 +930,11 @@
       ],
       "verification": "VERIFIED_FILE_CONTENT",
       "independence_group": "chileresultados",
-      "derived_from_source_id": "kino.secondary.db.chileresultados"
+      "derived_from_source_id": "kino.secondary.db.chileresultados",
+      "source_authority": "COMMUNITY_DATASET",
+      "independence_evidence_status": "VERIFIED_DERIVED_FROM_CHILERESULTADOS",
+      "independence_evidence_note": "Catalog attributes Kino JSON to ChileResultados; does not create independent corroboration.",
+      "source_lineage_evidence_refs": []
     },
     {
       "source_id": "kino.community.github.gaaguile_kino2026_history_a498fd8",
@@ -864,7 +956,14 @@
         "upstream XLSX publisher/lineage not documented",
         "records before draw 799 use a 15-number regime and are excluded from modern 14-number v1"
       ],
-      "archive_depth": 2469
+      "archive_depth": 2469,
+      "source_authority": "COMMUNITY_DATASET",
+      "independence_evidence_status": "UNVERIFIED_XLSX_PUBLISHER",
+      "independence_evidence_note": "XLSX to JSON transformation script exists, but original XLSX publisher is unknown. Separate scraper script synthesizes drawNumber by chronological index; use of that script for frozen JSON NOT PROVEN.",
+      "source_lineage_evidence_refs": [
+        "https://github.com/gaaguile/Kino2026/blob/a498fd81bbb89c672f04c0dc53b414ee7da57ad0/src/build-from-xlsx.ts",
+        "https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071663636"
+      ]
     },
     {
       "source_id": "kino.community.github.nicovh_kino_principal",
@@ -882,7 +981,14 @@
         "date absent from CSV",
         "derived from ChileResultados and therefore not independent of that publisher"
       ],
-      "archive_depth": 889
+      "archive_depth": 889,
+      "source_authority": "COMMUNITY_DATASET",
+      "independence_evidence_status": "VERIFIED_DERIVED_FROM_CHILERESULTADOS",
+      "independence_evidence_note": "Nicovh README declares ChileResultados as upstream; CSV lacks draw date; not independent of ChileResultados.",
+      "source_lineage_evidence_refs": [
+        "https://github.com/Nicovh-Analytics/analisis-loteria-chile/blob/main/README.md",
+        "https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071663636"
+      ]
     },
     {
       "source_id": "kino.secondary.stats.loterator",
@@ -896,7 +1002,20 @@
         "not a draw-level dataset surface",
         "underlying records not publicly exported"
       ],
-      "archive_depth": "site states 2083 draws analyzed"
+      "archive_depth": "site states 2083 draws analyzed",
+      "source_authority": "SECONDARY_STATISTICS",
+      "independence_evidence_status": "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE",
+      "independence_evidence_note": "No positive proof that numerical results originate from an editorially independent upstream source.",
+      "source_lineage_evidence_refs": []
     }
-  ]
+  ],
+  "independence_policy": "Only explicit upstream/editorial lineage evidence supports independent-sources. Different domains/names do not establish independence. Distinct matches stay recorded as observations.",
+  "authority_policy": "Official institution/website metadata is not equal to complete authenticated official result; a date anchor is not the 14 winning numbers.",
+  "independence_status_counts": {
+    "INSTITUTIONAL_ORIGIN_VERIFIED_NO_COMPLETE_NUMERIC_RESULT": 6,
+    "UNVERIFIED_UPSTREAM_NUMERIC_LINEAGE": 16,
+    "KNOWN_DERIVED": 1,
+    "VERIFIED_DERIVED_FROM_CHILERESULTADOS": 2,
+    "UNVERIFIED_XLSX_PUBLISHER": 1
+  }
 }
