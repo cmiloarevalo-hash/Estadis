@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1",
-  "dataset_version": "kino-history-v1.1.0",
+  "schema_version": "1.2",
+  "dataset_version": "kino-history-v1.1.1",
   "checkpoint": "C39.6",
   "gap_count": 7,
   "observed_internal_draw_number_gaps": 0,
@@ -20,7 +20,7 @@
       "type": "COMMUNITY_LINEAGE",
       "affected_draw_count": 2469,
       "status": "UNRESOLVED",
-      "description": "gaaguile XLSX original publisher and independence from Nicovh/ChileResultados are not verified; 889 numeric-only matches do not establish independent date-and-numbers consensus."
+      "description": "gaaguile XLSX original publisher and independence from Nicovh/ChileResultados are not verified; 889 numeric-only matches do not establish independent date-and-numbers consensus. R41.7 additionally shows Nicovh is derived from ChileResultados; gaaguile XLSX publisher UNKNOWN and alternate scraper numbering by index is not proven to generate frozen data. Seven multi-publication full date+number matches also lack positively verified editorial independence."
     },
     {
       "gap_id": "G3",
@@ -55,8 +55,46 @@
       "gap_id": "G7",
       "type": "EXTERNAL_SCHEDULE_AND_COVERAGE_CERTIFICATION",
       "status": "UNRESOLVED",
-      "description": "Sequence #799–#3286 is number-contiguous in captured data but complete draw schedule/expected historical total is not independently demonstrated; official coverage percent unknown."
+      "description": "Sequence #799–#3286 is number-contiguous in captured data but complete draw schedule/expected historical total is not independently demonstrated; official coverage percent unknown.",
+      "observed_regimes": [
+        {
+          "id": "K06-A",
+          "days": [
+            "Sunday"
+          ],
+          "range": "#799–#816"
+        },
+        {
+          "id": "K06-B",
+          "days": [
+            "Wednesday",
+            "Sunday"
+          ],
+          "range": "#817–#2260"
+        },
+        {
+          "id": "K20-C",
+          "days": [
+            "Wednesday",
+            "Friday",
+            "Sunday"
+          ],
+          "range": "#2261–#3286"
+        }
+      ],
+      "candidate_schedule_exception": {
+        "date": "2009-12-23",
+        "draw_number": null,
+        "status": "UNVERIFIED",
+        "source": "https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071605677"
+      }
     }
   ],
-  "zero_conflicts": "No observed material conflicts within acquired sources; does not resolve the authority/source gaps."
+  "zero_conflicts": "No observed material conflicts within acquired sources; does not resolve the authority/source gaps.",
+  "rework": "C39.RW3",
+  "consensus_independence_gap": {
+    "date_number_matching_secondary_draws": 7,
+    "date_unavailable_nicovh_numeric_matching_draws": 889,
+    "verified_independent_match_cohorts": 0
+  }
 }
