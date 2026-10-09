@@ -1,11 +1,14 @@
 {
   "schema_version": "1.1",
-  "dataset_version": "kino-history-v1.1.0",
+  "dataset_version": "kino-history-v1.1.1",
   "status": "VALIDATED",
   "dataset": "STRICT_DATASET",
   "checkpoint": "C39.6",
   "records_count": 0,
   "records": [],
   "analysis_ready": false,
-  "explanation": "No full official 14-number draw evidence corroborated as required by Master #15."
+  "explanation": "No full official 14-number draw evidence corroborated as required by Master #15.",
+  "rework": "C39.RW2",
+  "validation_readiness": "NO",
+  "note": "No complete official result meeting canonical corroboration requirements. STRICT_DATASET has zero records."
 }
