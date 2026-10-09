@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.1",
-  "dataset_version": "kino-history-v1.1.0",
-  "checkpoint": "C39.6",
+  "schema_version": "1.2",
+  "dataset_version": "kino-history-v1.1.1",
+  "checkpoint": "C39.RW2",
   "coverage_status": "PARTIAL",
   "DATASET_ANALYSIS_READY": "NO",
   "metrics": {
@@ -22,13 +22,21 @@
     "first_validated": null,
     "last_validated": null,
     "strict_dataset_size": 0,
-    "high_confidence_research_dataset_size": 6,
+    "high_confidence_research_dataset_size": 0,
     "draws_with_two_or_more_source_observations": 904,
     "percent_two_or_more_source_observations": 36.33,
-    "draws_with_independent_full_date_number_secondary_consensus": 7,
-    "percent_independent_full_consensus": 0.28,
+    "draws_with_independent_full_date_number_secondary_consensus": 0,
+    "percent_independent_full_consensus": 0,
     "draws_with_any_official_partial_or_complete_evidence": 11,
-    "percent_any_official_evidence": 0.44
+    "percent_any_official_evidence": 0.44,
+    "draws_with_multiple_matching_numeric_publications_no_independence_proof": 896,
+    "draws_with_matching_full_date_numeric_publications_no_independence_proof": 7,
+    "evidence_grade_counts": {
+      "SINGLE_SOURCE": 1592,
+      "INSUFFICIENT": 896,
+      "CONSENSUS_MEDIUM": 0,
+      "CONSENSUS_HIGH": 0
+    }
   },
   "coverage": {
     "target_window_start": "2006-01-08",
@@ -97,8 +105,10 @@
     "ticket_price": {
       "draws": 0,
       "percent": 0
-    }
+    },
+    "calendar_regimes_observed": "Sunday-only #799–#816; Wednesday/Sunday #817–#2260; Wednesday/Friday/Sunday #2261–#3286.",
+    "calendar_schedule_exception_candidate": "2009-12-23 UNVERIFIED; no synthetic draw_number"
   },
   "unresolved_gaps": 7,
-  "interpretation": "Observed numeric continuity and raw scale cannot substitute for official validation or publisher independence; analysis readiness is NO. Master #26 is blocked."
+  "interpretation": "2488 structurally complete PROVISIONAL candidates in quarantine; 0 VALIDATED and 0 independently corroborated CONSENSUS_HIGH; independent historical calendar certification and publisher lineage remain outstanding. DATASET_ANALYSIS_READY=NO."
 }
