@@ -1,18 +1,20 @@
 {
-  "schema_version": "1.0",
-  "checkpoint": "C39.5",
+  "schema_version": "1.1",
+  "checkpoint": "C39.RW2",
   "tests": {
     "strict_is_validated_only": true,
     "high_is_provisional_consensus_high": true,
     "quarantine_sum_is_2488": true,
     "partition_status_total": true,
     "unique_dataset_keys": true,
-    "high_keys_3281_3286": true,
     "rejected_zero": true,
     "conflicts_zero": true,
-    "economic_separate": true
+    "economic_separate": true,
+    "high_dataset_empty_without_positive_independence": true,
+    "grade_partition_sum": true,
+    "observed_publications_not_verified_independence": true
   },
-  "verification": "PASS",
+  "verification": "PASS_REWORK",
   "counts": {
     "unique": 2488,
     "VALIDATED": 0,
@@ -21,8 +23,13 @@
     "INCOMPLETE": 0,
     "REJECTED": 0,
     "strict_dataset": 0,
-    "high_confidence_research_dataset": 6,
-    "observation_level_incomplete": 900
+    "high_confidence_research_dataset": 0,
+    "observation_level_incomplete": 900,
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_HIGH": 0,
+    "CONSENSUS_MEDIUM": 0
   },
-  "reminder": "No validated draw and no actual analysis readiness. High-confidence is secondary-only research subset."
+  "reminder": "Six formerly labeled CONSENSUS_HIGH and one MEDIUM are INSUFFICIENT pending upstream-independence proof. HIGH_CONFIDENCE_RESEARCH_DATASET is now zero.",
+  "dataset_version": "kino-history-v1.1.1"
 }
