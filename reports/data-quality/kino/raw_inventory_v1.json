@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1",
-  "dataset_version": "kino-history-v1.1.0",
+  "schema_version": "1.2",
+  "dataset_version": "kino-history-v1.1.1",
   "checkpoint": "C39.6",
   "raw_files_count": 12,
   "raw_modern_draw_observations": 3401,
@@ -107,5 +107,7 @@
   ],
   "raw_identity_rule": "Git blob SHA-1 identifies committed snapshot; does not verify upstream HTML bytes.",
   "immutability": "Original raw unchanged by #39.",
-  "duplicate_blob_sha_pairs": 0
+  "duplicate_blob_sha_pairs": 0,
+  "rework": "C39.RW3",
+  "raw_immutability_assertion": "No raw file modified in #39 rework. Git blob identities must be compared to baseline HEAD independently in PR review."
 }
