@@ -1,18 +1,34 @@
 {
-  "schema_version": "1.0",
-  "checkpoint": "C39.4",
-  "verification": "PASS",
+  "schema_version": "1.1",
+  "checkpoint": "C39.RW2",
+  "verification": "PASS_STRUCTURAL_RECLASSIFICATION_PER_PARTITION",
   "total": 2488,
   "status_counts": {
-    "PROVISIONAL": 2488
+    "VALIDATED": 0,
+    "PROVISIONAL": 2488,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 0,
+    "REJECTED": 0
   },
   "evidence_grade_counts": {
-    "SINGLE_SOURCE": 2481,
-    "CONSENSUS_MEDIUM": 1,
-    "CONSENSUS_HIGH": 6
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_MEDIUM": 0,
+    "CONSENSUS_HIGH": 0,
+    "OFFICIAL_CORROBORATED": 0
   },
   "fully_official_numeric_dated": 0,
-  "high_consensus_draw_numbers": [
+  "high_consensus_draw_numbers": [],
+  "medium_consensus_draw_numbers": [],
+  "source_independence_rule": "Independence must be positively established with traceable upstream/editorial provenance. Distinct websites and source-group labels cannot be promoted to consensus.",
+  "high_consensus_rule": "≥3 truly independent secondary sources with identical date+14 numbers, verified lineage. None established.",
+  "number_of_structural_failures": 0,
+  "confidence_no_unjustified_promotion": true,
+  "source_raw_references_preserved": true,
+  "rule_regime_change_at_draw": 2893,
+  "legacy_regime_excluded_pre_draw": 799,
+  "dataset_version": "kino-history-v1.1.1",
+  "previous_consensus_high_draw_numbers": [
     3281,
     3282,
     3283,
@@ -20,14 +36,39 @@
     3285,
     3286
   ],
-  "medium_consensus_draw_numbers": [
+  "previous_consensus_medium_draw_numbers": [
     3280
   ],
-  "source_independence_rule": "Nicovh is derived from ChileResultados; gaaguile XLSX original publisher not verified. A date-free numeric match from this pair is not counted as independent date+number corroboration.",
-  "high_consensus_rule": "3 distinct traceable secondary publisher groups with exact draw_number + draw_date + 14 numbers; remains PROVISIONAL, no official numeric corroboration.",
-  "number_of_structural_failures": 0,
-  "confidence_no_unjustified_promotion": true,
-  "source_raw_references_preserved": true,
-  "rule_regime_change_at_draw": 2893,
-  "legacy_regime_excluded_pre_draw": 799
+  "single_source_rule": "Exactly one numeric publication, regardless of partial official event metadata.",
+  "insufficient_rule": "Two or more numeric publications but independent upstream lineage unverified, including date-free Nicovh matches.",
+  "published_numeric_matches_with_unverified_independence": 896,
+  "full_date_numeric_matching_draws_without_independence": 7,
+  "verified_independent_full_numeric_draws": 0,
+  "per_partition": [
+    {
+      "range": "2006_2010",
+      "single": 502,
+      "insufficient": 0
+    },
+    {
+      "range": "2011_2015",
+      "single": 522,
+      "insufficient": 0
+    },
+    {
+      "range": "2016_2020",
+      "single": 547,
+      "insufficient": 17
+    },
+    {
+      "range": "2021_2023",
+      "single": 4,
+      "insufficient": 466
+    },
+    {
+      "range": "2024_2026",
+      "single": 17,
+      "insufficient": 413
+    }
+  ]
 }
