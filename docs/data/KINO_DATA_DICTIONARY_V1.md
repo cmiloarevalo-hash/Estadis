@@ -1,6 +1,6 @@
-# Diccionario de datos — Kino histórico v1.1.0 (freeze de #39)
+# Diccionario de datos — Kino histórico v1.1.1 (freeze de #39)
 
-**Master:** #15 · **Work Item:** #39 · **Freeze:** 2026-10-08 · **Tipo:** registros históricos y documentación, no producto ejecutable.
+**Master:** #15 · **Work Item:** #39 · **Freeze original:** 2026-10-08 · **REWORK:** 2026-10-09 · **Tipo:** registros históricos y documentación, no producto ejecutable.
 
 ## Unidad y clave
 
@@ -27,9 +27,21 @@ Campos por observación: `observation_id`, `source_id`, `source_url`, `source_ty
 - Consolidación: 5 archivos `data/processed/kino/consolidated_c39_*.json`, 2.488 claves únicas.
 - Dataset estricto: `data/validated/kino/dataset_v1.json`, **cero** `VALIDATED`.
 - Cuarentena: `data/quarantine/kino/dataset_v1.json` es un **manifiesto** con rutas a 5 particiones `provisional_c39_*.json`, total **2.488 PROVISIONAL**. No es un archivo que contenga las 2.488 filas inline.
-- Investigación alta confianza: `data/processed/kino/high_confidence_research_dataset_c39_v1.json`, seis registros **PROVISIONAL / CONSENSUS_HIGH**. No es un conjunto oficialmente validado ni autoriza por sí solo análisis de producto.
+- Investigación alta confianza: `data/processed/kino/high_confidence_research_dataset_c39_v1.json`, **0 registros**. Los seis antes etiquetados CONSENSUS_HIGH permanecen PROVISIONAL en cuarentena y pasan a evidencia INSUFFICIENT hasta demostrar independencia positiva.
 - Rechazados: `data/rejected/kino/dataset_v1.json` (cero). Conflictos: `reports/data-quality/kino/conflict_log_v1.json` (cero contradicciones materiales *observadas*).
 - Legado excluido: `data/processed/kino/legacy_regime_exclusion_c39_v1.json`.
+
+## REWORK #39 — semántica de autoridad e independencia (2026-10-09)
+
+- `PROVISIONAL` se interpreta **únicamente como retención** de un resultado estructuralmente completo que no cumple `VALIDATED`, incluyendo registros comunitarios o secundarios sin corroboración. No implica credibilidad verificada.
+- `source_authority` conserva el tipo de la publicación de la cual proviene el candidato elegido; `source_type` y `official_complete_numeric_sources` no se alteran. Una referencia reglamentaria puede confirmar fecha de evento sin validar los 14 números.
+- `independence_evidence_status` distingue origen no verificado de publicación numérica única; `verified_independent_numeric_source_count` cuenta **sólo** pruebas positivas de procedencias independientes, no grupos inferidos por dominio.
+- `distinct_numeric_publication_count` y `matching_numeric_publication_source_ids` cuentan publicaciones coincidentes en 14 números. `matching_full_date_numeric_publication_count` y `matching_date_numeric_publication_source_ids` exigen adicionalmente coincidencia de fecha. **Coincidencia no equivale a independencia.**
+- `reported_secondary_publisher_groups` conserva los grupos nominales de la versión previa; `independent_full_secondary_publishers` queda vacío donde no se documentó independencia verificable. `corroborating_sources` queda vacío mientras no haya fuentes calificadas para corroboración independiente; los `source_observation_ids` originales permanecen intactos.
+- `calendar_evidence_status` es evidencia de la fecha observada, nunca certificación externa de todos los eventos. `numeric_result_evidence_status` separa el estado del resultado de 14 números de esa cronología.
+- `SINGLE_SOURCE`: 1.592 sorteos de procedencia numérica única; `INSUFFICIENT`: 896 sorteos con varias publicaciones numéricas coincidentes, pero linaje/editorialidad independiente pendiente (889 gaaguile/Nicovh numéricos sin fecha Nicovh, otros 7 recientes con coincidencia fecha+números). `CONSENSUS_HIGH=0`, `CONSENSUS_MEDIUM=0`, `VALIDATED=0`.
+- Nicovh **deriva** de ChileResultados; gaaguile posee un origen XLSX **UNKNOWN** y otro script distinto de su repositorio numera filas artificialmente, sin que esté probado que se usara para generar el JSON congelado. Detalle en [R41.7](https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071663636).
+- Regímenes calendarios observados: domingo (#799–#816); miércoles/domingo (#817–#2260); miércoles/viernes/domingo (desde #2261). La fecha candidata `2009-12-23` no tiene sorteo asignado: excepción **UNVERIFIED**, no se añade una observación.
 
 ## Campos económicos y ausencia
 
@@ -41,4 +53,4 @@ Cobertura de 2.488 sorteos observados: resultados de 14 números 2.488 (0 oficia
 
 No se infiere independencia por coincidencia de números. Nicovh deriva de ChileResultados y carece de fecha; el origen editorial del XLSX gaaguile no está demostrado. No existe un sorteo que cumpla los requisitos de `VALIDATED` en este freeze. La continuidad de números de sorteo #799–#3286 no certifica cobertura temporal oficial completa. `DATASET_ANALYSIS_READY: NO` y Master #26 permanece bloqueado.
 
-Los archivos de checkpoints previos a C39 se conservan como evidencia histórica, **no** deben confundirse con la vista canónica de v1.1.0 indicada aquí.
+Los archivos de checkpoints previos a C39 se conservan como evidencia histórica, **no** deben confundirse con la vista canónica de v1.1.1 indicada aquí.
