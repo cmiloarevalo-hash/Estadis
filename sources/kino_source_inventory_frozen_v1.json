@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "dataset_version": "kino-history-v1.1.0",
+  "dataset_version": "kino-history-v1.1.1",
   "checkpoint": "C39.6",
   "unique_catalog_source_count": 26,
   "previous_t38_discovered_count": 25,
@@ -28,5 +28,8 @@
     "Nicovh is derived from ChileResultados and does not add an independent publisher group.",
     "gaaguile XLSX publisher not documented; 889 matching numbers against Nicovh cannot prove independence.",
     "Historical dynamic/paginated sources are not exhaustively acquired."
-  ]
+  ],
+  "rework": "C39.RW2",
+  "lineage_decision": "Nicovh is derived from ChileResultados; gaaguile original XLSX publisher unknown; no secondary matched cohort has verified independent upstream origin.",
+  "verified_independent_numeric_secondary_cohorts": 0
 }
