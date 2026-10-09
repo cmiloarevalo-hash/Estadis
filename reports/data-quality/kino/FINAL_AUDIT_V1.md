@@ -1,6 +1,6 @@
-# Master #15 — Kino: auditoría histórica final v1.1.0
+# Master #15 — Kino: auditoría histórica final v1.1.1
 
-**Work Item:** #39 (C39.1–C39.6) · **Fecha:** 2026-10-08 · **PR:** #37 · **Rama:** `data-kino-historical-acquisition-v1`.
+**Work Item:** #39 (C39.1–C39.6) · **Freeze inicial:** 2026-10-08 · **REWORK:** 2026-10-09 · **PR:** #37 · **Rama:** `data-kino-historical-acquisition-v1`.
 
 **Estado:** `READY_FOR_REVIEW` del paquete documental; **no** es `SEMANTIC_ACCEPTED` y **no** autoriza merge ni desarrollo.
 
@@ -13,7 +13,7 @@ DEVELOPMENT: NOT STARTED
 DEVELOPMENT_GATE: BLOCKED_PENDING_HUMAN_SUPERVISOR
 ```
 
-El volumen supera el piso de conteo bruto de 1.000 sorteos completos, pero **sólo seis** sorteos tienen `CONSENSUS_HIGH` entre secundarios trazables y **ninguno** cumple `VALIDATED`. Por tanto no satisface el mínimo de 500 sorteos completos de alta confianza exigido para considerar un análisis limitado; tampoco existe cobertura económica histórica suficiente.
+El volumen supera el piso de conteo bruto de 1.000 sorteos completos, pero **cero** sorteos poseen `CONSENSUS_HIGH` con independencia editorial positivamente verificada y **ninguno** cumple `VALIDATED`. Por tanto no satisface el mínimo de 500 sorteos completos de alta confianza exigido para considerar un análisis limitado; tampoco existe cobertura económica histórica suficiente.
 
 ## Métricas finales, denominadores explícitos
 
@@ -33,11 +33,12 @@ El volumen supera el piso de conteo bruto de 1.000 sorteos completos, pero **só
 | INCOMPLETE (sorteo consolidado) | **0** |
 | REJECTED (sorteo consolidado) | **0** |
 | Observaciones individuales INCOMPLETE | **900** (889 Nicovh sin fecha y 11 observaciones oficiales parciales) |
-| Grade CONSENSUS_HIGH | **6** (#3281–#3286; todos PROVISIONAL) |
-| Grade CONSENSUS_MEDIUM | **1** (#3280; PROVISIONAL) |
-| Grade SINGLE_SOURCE | **2.481** |
+| Grade CONSENSUS_HIGH | **0**; seis etiquetas previas degradadas al no demostrar independencia |
+| Grade CONSENSUS_MEDIUM | **0**; una etiqueta previa degradada al no demostrar independencia |
+| Grade SINGLE_SOURCE | **1.592** (una publicación numérica por sorteo) |
+| Grade INSUFFICIENT | **896** (varias publicaciones numéricas; sin independencia verificable) |
 | STRICT_DATASET (VALIDATED solamente) | **0** |
-| HIGH_CONFIDENCE_RESEARCH_DATASET | **6**, conserva PROVISIONAL |
+| HIGH_CONFIDENCE_RESEARCH_DATASET | **0**; los seis antiguos permanecen en cuarentena como INSUFFICIENT |
 | Sorteos con dos o más observaciones | **904 / 2.488 (36,33 %)**; NO prueba independencia |
 | Sorteos con alguna evidencia oficial, incluso parcial | **11 / 2.488 (0,44 %)** |
 | Conflictos materiales de fecha o números observados | **0** |
@@ -53,11 +54,11 @@ El volumen supera el piso de conteo bruto de 1.000 sorteos completos, pero **só
 
 ## Matriz, autoridad e independencia
 
-La matriz reconstruida distingue 1.584 sorteos con una sola fuente completa fechada, 889 coincidencias solamente numéricas de gaaguile/Nicovh, 8 observaciones oficiales parciales en otros sorteos y 7 concordancias completas de fecha+números entre secundarios. No hubo conflictos materiales entre las evidencias capturadas.
+La matriz reconstruida conserva 1.584 relaciones SINGLE_DATED_COMPLETE_SOURCE, 889 coincidencias solamente numéricas de gaaguile/Nicovh, 8 relaciones PARTIAL_OFFICIAL_CONTEXT (números de otra fuente) y 7 concordancias completas de fecha+números entre webs secundarias. Esas relaciones no son directamente equivalentes a los nuevos grados: **1.592 SINGLE_SOURCE y 896 INSUFFICIENT**, por conteo de publicaciones de números y evidencia positiva de procedencia. No hubo conflictos materiales entre las evidencias capturadas.
 
 La tabla comunitaria gaaguile proviene de un XLSX cuyo editor original no está documentado; Nicovh obtiene información de ChileResultados y omite la fecha. Por tanto los 889 números coincidentes **no** son 889 corroboraciones editoriales independientes ni pueden convertirse en `CONSENSUS_HIGH` o `VALIDATED`. Ninguna interfaz oficial entregó, en la adquisición permitida, la serie completa de 14 números por sorteo requerida para elevar el estado global.
 
-Los sorteos #3281–#3286 tienen concordancia estructural exacta en tres grupos editoriales secundarios registrados (ResultadosKinoChile, ChileResultados y EpicentroChile), clasificados como `CONSENSUS_HIGH / PROVISIONAL`; #3280 posee dos grupos secundarios y grado `CONSENSUS_MEDIUM / PROVISIONAL`. Estas notas no implican aprobación oficial de la lotería ni validación de la independencia del origen remoto de todos los datos históricos.
+Los sorteos #3281–#3286 conservan los tres sitios publicadores con coincidencia completa de fecha+14 números (ResultadosKinoChile, ChileResultados y EpicentroChile); #3280 conserva dos. La independencia de su upstream editorial no fue demostrada. Los **siete** quedan `PROVISIONAL / INSUFFICIENT` y se conserva el recuento explícito de sitios y observaciones. Las 889 coincidencias numéricas gaaguile/Nicovh carecen de fecha en Nicovh y no acreditan independencia: Nicovh declara su origen ChileResultados y el XLSX de gaaguile tiene publicador desconocido.
 
 ## Cobertura por campos (denominador: 2.488 sorteos)
 
@@ -86,6 +87,12 @@ El freeze clasifica **7 grupos de brecha**: corroboración numérica oficial, li
 - Auditorías de particiones y métricas: `C39_5_PARTITION_QA.json`, `C39_5_COVERAGE_REPORT.json`, `C39_5_ECONOMIC_FIELD_COVERAGE.json`.
 - Catálogo de 26 fuentes: `sources/kino_historical_source_catalog_v2.json`; huellas Git por archivo: `reports/data-quality/kino/version_metadata_v1.json`.
 - Diccionario: `docs/data/KINO_DATA_DICTIONARY_V1.md`.
+
+## Hallazgos #41 y siguientes gates — **NO EJECUTADOS**
+
+La investigación R41.1–R41.10 en [Issue #41](https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071685134) terminó documentalmente con `VALIDATION_PATH: PARTIAL`. Calendario **observado**: sólo domingos hasta #816/2006-05-07, miércoles+domingo #817/2006-05-10 a #2260/2020-03-11, luego miércoles/viernes/domingo desde #2261/2020-03-13. La fuente arbitral NIC Chile reproduce una afirmación de Lotería sobre el cambio 2006, pero no certifica la fecha exacta del primer miércoles; anuncio contemporáneo de marzo 2020 respalda la incorporación del viernes. **2009-12-23** es fecha candidata de excepción `UNVERIFIED`, sin número de sorteo asignado. Estas referencias no certifican los 14 números ni la completitud oficial del calendario.
+
+**Próximo trabajo sujeto a Work Items/Gates del Supervisor, pendiente:** (1) piloto de **diez consultas reales** por número y fecha en la interfaz oficial Kino, con selección estratificada por regímenes, resultados visibles/error/negativos y tiempo por consulta; R41.4 sólo hizo ocho *probes indexados*, **cero envíos funcionales de formularios**. (2) consulta formal a Lotería por el calendario 2006–2026, situación 2009-12-23, primera fecha de miércoles, extractos de premios/resultados con 14 números y condiciones de entrega/reproducción. Ni la consulta interactiva ni la solicitud externa están ejecutadas/autorizadas por el REWORK #39. No se presume capacidad de API ni automatización.
 
 **Integridad:** se usan SHA-1 de blobs Git sobre archivos comprometidos; no se atribuye integridad HTTP original a capturas que son transcripciones manuales. Los controles documentales/estructurales C39.1–C39.5 se verificaron sin añadir pruebas ejecutables al repositorio.
 
