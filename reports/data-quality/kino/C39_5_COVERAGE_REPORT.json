@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "checkpoint": "C39.5",
+  "schema_version": "1.1",
+  "checkpoint": "C39.RW2",
   "verification": "PASS",
   "modern_target_window": {
     "first_draw_number": 799,
@@ -15,9 +15,9 @@
   "observed_core_complete_draws": 2488,
   "officially_validated": 0,
   "provisional": 2488,
-  "consensus_high": 6,
+  "consensus_high": 0,
   "strict_dataset_size": 0,
-  "high_confidence_research_dataset_size": 6,
+  "high_confidence_research_dataset_size": 0,
   "longest_observed_contiguous_draw_number_segment": {
     "first": 799,
     "last": 3286,
@@ -272,5 +272,22 @@
   "raw_snapshots": 12,
   "source_groups_evaluated_in_38": 9,
   "sources_discovered_in_38": 25,
-  "important_caveat": "Draw-number continuity and coherent dates do not prove official full temporal coverage or validated draws; historical XLSX provenance unknown."
+  "important_caveat": "Source scale, contiguous numbers and observed weekday pattern do not certify official chronology or 14 numbers; date 2009-12-23 remains schedule exception candidate.",
+  "dataset_version": "kino-history-v1.1.1",
+  "verified_independent_full_date_numeric_draws": 0,
+  "observed_complete_date_numeric_matches_with_unverified_independence": 7,
+  "observed_numeric_only_matches_with_unverified_independence": 889,
+  "evidence_grade_counts": {
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_MEDIUM": 0,
+    "CONSENSUS_HIGH": 0
+  },
+  "calendar_schedule_exception_candidate": {
+    "date": "2009-12-23",
+    "status": "UNVERIFIED",
+    "draw_number": null,
+    "evidence": "https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071605677"
+  },
+  "calendar_model_note": "K06-A Sunday, K06-B Wednesday/Sunday, K20-C Wednesday/Friday/Sunday are OBSERVED regimes; independent official complete historical calendar not certified."
 }
