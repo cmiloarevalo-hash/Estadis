@@ -1,40 +1,40 @@
 {
-  "schema_version": "1.1",
-  "dataset_version": "kino-history-v1.1.0",
+  "schema_version": "1.2",
+  "dataset_version": "kino-history-v1.1.1",
   "master_work_item": 15,
   "work_item": 39,
-  "checkpoint": "C39.6",
-  "freeze_date": "2026-10-08",
+  "checkpoint": "C39.RW3",
+  "freeze_date": "2026-10-09",
   "branch": "data-kino-historical-acquisition-v1",
   "raw_source_head": "89989300c0e8764aea945c8cee83d6eefdcebce7",
-  "fingerprint_tree_snapshot_commit": "d9e9f1eb88f86001d794dc31344045410da1dbba",
+  "fingerprint_tree_snapshot_commit": "5f22bb6d50f34f1452aa8141b1d58bb3ba9cb509",
   "all_fingerprints_are_git_blob_sha1": true,
   "upstream_http_sha256_fully_verified": false,
   "artifacts": [
     {
       "path": "data/processed/kino/consolidated_c39_2006_2010.json",
-      "git_blob_sha1": "cf101a0a8cb84e703134821141125468c3280d4b",
-      "size_bytes": 568803
+      "git_blob_sha1": "cd616c9dc67932c31cb8aff965dc998c078632a9",
+      "size_bytes": 1022660
     },
     {
       "path": "data/processed/kino/consolidated_c39_2011_2015.json",
-      "git_blob_sha1": "4d18e687beda83db80dbc05dbbfb5fdf5d391b7b",
-      "size_bytes": 592209
+      "git_blob_sha1": "5eab7386c325ef6ef6eb9baf6e2614fe5a9564de",
+      "size_bytes": 1064146
     },
     {
       "path": "data/processed/kino/consolidated_c39_2016_2020.json",
-      "git_blob_sha1": "4e122a5c4c5cb5e77908354a731301ceb0bcfebc",
-      "size_bytes": 640202
+      "git_blob_sha1": "48b0e774c19423538a13533b9b4576d1fd86f5f2",
+      "size_bytes": 1152827
     },
     {
       "path": "data/processed/kino/consolidated_c39_2021_2023.json",
-      "git_blob_sha1": "8a3af3e12c10ed1e4e05d738071c815f848fc0b6",
-      "size_bytes": 539806
+      "git_blob_sha1": "05bd991dda8607c11bf0b3c4fab54632b0711764",
+      "size_bytes": 1039295
     },
     {
       "path": "data/processed/kino/consolidated_c39_2024_2026.json",
-      "git_blob_sha1": "ee82840d75107e6c4876dc5444e18f92fea53007",
-      "size_bytes": 491162
+      "git_blob_sha1": "41dc7652f9e6843bf8cb38120ec005e74d82d3f6",
+      "size_bytes": 944932
     },
     {
       "path": "data/processed/kino/evidence_matrix_c39_2006_2010.json",
@@ -68,8 +68,8 @@
     },
     {
       "path": "data/processed/kino/high_confidence_research_dataset_c39_v1.json",
-      "git_blob_sha1": "53f6744f07215e217b3ba85dbdbb882f5a4b118f",
-      "size_bytes": 11956
+      "git_blob_sha1": "bf8b64edc33e8ad14e631eaf1dfdbff934974d15",
+      "size_bytes": 1131
     },
     {
       "path": "data/processed/kino/legacy_regime_exclusion_c39_v1.json",
@@ -108,38 +108,38 @@
     },
     {
       "path": "data/quarantine/kino/dataset_v1.json",
-      "git_blob_sha1": "4a7c5bea1fadc8bd8e1ce13ab61aae6ff4ba1868",
-      "size_bytes": 1009
+      "git_blob_sha1": "a6e725c12d17124d9d94017687df9b23188d4d39",
+      "size_bytes": 1329
     },
     {
       "path": "data/quarantine/kino/partitions_c39_v1.json",
-      "git_blob_sha1": "59a10c5e0838f27ce84fbaf1385679373229e684",
-      "size_bytes": 925
+      "git_blob_sha1": "677478211bc631f89c8997a784935cb96baf5f44",
+      "size_bytes": 1289
     },
     {
       "path": "data/quarantine/kino/provisional_c39_2006_2010.json",
-      "git_blob_sha1": "a92e43c81fdbd6dfd05c24622b51476da2dc4094",
-      "size_bytes": 568740
+      "git_blob_sha1": "396417305e6167e3ff0ac05431c4980c65bfb855",
+      "size_bytes": 1022607
     },
     {
       "path": "data/quarantine/kino/provisional_c39_2011_2015.json",
-      "git_blob_sha1": "88f3ff8ac53d1afef85103e7ea63332767786f32",
-      "size_bytes": 592146
+      "git_blob_sha1": "3783e2357db27a6a5be2b39102b15bb307c7aa3b",
+      "size_bytes": 1064093
     },
     {
       "path": "data/quarantine/kino/provisional_c39_2016_2020.json",
-      "git_blob_sha1": "75f28c5e9248c8941244a3971eb703ac66b0a176",
-      "size_bytes": 640139
+      "git_blob_sha1": "5b66725b64110bfcbd01088c2a0286c6dff11855",
+      "size_bytes": 1152774
     },
     {
       "path": "data/quarantine/kino/provisional_c39_2021_2023.json",
-      "git_blob_sha1": "536c45810c10687c5fba6ae358080d80686a64f4",
-      "size_bytes": 539743
+      "git_blob_sha1": "0c345e10ac71fb73c19175a93f492ce9d8d24309",
+      "size_bytes": 1039242
     },
     {
       "path": "data/quarantine/kino/provisional_c39_2024_2026.json",
-      "git_blob_sha1": "5799c9a2aa233cfb5305e15f28cc9ffe16528811",
-      "size_bytes": 491099
+      "git_blob_sha1": "ea0a214463cf4787c45e73b9d0426fd3de8bd28b",
+      "size_bytes": 944879
     },
     {
       "path": "data/raw/kino/community/deep_expansion_manifest_t38.json",
@@ -203,8 +203,8 @@
     },
     {
       "path": "data/rejected/kino/dataset_v1.json",
-      "git_blob_sha1": "ebc1bd5bcfc754a3b946c0b81cc9ac5ea7b559f6",
-      "size_bytes": 162
+      "git_blob_sha1": "63567b84199aeacf0317073b8650c63b7127a16d",
+      "size_bytes": 185
     },
     {
       "path": "data/rejected/kino/rejected_c39_v1.json",
@@ -213,13 +213,13 @@
     },
     {
       "path": "data/validated/kino/dataset_v1.json",
-      "git_blob_sha1": "a7caab6a90c86bf457e016e715613f29c5f5336d",
-      "size_bytes": 322
+      "git_blob_sha1": "2ff7133c74685ede298316953f0181c38d48908a",
+      "size_bytes": 497
     },
     {
       "path": "data/validated/kino/strict_dataset_c39_v1.json",
-      "git_blob_sha1": "526b0dfeffd6d8e6fc97d95990e4a691c0ed4f7a",
-      "size_bytes": 206
+      "git_blob_sha1": "f7bde844de02f118925ebe069da7183d0ce20138",
+      "size_bytes": 425
     },
     {
       "path": "docs/data/C39_1_LINEAGE_AND_PROVENANCE.md",
@@ -228,8 +228,8 @@
     },
     {
       "path": "docs/data/KINO_DATA_DICTIONARY_V1.md",
-      "git_blob_sha1": "2943f189ba70a9dbf1fe128c6d963a80f7b0c30a",
-      "size_bytes": 4535
+      "git_blob_sha1": "adc9860e7e3c3e179b09d3baa2adb93b484c90a8",
+      "size_bytes": 7236
     },
     {
       "path": "reports/data-quality/kino/C39_1_RAW_INVENTORY.json",
@@ -248,23 +248,23 @@
     },
     {
       "path": "reports/data-quality/kino/C39_4_CLASSIFICATION_QA.json",
-      "git_blob_sha1": "9d0cb522b1d28e8b7323ea9fb29b7e480a2d3a84",
-      "size_bytes": 1054
+      "git_blob_sha1": "8ed4d080a921fc7205a34ad8370abf9a8b258f80",
+      "size_bytes": 2189
     },
     {
       "path": "reports/data-quality/kino/C39_5_COVERAGE_REPORT.json",
-      "git_blob_sha1": "21903007b63eb58e42757d1d26728a75089fa8a1",
-      "size_bytes": 6839
+      "git_blob_sha1": "2230e59f6b0a6938f349ab4010268f03cdb9e634",
+      "size_bytes": 7652
     },
     {
       "path": "reports/data-quality/kino/C39_5_ECONOMIC_FIELD_COVERAGE.json",
-      "git_blob_sha1": "d5c8d515fda2fab4324952551ddc67f04f8d8405",
-      "size_bytes": 1365
+      "git_blob_sha1": "ff171e9f6bfe9f857e512f35c3610acecb71e273",
+      "size_bytes": 1588
     },
     {
       "path": "reports/data-quality/kino/C39_5_PARTITION_QA.json",
-      "git_blob_sha1": "541432ad8041b452378f00d4600f4fe5c82ec60a",
-      "size_bytes": 781
+      "git_blob_sha1": "731410830e97d33586504196d01a2723bf7efc02",
+      "size_bytes": 1109
     },
     {
       "path": "reports/data-quality/kino/conflict_log_c39_v1.json",
@@ -273,23 +273,28 @@
     },
     {
       "path": "reports/data-quality/kino/coverage_report_v1.json",
-      "git_blob_sha1": "78bf44991de18002a832cfff7edef76f8c1f9630",
-      "size_bytes": 2737
+      "git_blob_sha1": "4fc54813eefe12c1cde37f1b2f2a802d240b58be",
+      "size_bytes": 3360
     },
     {
       "path": "reports/data-quality/kino/gap_report_frozen_v1.json",
-      "git_blob_sha1": "ffc7ff2520f6c578ed01c1fed683047bc63bfb26",
-      "size_bytes": 2816
+      "git_blob_sha1": "2daa399b6412d99806f01c8322f8806e33a29fa4",
+      "size_bytes": 4057
     },
     {
       "path": "sources/kino_historical_source_catalog_v2.json",
-      "git_blob_sha1": "3fe62764ec9bc50dac95cc15ca1cbbc5a945d039",
-      "size_bytes": 31389
+      "git_blob_sha1": "ebd329eeeca346ce9dc06c3bee7fbb3d58b715de",
+      "size_bytes": 40747
     },
     {
       "path": "sources/kino_source_inventory_frozen_v1.json",
-      "git_blob_sha1": "b9a353302b686c09c11cf3c3c98c1902faf13a58",
-      "size_bytes": 1578
+      "git_blob_sha1": "4e3cdea1b48d96b659f8c7b617db29d137158af1",
+      "size_bytes": 1833
+    },
+    {
+      "path": "reports/data-quality/kino/C39_REWORK_VERIFICATION.json",
+      "git_blob_sha1": "5cf87ce4574e58afd47d0850d96d95b5a15f9d2a",
+      "size_bytes": 3650
     }
   ],
   "canonical_paths": {
@@ -302,7 +307,8 @@
     "research_dataset": "data/processed/kino/high_confidence_research_dataset_c39_v1.json",
     "quarantine_manifest": "data/quarantine/kino/dataset_v1.json",
     "coverage": "reports/data-quality/kino/coverage_report_v1.json",
-    "final_audit": "reports/data-quality/kino/FINAL_AUDIT_V1.md"
+    "final_audit": "reports/data-quality/kino/FINAL_AUDIT_V1.md",
+    "rework_verification": "reports/data-quality/kino/C39_REWORK_VERIFICATION.json"
   },
   "metrics": {
     "draws": 2488,
@@ -310,14 +316,21 @@
     "legacy_excluded": 799,
     "VALIDATED": 0,
     "PROVISIONAL": 2488,
-    "CONSENSUS_HIGH": 6,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 0,
+    "REJECTED": 0,
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_HIGH": 0,
+    "CONSENSUS_MEDIUM": 0,
     "strict": 0,
-    "research": 6
+    "research": 0
   },
   "data_analysis_ready": "NO",
   "master26": "BLOCKED_BY_DATA_QUALITY_OR_COVERAGE",
   "ci": "NOT CONFIGURED",
   "development": "NOT STARTED",
-  "supervisor_acceptance": "PENDING_REVIEW",
-  "note": "The metadata file and future FINAL_AUDIT/PR updates are not self-fingerprinted in this earlier snapshot. Use exact final PR HEAD to independently enumerate the full release tree."
+  "supervisor_acceptance": "PENDING_NEW_EXACT_HEAD_REVIEW",
+  "note": "Snapshot of all referenced Git blob SHA-1 values at predecessor commit. This metadata file is intentionally not self-fingerprinted; review exact PR HEAD tree for ultimate file identity.",
+  "source_lineage_policy": "Distinct publishing URLs without positive upstream independence evidence do NOT satisfy CONSENSUS_MEDIUM/HIGH."
 }
