@@ -32,5 +32,14 @@
   ],
   "conflicted_records": [],
   "incomplete_draw_records": [],
-  "note": "900 incomplete individual observations remain linked in normalized evidence, though each consolidated draw is core-complete."
+  "note": "900 incomplete individual observations remain linked in normalized evidence, though each consolidated draw is core-complete.",
+  "dataset_version": "kino-history-v1.1.1",
+  "rework": "C39.RW2",
+  "retention_policy": "All 2488 structurally complete records are PROVISIONAL in quarantine; neither official authority nor positive independence is implied.",
+  "evidence_grade_counts": {
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_HIGH": 0,
+    "CONSENSUS_MEDIUM": 0
+  }
 }
