@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.1",
+  "master_work_item": 15,
+  "work_item": 39,
+  "checkpoint": "C39.RW3",
+  "date": "2026-10-08",
+  "baseline_head": "89989300c0e8764aea945c8cee83d6eefdcebce7",
+  "verified_head_before_this_commit": "469effb5910d43ec75ceea214549b4376a1e2da7",
+  "verification": "SUPERSEDED_BY_CURRENT_REWORK_QA",
+  "verification_type": "DOCUMENTARY_AND_STRUCTURAL_WITHOUT_NEW_EXECUTABLE_TESTS",
+  "checkpoint_reports": [
+    {
+      "checkpoint": "C39.1",
+      "path": "reports/data-quality/kino/C39_1_RAW_INVENTORY.json",
+      "result": "12 source snapshots enumerated, original raw files unchanged"
+    },
+    {
+      "checkpoint": "C39.2",
+      "path": "reports/data-quality/kino/C39_2_NORMALIZATION_QA.json",
+      "result": "PASS; 3401 processed, 2488 distinct sorteo keys, 0 duplicate observation IDs"
+    },
+    {
+      "checkpoint": "C39.3",
+      "path": "reports/data-quality/kino/C39_3_EVIDENCE_MATRIX_QA.json",
+      "result": "PASS; 3401 observations reconciled, 2488 keys; no observed date/number conflicts"
+    },
+    {
+      "checkpoint": "C39.4",
+      "path": "reports/data-quality/kino/C39_4_CLASSIFICATION_QA.json",
+      "result": "PASS; 2488 PROVISIONAL, VALIDATED=0, 6 high secondary consensus"
+    },
+    {
+      "checkpoint": "C39.5",
+      "path": "reports/data-quality/kino/C39_5_PARTITION_QA.json",
+      "result": "PASS; 0 strict, 6 research, 2488 quarantined"
+    }
+  ],
+  "scope_diff_validation": {
+    "compared_against": "89989300c0e8764aea945c8cee83d6eefdcebce7",
+    "changed_file_count": 48,
+    "out_of_scope_file_count": 0,
+    "forbidden_development_file_count": 0,
+    "modified_raw_file_count": 0,
+    "branch": "data-kino-historical-acquisition-v1",
+    "base": "main@b3d197042afcaa093fa4c208710dfe70698b18c8",
+    "pr": 37,
+    "pr_open": true,
+    "pr_merged": false
+  },
+  "final_readiness": "NO",
+  "master26": "BLOCKED_BY_DATA_QUALITY_OR_COVERAGE",
+  "ci": "NOT CONFIGURED",
+  "development": "NOT STARTED",
+  "cautions": [
+    "No full independent recomputation of upstream HTML byte hashes was possible from preserved manual captures.",
+    "The 26-source reconciled inventory corrects a previously reported T38 count of 25.",
+    "Only 6 HIGH secondary consensus records; no VALIDATED draws.",
+    "This report fingerprints its predecessor HEAD, not its own future commit SHA. Final handoff issue comments cite the exact final HEAD."
+  ],
+  "dataset_version": "kino-history-v1.1.1",
+  "previous_verification_head": "469effb5910d43ec75ceea214549b4376a1e2da7",
+  "new_rework_verification_path": "reports/data-quality/kino/C39_REWORK_VERIFICATION.json",
+  "previous_2026_10_08_freeze_no_longer_SEMANTIC_ACCEPTED": true,
+  "current_status_counts": {
+    "VALIDATED": 0,
+    "PROVISIONAL": 2488,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 0,
+    "REJECTED": 0
+  },
+  "current_grade_counts": {
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_HIGH": 0,
+    "CONSENSUS_MEDIUM": 0
+  },
+  "current_research_subset_size": 0,
+  "checked_git_tree_snapshot": "37776e09d6491acb695bd82a55e23d50b53fc27d",
+  "note": "Original C39.6 preliminary QA for a different SHA is superseded. Use the new C39_REWORK_VERIFICATION.json and exact PR HEAD."
+}

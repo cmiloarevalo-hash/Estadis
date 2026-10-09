@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "C39.2",
+  "source_partition_files": [
+    "data/processed/kino/observations_c39_gaaguile_2006_2010.json",
+    "data/processed/kino/observations_c39_gaaguile_2011_2015.json",
+    "data/processed/kino/observations_c39_gaaguile_2016_2020.json",
+    "data/processed/kino/observations_c39_gaaguile_2021_2026.json",
+    "data/processed/kino/observations_c39_nicovh_v1.json",
+    "data/processed/kino/observations_c39_existing_and_manual_v1.json"
+  ],
+  "observations_total": 3401,
+  "source_ids_count": 11,
+  "distinct_draw_numbers": 2488,
+  "gaaguile_complete_observations": 2469,
+  "nicovh_missing_date_observations": 889,
+  "existing_and_manual_observations": 43,
+  "legacy_15_number_excluded": 799,
+  "observations_with_missing_core": 900,
+  "duplicate_observation_id_count": 0,
+  "invalid_observations_count": 0,
+  "all_raw_references_present": true,
+  "old_version_files_preserved": true,
+  "verification_status": "PASS",
+  "notes": [
+    "The 889 date-absent Nicovh rows remain observation-level INCOMPLETE, not discarded.",
+    "Legacy 799 pre-#799 rows have 15 numbers and are excluded without transformation.",
+    "Gaaguile source lineage unknown. Independence is determined separately in C39.4.",
+    "Economic fields remain null when absent; null never means zero."
+  ]
+}

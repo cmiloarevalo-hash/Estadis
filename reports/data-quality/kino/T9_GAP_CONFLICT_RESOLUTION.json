@@ -1,0 +1,101 @@
+{
+  "checkpoint": 24,
+  "acquisition_saturation": "REACHED",
+  "reason": "Official dynamic surfaces, official institutional sources, and multiple independent secondary sources were reasonably exhausted within the no-code/no-scraper scope. Further exhaustive acquisition would require prohibited automation.",
+  "raw_records_added": 1,
+  "new_evidence": {
+    "draw_number": 3280,
+    "source_id": "kino.secondary.media.epicentrochile",
+    "effect": "increased independent numeric corroboration from 1 to 2; status remains PROVISIONAL"
+  },
+  "official_search_attempt": {
+    "draws": [
+      3280,
+      3281,
+      3282,
+      3283,
+      3284,
+      3285,
+      3286
+    ],
+    "result": "NO_COMPLETE_OFFICIAL_14_NUMBER_RESULT_DISCOVERED"
+  },
+  "relation_counts": {
+    "MISSING_SOURCE": 10,
+    "EXACT_MATCH": 6,
+    "PARTIAL_MATCH": 1
+  },
+  "confidence_counts": {
+    "VALIDATED": 0,
+    "PROVISIONAL": 7,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 10,
+    "REJECTED": 0
+  },
+  "gaps": [
+    {
+      "gap_id": "G1",
+      "type": "ACQUISITION_GAP",
+      "affected_draws": "recent and historical official-query targets",
+      "status": "UNRESOLVED",
+      "description": "Official dynamic result interfaces do not expose complete numeric historical payload through permitted static/manual path; further exhaustive acquisition would require prohibited automation/endpoint work."
+    },
+    {
+      "gap_id": "G2",
+      "type": "VALIDATION_GAP",
+      "affected_draws": [
+        3280,
+        3281,
+        3282,
+        3283,
+        3284,
+        3285,
+        3286
+      ],
+      "status": "UNRESOLVED",
+      "description": "Complete secondary numeric evidence exists but no acquired official source contains the full 14-number result."
+    },
+    {
+      "gap_id": "G3",
+      "type": "SOURCE_GAP",
+      "affected_draws": [
+        1829,
+        1836,
+        1842,
+        1843,
+        1856,
+        1858,
+        1892,
+        1903,
+        2893,
+        3130
+      ],
+      "status": "UNRESOLVED",
+      "description": "Observed official records lack one or more core fields; eight video pages lack date and numbers, two institutional records lack numbers."
+    },
+    {
+      "gap_id": "G4",
+      "type": "REGIME_GAP",
+      "affected_draws": [
+        1829,
+        1836,
+        1842,
+        1843,
+        1856,
+        1858,
+        1892,
+        1903
+      ],
+      "status": "UNRESOLVED",
+      "description": "Detailed pre-2893 product rule regime was not established for these old observations."
+    },
+    {
+      "gap_id": "G5",
+      "type": "UNKNOWN_GAP",
+      "affected_draws": "historical sequence outside acquired sample",
+      "status": "UNRESOLVED",
+      "description": "Historical continuity was not exhaustively enumerated; absence from v1 cannot be interpreted as a missing lottery draw."
+    }
+  ],
+  "conflict_gap_count": 0
+}

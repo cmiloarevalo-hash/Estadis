@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.1",
+  "dataset_version": "kino-history-v1.1.0",
+  "checkpoint": "C39.6",
+  "status": "NO_MATERIAL_CORE_CONFLICTS_OBSERVED",
+  "conflicts_count": 0,
+  "records": [],
+  "source_reference": "reports/data-quality/kino/conflict_log_c39_v1.json",
+  "caution": "No captured conflicts does not prove absence in unacquired history."
+}

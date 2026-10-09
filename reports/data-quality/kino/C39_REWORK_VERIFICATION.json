@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "dataset_version": "kino-history-v1.1.1",
+  "master": 15,
+  "work_item": 39,
+  "checkpoint": "C39.RW3",
+  "date": "2026-10-09",
+  "comparison_head": "1b052b4e33e1ec7d58725077ca20266a7498c2e4",
+  "tree_verified_at_head": "37776e09d6491acb695bd82a55e23d50b53fc27d",
+  "verification": "PASS",
+  "verification_scope": "classification transformation constraints + Git tree immutable provenance + report arithmetic",
+  "ci": "NOT CONFIGURED",
+  "branch": "data-kino-historical-acquisition-v1",
+  "pr": 37,
+  "raw_unchanged_count": 12,
+  "processed_observations_unchanged_count": 6,
+  "evidence_matrix_active_partitions_unchanged_count": 5,
+  "changed_paths_at_snapshot": 27,
+  "changed_paths_outside_authorized_scope": 0,
+  "forbidden_development_changes": 0,
+  "per_year_partition_transformation": [
+    {
+      "part": "2006_2010",
+      "draws": 502,
+      "single": 502,
+      "insufficient": 0
+    },
+    {
+      "part": "2011_2015",
+      "draws": 522,
+      "single": 522,
+      "insufficient": 0
+    },
+    {
+      "part": "2016_2020",
+      "draws": 564,
+      "single": 547,
+      "insufficient": 17
+    },
+    {
+      "part": "2021_2023",
+      "draws": 470,
+      "single": 4,
+      "insufficient": 466
+    },
+    {
+      "part": "2024_2026",
+      "draws": 430,
+      "single": 17,
+      "insufficient": 413
+    }
+  ],
+  "total_draws": 2488,
+  "unique_core_complete_draws_preserved": 2488,
+  "original_modern_observations_preserved": 3401,
+  "confidence_status_counts": {
+    "VALIDATED": 0,
+    "PROVISIONAL": 2488,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 0,
+    "REJECTED": 0
+  },
+  "evidence_grade_counts": {
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_HIGH": 0,
+    "CONSENSUS_MEDIUM": 0,
+    "OFFICIAL_CORROBORATED": 0
+  },
+  "research_dataset_records": 0,
+  "strict_dataset_records": 0,
+  "original_889_nicovh_number_only_matches_preserved": true,
+  "original_7_dated_secondary_matches_preserved": true,
+  "independent_secondary_numeric_lineages_verified": 0,
+  "tests": {
+    "quarantine_retention_count": true,
+    "grade_partition_sum": true,
+    "zero_high_without_positive_independence": true,
+    "strict_empty_without_official_numeric_proof": true,
+    "raw_git_blob_identity_compared_and_unchanged": true,
+    "normalized_observation_git_blobs_unchanged": true,
+    "evidence_matrix_git_blobs_unchanged": true,
+    "repo_scope_no_development_changes": true,
+    "calendar_not_automatically_certified": true
+  },
+  "limitations": [
+    "The structural transform parsed each previous partition from GitHub and serialized valid JSON; the connector imposes a content-size limit on re-fetching some new larger single-line JSON partitions, so a separate byte-level parser check of those artifacts on the new HEAD is still desirable in the Supervisor review.",
+    "No independent original-HTTP-body checksum for legacy manual transcriptions; Git blob SHAs validate only stored artifacts.",
+    "No genuine independent upstream lineage documented for any of the multi-publication numeric cohorts.",
+    "External expected-draw count/certification not resolved, 2009-12-23 remains an unverified schedule exception."
+  ],
+  "development": "NOT STARTED",
+  "data_analysis_ready": "NO",
+  "master26": "BLOCKED_BY_DATA_QUALITY_OR_COVERAGE",
+  "next_gates": [
+    "Authorized 10-case functional official search UI pilot by number/date; 8 static probes in R41.4 do not qualify.",
+    "Authorized human contact to Lotería for historical calendar/certified result records; none sent.",
+    "Supervisor review of current rework HEAD before any integration; no merge, no issue closure."
+  ]
+}

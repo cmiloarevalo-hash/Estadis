@@ -1,0 +1,28 @@
+{
+  "checkpoint": 19,
+  "sources_consulted": 6,
+  "raw_records_added": 3,
+  "unique_draws_observed": 3,
+  "draw_fields": {
+    "2893": {
+      "date": true,
+      "numbers": false,
+      "prizes": false,
+      "rule_change": true
+    },
+    "3130": {
+      "date": true,
+      "numbers": false,
+      "prizes": false,
+      "rule_change": false
+    },
+    "3285": {
+      "date": true,
+      "numbers": false,
+      "prize_estimates": true,
+      "rule_change": false
+    }
+  },
+  "coverage": "PARTIAL",
+  "forbidden_development_files": 0
+}

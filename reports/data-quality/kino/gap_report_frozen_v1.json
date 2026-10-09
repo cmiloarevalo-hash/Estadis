@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.2",
+  "dataset_version": "kino-history-v1.1.1",
+  "checkpoint": "C39.6",
+  "gap_count": 7,
+  "observed_internal_draw_number_gaps": 0,
+  "external_expected_draws": null,
+  "coverage_percent_against_expected": null,
+  "gaps": [
+    {
+      "gap_id": "G1",
+      "type": "OFFICIAL_NUMERIC_CORROBORATION",
+      "affected_draw_count": 2488,
+      "status": "UNRESOLVED",
+      "description": "All 2488 complete dated draw candidates lack complete official 14-number corroboration. VALIDATED remains zero; strict dataset empty.",
+      "next_authorized_action": "Acquire authenticated/permitted official result records through separately authorized work only."
+    },
+    {
+      "gap_id": "G2",
+      "type": "COMMUNITY_LINEAGE",
+      "affected_draw_count": 2469,
+      "status": "UNRESOLVED",
+      "description": "gaaguile XLSX original publisher and independence from Nicovh/ChileResultados are not verified; 889 numeric-only matches do not establish independent date-and-numbers consensus. R41.7 additionally shows Nicovh is derived from ChileResultados; gaaguile XLSX publisher UNKNOWN and alternate scraper numbering by index is not proven to generate frozen data. Seven multi-publication full date+number matches also lack positively verified editorial independence."
+    },
+    {
+      "gap_id": "G3",
+      "type": "OBSERVATION_MISSING_DATE",
+      "affected_observation_count": 889,
+      "status": "UNRESOLVED_BUT_DRAW_DATE_AVAILABLE_ELSEWHERE",
+      "description": "Nicovh CSV contains numbers but no dates; normalized absence preserved, not imputed into that observation."
+    },
+    {
+      "gap_id": "G4",
+      "type": "ECONOMIC_FIELD_COVERAGE",
+      "affected_draw_count_for_sales": 2488,
+      "status": "UNRESOLVED",
+      "description": "Prize and winner tables acquired for 7 draws, jackpot estimates for 2, sale volume/price for 0. No actual comprehensive economic analysis is enabled."
+    },
+    {
+      "gap_id": "G5",
+      "type": "NON_AUTOMATED_ACQUISITION_LIMIT",
+      "affected_source_surfacing_count": 6,
+      "status": "UNRESOLVED_NOT_AUTHORIZED",
+      "description": "Historical pagination and dynamic official queries require automation or interface access outside Master #15 permissions.",
+      "reference": "reports/data-quality/kino/T38_ACQUISITION_AUTOMATION_GAPS.json"
+    },
+    {
+      "gap_id": "G6",
+      "type": "LEGACY_RULE_REGIME",
+      "affected_raw_rows": 799,
+      "status": "EXCLUDED_NOT_REJECTED",
+      "description": "Rows #0–#798 in gaaguile have 15-number rules, incompatible with 14-number modern target; retained raw without conversion."
+    },
+    {
+      "gap_id": "G7",
+      "type": "EXTERNAL_SCHEDULE_AND_COVERAGE_CERTIFICATION",
+      "status": "UNRESOLVED",
+      "description": "Sequence #799–#3286 is number-contiguous in captured data but complete draw schedule/expected historical total is not independently demonstrated; official coverage percent unknown.",
+      "observed_regimes": [
+        {
+          "id": "K06-A",
+          "days": [
+            "Sunday"
+          ],
+          "range": "#799–#816"
+        },
+        {
+          "id": "K06-B",
+          "days": [
+            "Wednesday",
+            "Sunday"
+          ],
+          "range": "#817–#2260"
+        },
+        {
+          "id": "K20-C",
+          "days": [
+            "Wednesday",
+            "Friday",
+            "Sunday"
+          ],
+          "range": "#2261–#3286"
+        }
+      ],
+      "candidate_schedule_exception": {
+        "date": "2009-12-23",
+        "draw_number": null,
+        "status": "UNVERIFIED",
+        "source": "https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071605677"
+      }
+    }
+  ],
+  "zero_conflicts": "No observed material conflicts within acquired sources; does not resolve the authority/source gaps.",
+  "rework": "C39.RW3",
+  "consensus_independence_gap": {
+    "date_number_matching_secondary_draws": 7,
+    "date_unavailable_nicovh_numeric_matching_draws": 889,
+    "verified_independent_match_cohorts": 0
+  }
+}

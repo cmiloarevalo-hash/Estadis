@@ -1,0 +1,27 @@
+{
+  "checkpoint": 18,
+  "source_id": "kino.official.direct.consulta_resultado",
+  "coverage": "UNKNOWN",
+  "raw_records_added": 0,
+  "unique_draws_observed": 0,
+  "t2_only_draws": [
+    1829,
+    1836,
+    1842,
+    1843,
+    1856,
+    1858,
+    1892,
+    1903
+  ],
+  "t3_only_draws": [],
+  "comparable_draws": 0,
+  "conflicts_observed": 0,
+  "gaps": [
+    {
+      "type": "ACQUISITION_GAP",
+      "description": "dynamic official query payload not available in allowed static/manual acquisition path"
+    }
+  ],
+  "forbidden_development_files": 0
+}

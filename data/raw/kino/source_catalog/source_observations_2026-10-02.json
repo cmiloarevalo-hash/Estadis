@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "issue": 16,
+  "captured_on": "2026-10-02",
+  "capture_method": "manual discovery via public web search/browser plus GitHub repository inspection; no bulk result acquisition",
+  "note": "This file is a source-catalog observation, not draw-level evidence.",
+  "observed_source_ids": [
+    "kino.official.direct.sorteos_en_vivo",
+    "kino.official.direct.consulta_resultado",
+    "kino.official.stats.estadisticas",
+    "kino.official.institutional.novedades",
+    "kino.official.institutional.ganadores",
+    "kino.official.institutional.reglamentacion",
+    "kino.secondary.db.resultadoskinochile",
+    "kino.secondary.db.chileresultados",
+    "kino.secondary.db.loterochile",
+    "kino.secondary.db.lotero",
+    "kino.secondary.db.openloto",
+    "kino.secondary.db.loteria_guru",
+    "kino.secondary.db.kinohistorico",
+    "kino.secondary.db.indicadoresydatos",
+    "kino.secondary.db.sortuo",
+    "kino.secondary.db.yelu",
+    "kino.secondary.media.24horas",
+    "kino.secondary.media.epicentrochile",
+    "kino.secondary.media.prensadigital",
+    "kino.community.github.77ruben_kino_scraper",
+    "kino.community.github.gaaguile_kino2026",
+    "kino.community.github.blank2d_datos_de_azar",
+    "kino.community.github.fernando8955_kino"
+  ],
+  "verified_official_interfaces": [
+    "https://www.sorteosenvivo.cl/sorteosenvivo",
+    "https://www.loteria.cl/resultados/consulta-resultado/",
+    "https://www.loteria.cl/resultados/estadisticas/",
+    "https://www.loteria.cl/contenido/novedades/",
+    "https://www.loteria.cl/contenido/ganadores/",
+    "https://mc.loteria.cl/absolutenm/templates/PyR.aspx?articleid=868&zoneid=47"
+  ],
+  "verified_secondary_examples": [
+    "https://www.resultadoskinochile.com/2012/12/16/resultados-kino-sorteo-1505-fecha-16122012/",
+    "https://www.resultadoskinochile.com/2012/12/19/resultados-kino-sorteo-1506-fecha-19122012/",
+    "https://www.resultadoskinochile.com/resultados-kino/page/282/",
+    "https://chileresultados.com/kino/sorteos/2396",
+    "https://chileresultados.com/kino/sorteos/2432",
+    "https://chileresultados.com/kino/sorteos/2982",
+    "https://chileresultados.com/kino/sorteos/3070",
+    "https://loterochile.cl/resultados-kino/todos/",
+    "https://www.openloto.cl/resultados-del-kino/",
+    "https://loteria.guru/resultados-loteria-chile/cl-kino/resultados-anteriores-kino-cl",
+    "https://kinohistorico.cl/search/",
+    "https://indicadoresydatos.cl/azar/estadisticas-loto-kino",
+    "https://sortuo.cl/kino/",
+    "https://www.24horas.cl/tesirve/kino/p/2"
+  ],
+  "github_sources": [
+    {
+      "repo": "77ruben/kino-scraper",
+      "license": "NOT_DECLARED",
+      "lineage": "resultadoskinochile.com"
+    },
+    {
+      "repo": "gaaguile/Kino2026",
+      "license": "NOT_DECLARED",
+      "lineage": "NOT_VERIFIED"
+    },
+    {
+      "repo": "Blank2D/datos-de-azar",
+      "license": "MIT",
+      "lineage": "official latest + kinohistorico fallback; no full dataset persisted"
+    },
+    {
+      "repo": "Fernando8955/kino",
+      "license": "NOT_DECLARED",
+      "lineage": "kino-polla.json declares chileresultados.com; mixed data quality"
+    }
+  ]
+}

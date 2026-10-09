@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "master_work_item": 15,
+  "issue": 24,
+  "source_id": "kino.secondary.media.epicentrochile",
+  "source_type": "SECONDARY_MEDIA",
+  "retrieved_at": "2026-10-02T01:24:00-03:00",
+  "purpose": "gap_resolution",
+  "observations": [
+    {
+      "record_id": "kino.secondary.media.epicentrochile:3280:t9",
+      "draw_number": 3280,
+      "draw_date": "2026-09-16",
+      "numbers": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        18,
+        20,
+        22,
+        24,
+        25
+      ],
+      "game": "kino",
+      "modality": "kino_base",
+      "source_id": "kino.secondary.media.epicentrochile",
+      "source_url": "https://www.epicentrochile.com/2026/09/16/resultados-kino-3280-de-hoy-miercoles-16-de-septiembre-numeros-ganadores/",
+      "retrieved_at": "2026-10-02T01:24:00-03:00",
+      "source_type": "SECONDARY_MEDIA",
+      "independence_group": "epicentrochile",
+      "jackpot_estimate_total_clp": 6700000000,
+      "kino_jackpot_estimate_clp": 860000000,
+      "raw_representation": "Resultados Kino 3280 de Hoy Miércoles 16 de Septiembre: Números Ganadores\nSource: https://www.epicentrochile.com/2026/09/16/resultados-kino-3280-de-hoy-miercoles-16-de-septiembre-numeros-ganadores/\nPublished: 2026-09-16 23:19\nKino: 01 – 02 – 05 – 06 – 09 – 10 – 11 – 13 – 14 – 18 – 20 – 22 – 24 – 25\nPozo total estimado: $6.700 millones.\nKino principal estimado: $860 millones.\nObserved via public web result on 2026-10-02.",
+      "raw_representation_sha256": "c887b4583497dbe3d407540467ccaf55513022ec3dce15400c98e5dac333234d",
+      "raw_snapshot_status": "structured textual capture from public article; original page bytes not persisted"
+    }
+  ],
+  "acquisition_attempts": [
+    {
+      "target": "official numeric evidence for draws 3280–3286",
+      "method": "public web search restricted to loteria.cl",
+      "result": "NO_COMPLETE_14_NUMBER_RESULT_DISCOVERED",
+      "impact": "recent draws remain PROVISIONAL"
+    }
+  ]
+}

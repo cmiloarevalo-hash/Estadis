@@ -1,0 +1,27 @@
+{
+  "checkpoint": 17,
+  "source_id": "kino.official.direct.sorteos_en_vivo",
+  "coverage": "PARTIAL",
+  "raw_records_added": 8,
+  "unique_draws_observed": 8,
+  "earliest_observed_draw": 1829,
+  "latest_observed_draw": 1903,
+  "complete_core_records": 0,
+  "known_gaps": [
+    {
+      "type": "ACQUISITION_GAP",
+      "description": "dynamic historical query payload not statically accessible without prohibited automation"
+    },
+    {
+      "type": "UNKNOWN_GAP",
+      "description": "continuity and earliest/latest queryable draw not established"
+    }
+  ],
+  "query_capabilities": [
+    "draw number",
+    "date from",
+    "date to",
+    "game selector"
+  ],
+  "forbidden_development_files": 0
+}

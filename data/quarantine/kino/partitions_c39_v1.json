@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "C39.5",
+  "dataset": "QUARANTINE",
+  "records_count": 2488,
+  "status_counts": {
+    "PROVISIONAL": 2488,
+    "CONFLICTED": 0,
+    "INCOMPLETE": 0
+  },
+  "partitions": [
+    {
+      "path": "data/quarantine/kino/provisional_c39_2006_2010.json",
+      "count": 502
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2011_2015.json",
+      "count": 522
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2016_2020.json",
+      "count": 564
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2021_2023.json",
+      "count": 470
+    },
+    {
+      "path": "data/quarantine/kino/provisional_c39_2024_2026.json",
+      "count": 430
+    }
+  ],
+  "conflicted_records": [],
+  "incomplete_draw_records": [],
+  "note": "900 incomplete individual observations remain linked in normalized evidence, though each consolidated draw is core-complete.",
+  "dataset_version": "kino-history-v1.1.1",
+  "rework": "C39.RW2",
+  "retention_policy": "All 2488 structurally complete records are PROVISIONAL in quarantine; neither official authority nor positive independence is implied.",
+  "evidence_grade_counts": {
+    "SINGLE_SOURCE": 1592,
+    "INSUFFICIENT": 896,
+    "CONSENSUS_HIGH": 0,
+    "CONSENSUS_MEDIUM": 0
+  }
+}

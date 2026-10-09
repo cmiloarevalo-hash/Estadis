@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.1",
+  "dataset_version": "kino-history-v1.1.1",
+  "checkpoint": "C39.RW2",
+  "dataset": "HIGH_CONFIDENCE_RESEARCH_DATASET",
+  "criteria": "VALIDATED or (PROVISIONAL + CONSENSUS_HIGH proven by ≥3 genuinely independent traceable secondary sources with matching date and 14 numbers)",
+  "records_count": 0,
+  "records": [],
+  "independence_verified": false,
+  "not_officially_validated": true,
+  "reclassified_previous_candidates": {
+    "draw_numbers": [
+      3281,
+      3282,
+      3283,
+      3284,
+      3285,
+      3286
+    ],
+    "previous_grade": "CONSENSUS_HIGH",
+    "current_grade": "INSUFFICIENT",
+    "reason": "3 distinct publishing websites match date+numbers; independent upstream source lineage not proven; preserve all observations and quarantine records.",
+    "candidate_partition": "data/quarantine/kino/provisional_c39_2024_2026.json"
+  },
+  "decision_issue_comment": "https://github.com/cmiloarevalo-hash/Estadis/issues/39#issuecomment-6071308571",
+  "research_lineage_comment": "https://github.com/cmiloarevalo-hash/Estadis/issues/41#issuecomment-6071663636",
+  "readiness": "NO"
+}

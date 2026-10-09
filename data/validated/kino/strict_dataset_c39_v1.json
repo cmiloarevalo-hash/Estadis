@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "C39.5",
+  "dataset": "STRICT_DATASET",
+  "criteria": "VALIDATED only",
+  "records_count": 0,
+  "records": [],
+  "readiness": "NOT_READY_NO_VALIDATED_RESULTS",
+  "dataset_version": "kino-history-v1.1.1",
+  "rework": "C39.RW2",
+  "validation_readiness": "NO",
+  "note": "No complete official result meeting canonical corroboration requirements. STRICT_DATASET has zero records."
+}

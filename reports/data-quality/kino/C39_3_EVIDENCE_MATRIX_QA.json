@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "C39.3",
+  "active_matrix_parts": [
+    "data/processed/kino/evidence_matrix_c39_2006_2010.json",
+    "data/processed/kino/evidence_matrix_c39_2011_2015.json",
+    "data/processed/kino/evidence_matrix_c39_2016_2020.json",
+    "data/processed/kino/evidence_matrix_c39_2021_2023.json",
+    "data/processed/kino/evidence_matrix_c39_2024_2026.json"
+  ],
+  "superseded_large_aggregate": "data/processed/kino/evidence_matrix_c39_2021_2026.json",
+  "draws": 2488,
+  "unique_keys": 2488,
+  "source_observations_reconciled": 3401,
+  "complete_dated_draws": 2488,
+  "relation_counts": {
+    "SINGLE_DATED_COMPLETE_SOURCE": 1584,
+    "PARTIAL_OFFICIAL_CONTEXT": 8,
+    "NUMBERS_ONLY_MATCH_UNVERIFIED_LINEAGE": 889,
+    "EXACT_DATE_NUMBERS_MATCH": 7
+  },
+  "date_conflicts": 0,
+  "number_conflicts": 0,
+  "continuous_draw_number_span": true,
+  "earliest": {
+    "draw_number": 799,
+    "draw_date": "2006-01-08"
+  },
+  "latest": {
+    "draw_number": 3286,
+    "draw_date": "2026-09-30"
+  },
+  "independence_warning": "889 numerical-only matches (gaaguile/Nicovh) are not verified independent; Nicovh derived from ChileResultados and lacks date. Exact matching of numbers != full date corroboration or official validation.",
+  "verification": "PASS"
+}

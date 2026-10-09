@@ -1,0 +1,51 @@
+{
+  "checkpoint": 38,
+  "state": "ACQUISITION_EXPANSION_COMPLETE",
+  "sources_discovered_total": 25,
+  "sources_acquired_new": 4,
+  "independent_source_groups_evaluated": 9,
+  "raw_source_rows_added": 4169,
+  "unique_modern_complete_draws_from_bulk": 2469,
+  "earliest_complete": {
+    "draw_number": 799,
+    "date": "Sunday, Jan 08, 2006"
+  },
+  "latest_complete": {
+    "draw_number": 3286,
+    "date": "2026-09-30"
+  },
+  "years_observed": "2006–2026",
+  "modern_internal_gaps": 0,
+  "numeric_crosscheck": {
+    "overlap": 889,
+    "exact_matches": 889,
+    "mismatches": 0,
+    "rate": 1
+  },
+  "automation_required_sources": 6,
+  "acquisition_saturation_reassessment": "REACHED_WITHIN_NO_AUTOMATION_SCOPE",
+  "note": "Bulk public artifact supplies #799–#3267; manual public archive capture supplies #3268–#3279; prior T5 evidence supplies #3280–#3286. Complete observed draw-number span is now #799–#3286 with no internal draw-number gaps, but most records remain secondary/community evidence.",
+  "unique_modern_complete_draws_from_expansion": 2481,
+  "gap_draws_filled_manually": [
+    3268,
+    3269,
+    3270,
+    3271,
+    3272,
+    3273,
+    3274,
+    3275,
+    3276,
+    3277,
+    3278,
+    3279
+  ],
+  "total_master_complete_draw_span_after_existing_recent_evidence": {
+    "from": 799,
+    "to": 3286,
+    "count": 2488,
+    "draw_number_gaps": 0
+  },
+  "sources_acquired_bulk": 2,
+  "sources_acquired_manual": 2
+}

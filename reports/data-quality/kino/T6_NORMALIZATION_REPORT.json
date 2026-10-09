@@ -1,0 +1,31 @@
+{
+  "checkpoint": 21,
+  "observation_count": 30,
+  "unique_draws": 17,
+  "unique_draw_numbers": [
+    1829,
+    1836,
+    1842,
+    1843,
+    1856,
+    1858,
+    1892,
+    1903,
+    2893,
+    3130,
+    3280,
+    3281,
+    3282,
+    3283,
+    3284,
+    3285,
+    3286
+  ],
+  "validation_status_counts": {
+    "INCOMPLETE": 11,
+    "VALID_STRUCTURAL": 19
+  },
+  "raw_immutability": "PASS",
+  "inference_fill": "NONE",
+  "coverage": "PARTIAL"
+}
