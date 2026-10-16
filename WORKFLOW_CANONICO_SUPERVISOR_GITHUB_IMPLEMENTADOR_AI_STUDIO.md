@@ -940,3 +940,19 @@ SEMANTIC_ACCEPTED | REWORK | HOLD | ESCALATE
 ~~~
 
 CI y operadores externos pueden incorporarse más adelante mediante Work Items separados. Mientras no exista evidencia persistida de su configuración, permanecen explícitamente NOT CONFIGURED.
+
+
+---
+
+# Adenda vigente — Actuador como transporte EXTERNO (Estadis #42)
+
+**Autoridad:** decisión explícita del Humano, registrada en [Issue #42](https://github.com/cmiloarevalo-hash/Estadis/issues/42). **Fuente operativa de detalle:** [docs/governance/ACTUADOR_TRANSPORTE_EXTERNO.md](docs/governance/ACTUADOR_TRANSPORTE_EXTERNO.md). Esta adenda conserva íntegramente la cadena Humano → Supervisor → Issue → Implementador → PR/QA → Supervisor.
+
+1. **Prohibición absoluta de interferir:** Supervisor, Implementador y demás agentes de Estadis **no pueden tocar ni ordenar cambios a Actuador** (repositorio, Issues/PR, código, configuración, runtime, sesiones, procesos, pruebas, despliegue o monitorización). Su mantenimiento corresponde únicamente al Supervisor independiente de Actuador. No se incorpora como implementador o autoridad nueva.
+2. **Único vínculo permitido:** ambos agentes de Estadis publican mensajes y pruebas en **su propio repositorio GitHub**, asociados a un Work Item. Actuador externo solo los transporta mecánicamente entre chats. No hay permiso para operarlo, ejecutarlo, integrarlo técnicamente ni modificar su comportamiento desde Estadis.
+3. **Convención de comunicación:** mensajes breves con `TARGET_ROLE`, `REPOSITORY`, `WORK_ITEM`, `ACTIVITY`, `AUTHORITY_REF`, `PR`, `HEAD`, `STATE` y `NEXT_ACTOR`. El comentario GitHub fuente aporta trazabilidad exacta. Estos encabezados ayudan al workflow, **no son una garantía de reconocimiento, entrega o validación de rol por Actuador**.
+4. **Estados independientes:** el mero `DELIVERED` del transporte no prueba respuesta efectiva, `READY_FOR_REVIEW`, `SEMANTIC_ACCEPTED` ni merge. Revisión y decisiones permanecen bajo autoridad de Estadis; GitHub guarda la evidencia. No se lee/infieren outputs web a través del transportador.
+5. **Cambio de chat / continuidad:** todo nuevo Supervisor/Implementador lee la fuente documental y reconstruye el estado desde GitHub, sin requerir memoria previa ni pedir mantenimiento del transportador. Para campañas de 100 experimentos, las etiquetas `EXP-001`–`EXP-100` son convenciones documentales de Estadis, no acciones o contadores de Actuador.
+6. **Estado de integración:** esta adenda **no activa ni prueba** un runtime de Actuador ni configura conectividad, inspección de sesiones, delivery o relay end-to-end. Es únicamente una regla de coordinación publicada en Estadis.
+
+**Prioridad:** esta restricción de recursos impuesta por el Humano prevalece frente a cualquier permiso técnico genérico. Requiere una nueva instrucción humana expresa para cualquier variación; nunca puede ser ampliada por un Issue del Implementador o por la conveniencia de automatización.
