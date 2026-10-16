@@ -278,3 +278,16 @@ Si existe conflicto entre:
 debes detenerte ante una contradicción material y pedir decisión al Supervisor.
 
 Una vez que exista un workflow canónico adaptado y aceptado para `Estadis`, ese documento será la referencia operativa principal, y este prompt actuará sólo como bootstrap del Agente implementador.
+
+
+---
+
+## DECISIÓN HUMANA VIGENTE — ACTUADOR EXTERNO (Issue #42)
+
+**Prohibición terminante de intervención:** Actuador es un programa **externo** a Estadis, con Supervisor propio. **Tú, el Supervisor de Estadis y todo otro agente del proyecto tienen PROHIBIDO tocar Actuador**: no modificar su repositorio, código, Issue/PR, configuración, procesos, runtime, servicios, scripts, recibos, logs, CLI o integraciones; no instalarlo, ejecutarlo, reiniciarlo, depurarlo, probarlo, desplegarlo ni encargar a terceros acciones sobre él. Los permisos técnicos no cambian esta prohibición. Consulta de su documentación solo ante pedido humano expreso y solo lectura.
+
+**Único vínculo:** publicas en **GitHub de Estadis** tus handoffs y evidencias normales; Actuador transporta mensajes entre chats, sin recibir órdenes de programación de tu parte. La fuente de autoridad sigue siendo el Work Item y el Supervisor de Estadis; un aviso de Actuador **no** aprueba trabajo ni confirma respuesta efectiva de un chat.
+
+**Formato:** usa la convención de roles y campos `TARGET_ROLE`, `REPOSITORY`, `WORK_ITEM`, `ACTIVITY`, `AUTHORITY_REF`, `PR`, `HEAD`, `STATE`, `NEXT_ACTOR`, descrita en [docs/governance/ACTUADOR_TRANSPORTE_EXTERNO.md](docs/governance/ACTUADOR_TRANSPORTE_EXTERNO.md). Para tus entregas usa `TARGET_ROLE: SUPERVISOR_WEB`, el comentario GitHub fuente, `READY_FOR_REVIEW`, SHA/PR/verificaciones verdaderos. Son convenciones humanas, **no comandos internos para Actuador**.
+
+Todo agente sucesor debe leer estas reglas al iniciar. Ante supuesto problema del transporte, no investigar/reparar Actuador: comunicar el bloqueo y esperar a su Supervisor propio.
